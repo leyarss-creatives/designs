@@ -1,0 +1,199 @@
+@import 'variables'; //importing the variables
+
+body {
+    @include bodyStyle;
+}
+
+header {
+    @include headerStyle;
+
+    nav {
+        @include navStyle;
+        
+        .nav-other-screens {
+            a {
+                color: black;
+                transition: 0.2s;
+            }
+            
+            a:hover, 
+            .current-page {
+                color: $yellow;
+                border-bottom: 2px solid $yellow;
+            }
+
+            //background-image: url('../Assets/projects-nav-bg.png');
+            //border: 1px blue dashed;
+        }
+    }
+
+    .header-content {
+        background-color: $yellow;
+        font-size: $headerFontSize-Mobile;
+
+        h1 {
+            margin: 0;
+
+            span {
+                color: black;
+                -webkit-text-fill-color: $pink;
+                -webkit-text-stroke: 2px;
+            }
+        }
+
+        p {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    }
+}
+
+/*=====Works Section=====*/
+#works {
+    .filter-dropdown {
+        .filter-btn {
+            width: 100%;
+            text-align: left;
+            padding: 5px 10px;
+        }
+
+        .filter-btn,
+        div {
+            background-color: black;
+            color: white;
+        }
+
+        .dropdown-content {
+            display: none;
+            width: fit-content;
+
+            div {
+                padding: 5px 10px;
+                border-top: 2px solid white;
+                cursor: pointer;
+            }
+        }
+
+        .show {
+            display: block;
+            position: absolute;
+        }
+
+        #dropdown1 {
+            background-color: $pink;
+        }
+
+        #dropdown2 {
+            background-color: $blue;
+        }
+
+        #dropdown3 {
+            background-color: $yellow;
+            color: black;
+        }
+    }
+
+    .work {
+        padding: 20px 0;
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+
+        img {
+            display: block;
+            height: 400px;
+        }
+
+        button {
+            padding: 7px 30px;
+            border: 1px solid black;
+            border-radius: 60px;
+            background-color: white;
+        }
+    }
+
+    #event,
+    #print,
+    #proddesign {
+        display: none;
+    }
+}
+
+/*=====Footer Section=====*/
+footer {
+    @include footerStyle
+}
+
+
+
+/*--- MOBILE SCREEN ---*/
+@media screen and (max-width: 768px) {
+    body {
+        @include bodyStyle-Mobile;
+    }
+
+    header {
+        @include headerStyle-Mobile;
+
+        nav {
+            @include navStyle-Mobile;
+        }
+    }
+
+    #works {
+        .filter-dropdown {
+            .filter-btn {
+                width: 100%;
+                text-align: left;
+                padding: 5px 10px;
+            }
+    
+            .filter-btn,
+            div {
+                background-color: black;
+                color: white;
+            }
+    
+            .dropdown-content {
+                display: none;
+                width: fit-content;
+    
+                div {
+                    padding: 5px 10px;
+                    border-top: 2px solid white;
+                    cursor: pointer;
+                }
+            }
+        }
+    
+        .work {
+            padding: 20px 0;
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+    
+            img {
+                display: block;
+                height: 200px;
+            }
+    
+            button {
+                padding: 7px 10px;
+                border: 1px solid black;
+                border-radius: 60px;
+                background-color: white;
+                font-size: $allTextFontSize-Mobile;
+            }
+        }
+    
+        #event,
+        #print,
+        #proddesign {
+            display: none;
+        }
+    }
+
+    footer {
+        @include footerStyle-Mobile;
+    }
+}

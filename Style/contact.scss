@@ -1,0 +1,199 @@
+@import 'variables'; //importing the variables
+
+body {
+    @include bodyStyle;
+}
+
+header {
+    margin: 10px;
+    nav {
+        @include navStyle;
+
+        a {
+            color: black;
+        }
+
+        .nav-contact-us {
+            visibility: hidden;
+        }
+
+        //border: 1px blue dashed;
+    }
+}
+
+/*=====Input Section=====*/
+#message {
+    padding-top: 0;
+    text-align: center;
+
+    /*border: 1px blue solid;*/
+
+    span {
+        color: $pink;
+    }
+
+    input,
+    #message-box {
+        font-family: $webFont;
+        font-size: $allTextFontSize;
+        width: 100%;
+        max-width: 700px;
+        box-sizing: border-box; /*prevent width from going over div*/
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(0,0,0,0.5);
+        display: block;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid black;
+        border-radius: 0;
+    }
+
+    #message-box {
+        height: 300px;
+        resize: none; /*make it non-resizeable*/
+        padding: 20px;
+        box-sizing: border-box; /*prevent width from going over div*/
+    }
+
+    div {
+        text-align: right;
+        max-width: 700px;
+        margin: 0 auto;
+
+        button {
+            font-family: $webFont;
+            font-size: $allTextFontSize;
+            padding: 7px 30px;
+            border: 1px solid black;
+            border-radius: 60px;
+            background-color: white;
+        }
+    }
+}
+
+/*=====Contact Details Section=====*/
+#contact-details {
+    text-align: center;
+    
+    .details-flex {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        .number,
+        .email,
+        .location {
+            padding: 20px;
+            border-radius: 10px;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .number,
+        .email {
+            color: white;
+        }
+
+        .number {
+            background-color: $pink;
+            
+            img {
+                height: 40px;
+            }
+        }
+        .email {
+            background-color: $blue;
+
+            img {
+                height: 60px;
+                margin: -10px;
+            }
+        }
+        .location {
+            background-color: $yellow;
+            
+            img {
+                height: 45px;
+            }
+        }
+    }
+
+    iframe {
+        margin: 20px auto;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 850px;
+        height: 400px;
+    }
+}
+
+/*=====Footer Section=====*/
+footer {
+    @include footerStyle
+}
+
+
+
+/*--- MOBILE SCREEN ---*/
+@media screen and (max-width: 768px) {
+    body {
+        @include bodyStyle-Mobile;
+    }
+
+    header {
+        @include headerStyle-Mobile;
+
+        nav {
+            @include navStyle-Mobile;
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+    #message {    
+        input,
+        #message-box {
+            font-size: $allTextFontSize-Mobile;
+        }
+    
+        #message-box {
+            height: 200px;
+        }
+    
+        div {    
+            button {
+                font-size: $allTextFontSize-Mobile;
+                padding: 7px 10px;
+            }
+        }
+    }
+
+    #contact-details {
+        .details-flex {
+            display: block;
+    
+            .number,
+            .email,
+            .location {
+                margin-top: 10px;
+                padding: 20px;
+            }
+        }
+    
+        iframe {
+            width: 100%;
+        }
+    }
+
+    footer {
+        @include footerStyle-Mobile;
+    }
+}

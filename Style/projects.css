@@ -1,0 +1,348 @@
+/*=====Fonts=====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); /*Poppins font*/
+/*=====Style Variables=====*/
+/* for other screens */
+/*--- for mobile ---*/
+/*======Body Style=====*/
+/*==========Header Style==========*/
+/*======Nav Style=====*/
+/*======Footer Style=====*/
+/*======Back to top btn Style=====*/
+/*--- MOBILE SCREEN ---*/
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+body h1 {
+  text-align: center;
+  font-size: 64px;
+  margin: 0;
+}
+body section {
+  padding: 50px 100px;
+}
+body button {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  border: none;
+}
+
+header {
+  margin: 10px;
+}
+header .header-content {
+  border-radius: 60px;
+  padding: 80px;
+  font-size: 30px;
+  text-align: center;
+}
+header nav {
+  /*hide mobile nav*/
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+header nav div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header nav .nav-other-screens {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+header nav .nav-other-screens .nav-logo-name {
+  margin-right: auto;
+}
+header nav .nav-other-screens .nav-logo-name img {
+  height: 70px;
+  padding: 10px 0;
+}
+header nav .nav-other-screens .nav-logo-name p {
+  line-height: 1;
+}
+header nav .nav-other-screens .nav-contact-us a {
+  color: white;
+}
+header nav .nav-other-screens .nav-general {
+  width: 50%;
+  justify-content: space-evenly;
+}
+header nav .nav-other-screens .nav-contact-us {
+  margin-left: auto;
+}
+header nav .nav-other-screens .nav-contact-us a {
+  padding: 10px 15px 10px 30px;
+  border-radius: 80px;
+  background-color: #282828;
+}
+header nav .nav-other-screens .nav-contact-us a span {
+  margin: 0 10px;
+}
+header nav .nav-mobile {
+  display: none;
+}
+header nav .nav-other-screens a {
+  color: black;
+  transition: 0.2s;
+}
+header nav .nav-other-screens a:hover,
+header nav .nav-other-screens .current-page {
+  color: #FFF200;
+  border-bottom: 2px solid #FFF200;
+}
+header .header-content {
+  background-color: #FFF200;
+  font-size: 22px;
+}
+header .header-content h1 {
+  margin: 0;
+}
+header .header-content h1 span {
+  color: black;
+  -webkit-text-fill-color: #EF018D;
+  -webkit-text-stroke: 2px;
+}
+header .header-content p {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/*=====Works Section=====*/
+#works .filter-dropdown .filter-btn {
+  width: 100%;
+  text-align: left;
+  padding: 5px 10px;
+}
+#works .filter-dropdown .filter-btn,
+#works .filter-dropdown div {
+  background-color: black;
+  color: white;
+}
+#works .filter-dropdown .dropdown-content {
+  display: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#works .filter-dropdown .dropdown-content div {
+  padding: 5px 10px;
+  border-top: 2px solid white;
+  cursor: pointer;
+}
+#works .filter-dropdown .show {
+  display: block;
+  position: absolute;
+}
+#works .filter-dropdown #dropdown1 {
+  background-color: #EF018D;
+}
+#works .filter-dropdown #dropdown2 {
+  background-color: #00aeef;
+}
+#works .filter-dropdown #dropdown3 {
+  background-color: #FFF200;
+  color: black;
+}
+#works .work {
+  padding: 20px 0;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+#works .work img {
+  display: block;
+  height: 400px;
+}
+#works .work button {
+  padding: 7px 30px;
+  border: 1px solid black;
+  border-radius: 60px;
+  background-color: white;
+}
+#works #event,
+#works #print,
+#works #proddesign {
+  display: none;
+}
+
+/*=====Footer Section=====*/
+footer {
+  background-color: black;
+  color: white;
+}
+footer a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+footer .footer-flex {
+  display: flex;
+}
+footer .footer-pink,
+footer .footer-blue,
+footer .footer-yellow {
+  height: 30px;
+  width: 100%;
+}
+footer .footer-pink {
+  background-color: #EF018D;
+}
+footer .footer-blue {
+  background-color: #00aeef;
+}
+footer .footer-yellow {
+  background-color: #FFF200;
+}
+footer .footer-content {
+  margin: 50px 100px;
+  gap: 30px;
+}
+footer .footer-content .contact-details {
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+footer .footer-content .contact-details span {
+  font-weight: 600;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+footer .footer-logo,
+footer .copyright {
+  text-align: center;
+}
+footer .copyright {
+  margin: 0;
+  padding: 20px;
+}
+
+/*--- MOBILE SCREEN ---*/
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 15px;
+    background-color: aquamarine;
+  }
+  body h1 {
+    font-size: 32px;
+    margin: 0;
+  }
+  body section {
+    padding: 10px;
+  }
+  header .header-content {
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 22px;
+    text-align: center;
+  }
+  header .header-content h1 {
+    text-align: center;
+  }
+  header .header-content .header-content-mockups img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+  header nav .nav-other-screens {
+    display: none;
+  }
+  header nav .nav-mobile {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  header nav .nav-mobile div, header nav .nav-mobile a {
+    display: block;
+  }
+  header nav .nav-mobile .nav-logo-name img {
+    height: 50px;
+  }
+  header nav .nav-mobile button {
+    background-color: black;
+    color: white;
+  }
+  header nav .nav-mobile .nav-btns {
+    background-color: black;
+    position: absolute;
+    right: 0;
+    top: 50px;
+  }
+  header nav .nav-mobile .nav-btns a {
+    margin: 10px;
+  }
+  #works .filter-dropdown .filter-btn {
+    width: 100%;
+    text-align: left;
+    padding: 5px 10px;
+  }
+  #works .filter-dropdown .filter-btn,
+  #works .filter-dropdown div {
+    background-color: black;
+    color: white;
+  }
+  #works .filter-dropdown .dropdown-content {
+    display: none;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #works .filter-dropdown .dropdown-content div {
+    padding: 5px 10px;
+    border-top: 2px solid white;
+    cursor: pointer;
+  }
+  #works .work {
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+  }
+  #works .work img {
+    display: block;
+    height: 200px;
+  }
+  #works .work button {
+    padding: 7px 10px;
+    border: 1px solid black;
+    border-radius: 60px;
+    background-color: white;
+    font-size: 15px;
+  }
+  #works #event,
+  #works #print,
+  #works #proddesign {
+    display: none;
+  }
+  footer .footer-pink,
+  footer .footer-blue,
+  footer .footer-yellow {
+    height: 15px;
+    width: 100%;
+  }
+  footer .footer-content {
+    margin: 20px;
+    display: block;
+  }
+  footer .footer-content img {
+    height: 100px;
+  }
+  footer .footer-content .contact-details {
+    display: block;
+    text-align: center;
+    /*if not center aligned
+    width: fit-content;
+    margin: 0 auto;*/
+  }
+  footer .footer-content .contact-details div {
+    margin: 20px 0;
+  }
+}/*# sourceMappingURL=projects.css.map */

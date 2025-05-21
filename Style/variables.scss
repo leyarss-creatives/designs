@@ -1,0 +1,314 @@
+/*=====Fonts=====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /*Poppins font*/
+
+/*=====Style Variables=====*/
+$blue: #00aeef;
+$pink: #EF018D;
+$yellow: #FFF200;
+$lightblack: #282828;
+
+$webFont: "Poppins", sans-serif;
+
+/* for other screens */
+$headerFontSize: 30px;
+$h1FontSize: 64px;
+$allTextFontSize: 20px;
+$footerFontSize: 18px;
+$boarder: 15px;
+
+/*--- for mobile ---*/
+$headerFontSize-Mobile: 22px;
+$h1FontSize-Mobile: 32px;
+$allTextFontSize-Mobile: 15px;
+
+/*======Body Style=====*/
+@mixin bodyStyle {
+    margin: 0;
+    overflow-x: hidden;
+    
+    font-family: $webFont;
+    font-size: $allTextFontSize;
+
+    h1 {
+        text-align: center;
+        font-size: $h1FontSize;
+        margin: 0;
+    }
+
+    section {
+        padding: 50px 100px;
+        //border: 1px dashed green;
+    }
+
+    button {
+        font-family: $webFont;
+        font-size: $allTextFontSize;
+        border: none;
+    }
+}
+
+/*==========Header Style==========*/
+@mixin headerStyle {
+    margin: 10px;
+
+    .header-content {
+        border-radius: 60px;
+        padding: 80px;
+        font-size: $headerFontSize;
+        text-align: center;
+    }
+}
+
+/*======Nav Style=====*/
+@mixin navStyle {
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-other-screens {
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain;
+        font-weight: bold;
+        font-size: $allTextFontSize;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    
+        .nav-logo-name {
+            margin-right: auto;
+            img {
+                height: 70px;
+                padding: 10px 0;
+            }
+            
+            p {
+                line-height: 1;
+            }
+        }
+    
+        .nav-contact-us a {
+            color: white;
+        }
+    
+        .nav-general {
+            width: 50%;
+            justify-content: space-evenly;
+        }
+    
+        .nav-contact-us {
+            margin-left: auto;
+            a {
+                padding: 10px 15px 10px 30px;
+                border-radius: 80px;
+                background-color: #282828;
+    
+                span {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+
+    /*hide mobile nav*/
+    .nav-mobile {
+        display: none;
+    }
+}
+
+/*======Footer Style=====*/
+@mixin footerStyle {
+    background-color: black;
+    color: white;
+
+    a {
+        display: block;
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer-flex {
+        display: flex;
+    }
+
+    .footer-pink,
+    .footer-blue,
+    .footer-yellow {
+        height: 30px;
+        width: 100%;
+    }
+
+    .footer-pink {
+        background-color: $pink;
+    }
+
+    .footer-blue {
+        background-color: $blue;
+    }
+
+    .footer-yellow {
+        background-color: $yellow;
+    }
+
+    .footer-content {
+        margin: 50px 100px;
+        gap: 30px;
+        //border: 1px dashed pink;
+
+        .contact-details {
+            width: 100%;
+            justify-content: space-around;
+            margin-top: 50px;
+            
+            span {
+                font-weight: 600;
+                text-decoration: underline;
+                text-transform: uppercase;
+            }
+
+            //border: 1px dashed blue;
+        }
+    }
+
+    .footer-logo,
+    .copyright {
+        text-align: center;
+    }
+
+    .copyright {
+        margin: 0;
+        padding: 20px;
+    }
+}
+
+/*======Back to top btn Style=====*/
+@mixin backToTopBtn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: $lightblack;
+    color: white;
+    text-align: center;
+    font-size: $headerFontSize;
+    border-radius: 50px;
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+
+/*--- MOBILE SCREEN ---*/
+@mixin bodyStyle-Mobile {
+    font-size: $allTextFontSize-Mobile;
+    background-color: aquamarine;
+
+    h1 {
+        font-size: $h1FontSize-Mobile;
+        margin: 0;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    
+}
+
+@mixin headerStyle-Mobile {    
+    .header-content {
+        border-radius: 30px;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: $headerFontSize-Mobile;
+        text-align: center;
+    
+        h1 {
+            text-align: center;
+        }
+    
+        .header-content-mockups img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+        }
+    }
+}
+
+@mixin navStyle-Mobile {
+    .nav-other-screens {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        
+        div, a {
+            display: block;
+        }
+
+        .nav-logo-name img {
+            height: 50px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+        }
+
+        .nav-btns {
+            background-color: black;
+            position: absolute;
+            right: 0;
+            top: 50px;
+
+            a {
+                margin: 10px;
+            }
+        }
+    }
+}
+
+@mixin footerStyle-Mobile {
+    .footer-pink,
+    .footer-blue,
+    .footer-yellow {
+        height: 15px;
+        width: 100%;
+    }
+    
+    .footer-content {
+        margin: 20px;
+        display: block;
+        //border: 1px solid white;
+
+        img {
+            height: 100px;
+        }
+
+        .contact-details {
+            display: block;
+            text-align: center;
+            /*if not center aligned
+            width: fit-content;
+            margin: 0 auto;*/
+            
+            div {
+                margin: 20px 0;
+            }
+        }
+    }
+}
