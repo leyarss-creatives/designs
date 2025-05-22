@@ -10,11 +10,13 @@ $lightblack: #282828;
 $webFont: "Poppins", sans-serif;
 
 /* for other screens */
-$headerFontSize: 30px;
-$h1FontSize: 64px;
-$allTextFontSize: 20px;
+$headerFontSize: 1.5rem; //(24px)
+$h1FontSize: 3.125rem; //(50px)
+$allTextFontSize: 1.1rem; //(17.6px)
 $footerFontSize: 18px;
 $boarder: 15px;
+$sectionPaddingTB: 50px;
+$sectionPaddingLR: 100px;
 
 /*--- for mobile ---*/
 $headerFontSize-Mobile: 22px;
@@ -36,7 +38,7 @@ $allTextFontSize-Mobile: 15px;
     }
 
     section {
-        padding: 50px 100px;
+        padding: $sectionPaddingTB $sectionPaddingLR;
         //border: 1px dashed green;
     }
 
@@ -158,7 +160,7 @@ $allTextFontSize-Mobile: 15px;
     }
 
     .footer-content {
-        margin: 50px 100px;
+        margin: $sectionPaddingTB $sectionPaddingLR;
         gap: 30px;
         //border: 1px dashed pink;
 
@@ -201,11 +203,7 @@ $allTextFontSize-Mobile: 15px;
     border: 1px solid white;
     width: 50px;
     height: 50px;
-
-    a {
-        color: white;
-        text-decoration: none;
-    }
+    cursor: pointer;
 }
 
 
@@ -310,5 +308,12 @@ $allTextFontSize-Mobile: 15px;
                 margin: 20px 0;
             }
         }
+    }
+}
+
+@mixin footerStyleTablet {
+    .footer-content {
+        margin: 30px;
+        gap: 10px;
     }
 }

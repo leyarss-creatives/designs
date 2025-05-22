@@ -1,23 +1,18 @@
-//=====Works Section=====
 //---Dropdown filter---
-// When the user clicks on the button, toggle between hiding and showing the dropdown content
+/* toggle between hiding/showing the dropdown content */
 function showDropdownFilter() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
-  
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-if (!event.target.matches('.filter-btn')) {
-    var dropdowns = document.getElementsByClassName("filter-dropdown");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-        }
+
+/* close dropdown if user clicks outside of it */
+window.addEventListener('click', function(event) {
+    const dropdown = document.getElementById("myDropdown");
+    const button = document.querySelector('.filter-btn');
+
+    if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+        dropdown.classList.remove('show');
     }
-}
-}
+});
 
 //---Display the selected filter---
 // get elements by their class/ids
@@ -41,16 +36,34 @@ function showFilteredContent(id) {
     }
 }
 
-// make dropdown btns clickable to call the func above
+/* make dropdown btns clickable to call the func above + hide dropdown after selection */
 d1.addEventListener('click', function() {
     showFilteredContent('brand');
+    document.getElementById("myDropdown").classList.remove('show');
 });
 d2.addEventListener('click', function() {
     showFilteredContent('event');
+    document.getElementById("myDropdown").classList.remove('show');
 });
 d3.addEventListener('click', function() {
     showFilteredContent('print');
+    document.getElementById("myDropdown").classList.remove('show');
 });
 d4.addEventListener('click', function() {
     showFilteredContent('proddesign');
+    document.getElementById("myDropdown").classList.remove('show');
+});
+
+//---Splide for carousel---
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.splide').forEach(function (el) {
+        new Splide(el, {
+            perPage: 3,
+            perMove: 1,
+            padding: '5rem',
+            gap: '1rem',
+            wheel: true,
+            pagination: false
+        }).mount();
+    });
 });

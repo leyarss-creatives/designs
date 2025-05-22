@@ -19,11 +19,11 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 1.1rem;
 }
 body h1 {
   text-align: center;
-  font-size: 64px;
+  font-size: 3.125rem;
   margin: 0;
 }
 body section {
@@ -31,25 +31,22 @@ body section {
 }
 body button {
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 1.1rem;
   border: none;
 }
-body .button-backtotop {
+body #btn-backtotop {
   position: fixed;
   bottom: 10px;
   right: 10px;
   background-color: #282828;
   color: white;
   text-align: center;
-  font-size: 30px;
+  font-size: 1.5rem;
   border-radius: 50px;
   border: 1px solid white;
   width: 50px;
   height: 50px;
-}
-body .button-backtotop a {
-  color: white;
-  text-decoration: none;
+  cursor: pointer;
 }
 
 header {
@@ -59,7 +56,7 @@ header {
 header .header-content {
   border-radius: 60px;
   padding: 80px;
-  font-size: 30px;
+  font-size: 1.5rem;
   text-align: center;
 }
 header nav {
@@ -79,7 +76,7 @@ header nav .nav-other-screens {
   background-position: top;
   background-size: contain;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -115,27 +112,6 @@ header nav .nav-other-screens .nav-contact-us a span {
 header nav .nav-mobile {
   display: none;
 }
-header nav .nav-other-screens {
-  /*background-image: url('../Assets/home-nav-bg.png');
-
-  .nav-logo-name {
-      img {
-          //border: 1px dashed black;
-          height: 50px;
-      }
-  }
-
-  .nav-general {
-      background-color: $pink;
-      height: 100%;
-      border-radius: 30px 30px 0 0;
-      //border: 1px dashed black;
-
-      a {
-          padding: 20px;
-      }
-  }*/
-}
 header nav .nav-other-screens a {
   color: black;
   transition: 0.2s;
@@ -164,16 +140,17 @@ header .header-content button {
   padding: 15px 10px 15px 30px;
   border-radius: 80px;
   background-color: #FFF200;
+  cursor: pointer;
 }
-header .header-content button a {
-  text-decoration: none;
+header .header-content button span {
+  color: white;
   margin-left: 15px;
-  padding: 6px 19px;
+  padding: 6px 12px;
   border-radius: 80px;
   background-color: #282828;
 }
 header .header-content .header-content-mockups img {
-  height: 550px;
+  height: 450px;
 }
 
 /*=====Why choose us Section=====*/
@@ -230,26 +207,39 @@ header .header-content .header-content-mockups img {
 }
 
 /*======What our customers say Section======*/
-#client-feed .client-feed-carousel .customers-container {
-  margin: 50px 0;
-  display: flex;
-  align-items: center;
+#client-feed .splide {
+  /* so it doesn't overlap with the slides */
 }
-#client-feed .client-feed-carousel .customers-container .customer-card {
+#client-feed .splide .splide__slide {
+  max-width: 600px;
   text-align: center;
-  max-width: 550px;
-  height: 200px;
+  margin: 20px 10px 40px;
   padding: 20px;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-  border: 1px pink dashed;
+  border: 0.3px solid rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 6px 5px rgba(0, 0, 0, 0.4);
 }
-#client-feed .client-feed-carousel .carousel-btns {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 10px;
+#client-feed .splide .splide__arrow {
+  background-color: transparent;
+  top: 45%;
+}
+#client-feed .splide .splide__arrow--prev {
+  transform: translateX(-150%);
+}
+#client-feed .splide .splide__arrow--next {
+  transform: translateX(150%);
+}
+#client-feed .splide .splide__pagination__page {
+  border: none;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: background-color 0.3s, transform 0.3s;
+}
+#client-feed .splide .splide__pagination__page.is-active {
+  background-color: #EF018D;
 }
 
 /*======Footer Section======*/
@@ -302,8 +292,14 @@ footer .copyright {
   margin: 0;
   padding: 20px;
 }
+footer .footer-content {
+  border: 1px dashed grey;
+}
+footer .footer-content .footer-logo img {
+  height: 200px;
+}
 
-/*--- MOBILE SCREEN ---*/
+/*--- MOBILE ---*/
 @media screen and (max-width: 768px) {
   body {
     font-size: 15px;
@@ -419,26 +415,12 @@ footer .copyright {
     color: white;
     font-size: 15px;
   }
-  #client-feed .client-feed-carousel .customers-container {
-    margin: 20px 0;
-    display: block;
-    align-items: center;
+  #client-feed .splide {
+    /* so it doesn't overlap with the slides */
   }
-  #client-feed .client-feed-carousel .customers-container .customer-card {
-    margin: 0 auto;
-    text-align: center;
-    height: 200px;
-    padding: 20px;
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-    border: 1px pink dashed;
-  }
-  #client-feed .client-feed-carousel .carousel-btns {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 10px;
+  #client-feed .splide .splide__arrow--prev,
+  #client-feed .splide .splide__arrow--next {
+    display: none;
   }
   footer .footer-pink,
   footer .footer-blue,
@@ -463,4 +445,53 @@ footer .copyright {
   footer .footer-content .contact-details div {
     margin: 20px 0;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+/* --- TABLET --- */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body h1 {
+    font-size: 2.5rem; /*decrease font-size by 20%*/
+  }
+  body section {
+    padding: 35px 70px;
+  }
+  header {
+    border: 1px dashed slategrey;
+  }
+  header .header-content {
+    border-radius: 40px;
+    padding: 2.5rem 2.188rem 0;
+    font-size: 1.2rem; /*decrease font-size by 20%*/
+  }
+  header .header-content .header-content-mockups img {
+    height: 350px;
+  }
+  #why-choose-us {
+    border: 1px dashed slategrey;
+  }
+  #our-proj {
+    border: 1px dashed slategrey;
+  }
+  #our-proj .prods-container {
+    border: 1px dashed slategrey;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+  }
+  #our-proj .prods-container .prod-card {
+    background-color: white;
+    border-radius: 15px;
+    padding-top: 30px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  }
+  footer .footer-content {
+    margin: 30px;
+    gap: 10px;
+  }
+}
+/* --- DESKTOP --- */
+@media screen and (min-width: 1025px) {
+  header .header-content p {
+    width: 450px;
+  }
+}
+/* --- LARGE DESKTOP --- *//*# sourceMappingURL=index.css.map */

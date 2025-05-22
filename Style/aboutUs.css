@@ -13,11 +13,11 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 1.1rem;
 }
 body h1 {
   text-align: center;
-  font-size: 64px;
+  font-size: 3.125rem;
   margin: 0;
 }
 body section {
@@ -25,7 +25,7 @@ body section {
 }
 body button {
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 1.1rem;
   border: none;
 }
 
@@ -35,7 +35,7 @@ header {
 header .header-content {
   border-radius: 60px;
   padding: 80px;
-  font-size: 30px;
+  font-size: 1.5rem;
   text-align: center;
 }
 header nav {
@@ -55,7 +55,7 @@ header nav .nav-other-screens {
   background-position: top;
   background-size: contain;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -165,8 +165,8 @@ section {
   gap: 25px;
 }
 .team-list-container .team-flex .person {
-  width: 310px;
-  height: 355px;
+  width: 270px;
+  height: 326px;
   background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
   border-radius: 30px;
   position: relative;
@@ -253,7 +253,7 @@ section {
 }
 .Vision-Mission .Vision-Mission-img .text2 {
   position: absolute;
-  padding: 40px 0 100px 10px;
+  padding: 20px 0 70px 10px;
 }
 .Vision-Mission .Vision-Mission-img .text2 p {
   padding: 20px 0;
@@ -264,7 +264,7 @@ section {
 .Vision-Mission .Vision-Mission-img .Text {
   position: absolute;
   left: 6px;
-  top: -200px;
+  top: -190px;
 }
 .Vision-Mission .Mission-img {
   max-width: 100%;
@@ -332,21 +332,21 @@ section {
 }
 .our-services-section .our-services-list .service-list-1 {
   border-bottom: 5px solid #EF018D;
-  padding: 0 20px 50px 20px;
-  margin: 10px 30px 0 0;
+  padding: 0 20px 30px 20px;
+  margin: 10px 10px 0 0;
 }
 .our-services-section .our-services-list .service-list-2 {
   border-bottom: 5px solid #00ADF1;
-  padding: 0 20px 50px 20px;
-  margin: 10px 30px 0 0;
+  padding: 0 20px 30px 20px;
+  margin: 10px 10px 0 0;
 }
 .our-services-section .our-services-list .service-list-3 {
   border-bottom: 5px solid #FEF102;
-  padding: 0 20px 50px 20px;
-  margin: 10px 30px 0 0;
+  padding: 0 20px 30px 20px;
+  margin: 10px 10px 0 0;
 }
 .our-services-section .our-services-list .service-list-4 {
-  padding: 0 20px 50px 20px;
+  padding: 0 20px 30px 20px;
   margin: 10px 10px 0 0;
 }
 .our-services-section .our-services-list .pg1 {
@@ -486,4 +486,16 @@ footer .copyright {
   footer .footer-content .contact-details div {
     margin: 20px 0;
   }
+}
+/* --- TABLET --- */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* tablet styles */
+}
+/* --- DESKTOP --- */
+@media screen and (min-width: 1025px) {
+  /* desktop styles */
+}
+/* --- LARGE DESKTOP --- */
+@media screen and (min-width: 1281px) {
+  /* large screen styles */
 }/*# sourceMappingURL=aboutUs.css.map */

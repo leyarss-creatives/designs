@@ -197,3 +197,18 @@ footer {
         @include footerStyle-Mobile;
     }
 }
+
+/* --- TABLET --- */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* tablet styles */
+}
+
+/* --- DESKTOP --- */
+@media screen and (min-width: 1025px) {
+  /* desktop styles */
+}
+
+/* --- LARGE DESKTOP --- */
+@media screen and (min-width: 1281px) {
+  /* large screen styles */
+}

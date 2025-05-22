@@ -9,7 +9,7 @@ html {
 body {
     @include bodyStyle;
 
-    .button-backtotop {
+    #btn-backtotop {
         @include backToTopBtn;
     }
 }
@@ -32,26 +32,6 @@ header {
                 color: $pink;
                 border-bottom: 2px solid $pink;
             }
-
-            /*background-image: url('../Assets/home-nav-bg.png');
-
-            .nav-logo-name {
-                img {
-                    //border: 1px dashed black;
-                    height: 50px;
-                }
-            }
-
-            .nav-general {
-                background-color: $pink;
-                height: 100%;
-                border-radius: 30px 30px 0 0;
-                //border: 1px dashed black;
-                
-                a {
-                    padding: 20px;
-                }
-            }*/
         }
     }
 
@@ -78,11 +58,12 @@ header {
             padding: 15px 10px 15px 30px;
             border-radius: 80px;
             background-color: $yellow;
+            cursor: pointer;
 
-            a {
-                text-decoration: none;
+            span {
+                color: white;
                 margin-left: 15px;
-                padding: 6px 19px;
+                padding: 6px 12px;
                 border-radius: 80px;
                 background-color: $lightblack;
             }
@@ -90,7 +71,7 @@ header {
 
         .header-content-mockups {
             img {
-                height: 550px;
+                height: 450px;
                 //border: 1px dotted blue;
             }
         }
@@ -158,31 +139,47 @@ header {
 }
 
 /*======What our customers say Section======*/
-#client-feed {    
-    .client-feed-carousel {
-        .customers-container {
-            margin: 50px 0;
-            display: flex;
-            align-items: center;
-            //border: 1px blue solid;
-    
-            .customer-card {
-                text-align: center;
-                max-width: 550px;
-                height: 200px;
-                padding: 20px;
-                border-radius: 15px;
-                background-color: white;
-                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-                border: 1px pink dashed;
-            }
+#client-feed {
+    .splide {
+        // border: 1px dashed red;
+        
+        .splide__slide {
+            max-width: 600px;
+            text-align: center;
+            margin: 20px 10px 40px;
+            padding: 20px;
+            border: 0.3px solid rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            box-shadow: 0 6px 5px rgba(0, 0, 0, 0.4);
+            // border: 1px dashed black;
         }
 
-        .carousel-btns {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 10px;
+        .splide__arrow {
+            background-color: transparent;
+            top: 45%;
+        }
+
+        /* so it doesn't overlap with the slides */
+        .splide__arrow--prev {
+            transform: translateX(-150%);
+        }
+
+        .splide__arrow--next {
+            transform: translateX(150%);
+        }
+
+        .splide__pagination__page {
+            border: none;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            border-radius: 50%;
+            opacity: 0.7;
+            transition: background-color 0.3s, transform 0.3s;
+
+            &.is-active {
+                background-color: $pink;
+            }
         }
     }
 }
@@ -190,10 +187,19 @@ header {
 /*======Footer Section======*/
 footer {
     @include footerStyle;
+
+    .footer-content {
+        border: 1px dashed grey;
+        .footer-logo {
+            img {
+                height: 200px;
+            }
+        }
+    }
 }
 
 
-/*--- MOBILE SCREEN ---*/
+/*--- MOBILE ---*/
 @media screen and (max-width: 768px) {
     body {
         @include bodyStyle-Mobile;
@@ -282,31 +288,12 @@ footer {
         }
     }
 
-    #client-feed {    
-        .client-feed-carousel {
-            .customers-container {
-                margin: 20px 0;
-                display: block;
-                align-items: center;
-                //border: 1px blue solid;
-        
-                .customer-card {
-                    margin: 0 auto;
-                    text-align: center;
-                    height: 200px;
-                    padding: 20px;
-                    border-radius: 15px;
-                    background-color: white;
-                    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-                    border: 1px pink dashed;
-                }
-            }
-    
-            .carousel-btns {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-                margin: 10px;
+    #client-feed {
+        .splide {
+            /* so it doesn't overlap with the slides */
+            .splide__arrow--prev,
+            .splide__arrow--next {
+                display: none;
             }
         }
     }
@@ -314,4 +301,73 @@ footer {
     footer {
         @include footerStyle-Mobile;
     }
+}
+
+/* --- TABLET --- */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        h1 {
+            font-size: $h1FontSize * 0.8; /*decrease font-size by 20%*/
+        }
+
+        section {
+            padding: ($sectionPaddingTB * 0.7) ($sectionPaddingLR * 0.7) /*decrease padding by 30%*/
+        }
+    }
+
+    header {
+        border: 1px dashed slategrey;
+        .header-content {
+            border-radius: 40px;
+            padding: 2.5rem 2.188rem 0;
+            font-size: $headerFontSize * 0.8; /*decrease font-size by 20%*/
+
+            .header-content-mockups {
+                img {
+                    height: 350px;
+                }
+            }
+        }
+    }
+
+    #why-choose-us {
+        border: 1px dashed slategrey;
+    }
+
+    #our-proj {
+        border: 1px dashed slategrey;
+        .prods-container {
+            border: 1px dashed slategrey;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 30px;
+
+            .prod-card {
+                background-color: white;
+                border-radius: 15px;
+                padding-top: 30px;
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+
+    footer {
+        @include footerStyleTablet;
+    }
+}
+
+/* --- DESKTOP --- */
+@media screen and (min-width: 1025px) {
+    header {
+        .header-content {
+            p {
+                width: 450px;
+            }
+        }
+    }
+}
+
+/* --- LARGE DESKTOP --- */
+@media screen and (min-width: 1281px) {
+    
 }

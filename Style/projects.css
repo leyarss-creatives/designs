@@ -13,11 +13,11 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 1.1rem;
 }
 body h1 {
   text-align: center;
-  font-size: 64px;
+  font-size: 3.125rem;
   margin: 0;
 }
 body section {
@@ -25,7 +25,7 @@ body section {
 }
 body button {
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 1.1rem;
   border: none;
 }
 
@@ -35,7 +35,7 @@ header {
 header .header-content {
   border-radius: 60px;
   padding: 80px;
-  font-size: 30px;
+  font-size: 1.5rem;
   text-align: center;
 }
 header nav {
@@ -55,7 +55,7 @@ header nav .nav-other-screens {
   background-position: top;
   background-size: contain;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -118,7 +118,11 @@ header .header-content p {
 }
 
 /*=====Works Section=====*/
+#works .filter-dropdown {
+  position: relative;
+}
 #works .filter-dropdown .filter-btn {
+  z-index: 100;
   width: 100%;
   text-align: left;
   padding: 5px 10px;
@@ -132,6 +136,7 @@ header .header-content p {
   display: none;
   width: -moz-fit-content;
   width: fit-content;
+  z-index: 100;
 }
 #works .filter-dropdown .dropdown-content div {
   padding: 5px 10px;
@@ -153,17 +158,55 @@ header .header-content p {
   color: black;
 }
 #works .work {
-  padding: 20px 0;
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
+  /* // alternative design (attempt at aligned img, p, btn)
+  .splide {
+      border: 1px dashed red;
+
+      .splide__slide {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between; // Keep text/buttons at bottom
+          align-items: center;
+          height: 480px; // Adjust to match tallest content
+          text-align: center;
+          border: 1px dashed black;
+
+          img {
+              max-height: 300px;
+              max-width: 100%;
+              object-fit: contain;
+              flex-shrink: 0;
+              margin: auto 0;
+          }
+
+          p {
+              margin-top: 1rem;
+              margin-bottom: 0.5rem;
+          }
+
+          button {
+              padding: 7px 20px;
+              border: 1px solid black;
+              border-radius: 60px;
+              background-color: white;
+              margin-bottom: 1rem;
+          }
+      }
+  }
+  */
 }
-#works .work img {
-  display: block;
-  height: 400px;
+#works .work .splide {
+  border: 1px dashed red;
 }
-#works .work button {
-  padding: 7px 30px;
+#works .work .splide .splide__slide {
+  border: 1px dashed black;
+}
+#works .work .splide .splide__slide img {
+  width: 100%;
+  margin: auto 0;
+}
+#works .work .splide .splide__slide button {
+  padding: 7px 20px;
   border: 1px solid black;
   border-radius: 60px;
   background-color: white;
@@ -225,7 +268,7 @@ footer .copyright {
   padding: 20px;
 }
 
-/*--- MOBILE SCREEN ---*/
+/*--- MOBILE ---*/
 @media screen and (max-width: 768px) {
   body {
     font-size: 15px;
@@ -345,4 +388,16 @@ footer .copyright {
   footer .footer-content .contact-details div {
     margin: 20px 0;
   }
+}
+/* --- TABLET --- */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* tablet styles */
+}
+/* --- DESKTOP --- */
+@media screen and (min-width: 1025px) {
+  /* desktop styles */
+}
+/* --- LARGE DESKTOP --- */
+@media screen and (min-width: 1281px) {
+  /* large screen styles */
 }/*# sourceMappingURL=projects.css.map */

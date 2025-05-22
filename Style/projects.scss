@@ -50,8 +50,11 @@ header {
 
 /*=====Works Section=====*/
 #works {
-    .filter-dropdown {
+   .filter-dropdown {
+        position: relative;
+
         .filter-btn {
+            z-index: 100;
             width: 100%;
             text-align: left;
             padding: 5px 10px;
@@ -66,6 +69,7 @@ header {
         .dropdown-content {
             display: none;
             width: fit-content;
+            z-index: 100;
 
             div {
                 padding: 5px 10px;
@@ -92,24 +96,64 @@ header {
             color: black;
         }
     }
-
+    
     .work {
-        padding: 20px 0;
-        display: flex;
-        gap: 20px;
-        overflow-x: auto;
+        .splide {
+            border: 1px dashed red;
+        
+            .splide__slide {
+                border: 1px dashed black;
 
-        img {
-            display: block;
-            height: 400px;
+                img {
+                    width: 100%;
+                    margin: auto 0;
+                }
+
+                button {
+                    padding: 7px 20px;
+                    border: 1px solid black;
+                    border-radius: 60px;
+                    background-color: white;
+                }
+            }
         }
 
-        button {
-            padding: 7px 30px;
-            border: 1px solid black;
-            border-radius: 60px;
-            background-color: white;
+        /* // alternative design (attempt at aligned img, p, btn)
+        .splide {
+            border: 1px dashed red;
+
+            .splide__slide {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between; // Keep text/buttons at bottom
+                align-items: center;
+                height: 480px; // Adjust to match tallest content
+                text-align: center;
+                border: 1px dashed black;
+
+                img {
+                    max-height: 300px;
+                    max-width: 100%;
+                    object-fit: contain;
+                    flex-shrink: 0;
+                    margin: auto 0;
+                }
+
+                p {
+                    margin-top: 1rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                button {
+                    padding: 7px 20px;
+                    border: 1px solid black;
+                    border-radius: 60px;
+                    background-color: white;
+                    margin-bottom: 1rem;
+                }
+            }
         }
+        */
     }
 
     #event,
@@ -126,7 +170,7 @@ footer {
 
 
 
-/*--- MOBILE SCREEN ---*/
+/*--- MOBILE ---*/
 @media screen and (max-width: 768px) {
     body {
         @include bodyStyle-Mobile;
@@ -196,4 +240,19 @@ footer {
     footer {
         @include footerStyle-Mobile;
     }
+}
+
+/* --- TABLET --- */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* tablet styles */
+}
+
+/* --- DESKTOP --- */
+@media screen and (min-width: 1025px) {
+  /* desktop styles */
+}
+
+/* --- LARGE DESKTOP --- */
+@media screen and (min-width: 1281px) {
+  /* large screen styles */
 }

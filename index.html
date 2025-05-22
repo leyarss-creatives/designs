@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | LEyarss</title>
 
-    <link rel="stylesheet" href="Style/index.css"> <!--css link-->
     <link rel="icon" type="image--" href="Assets/Transparent Logo (Colored Without Text).png"> <!--page icon-->
+    <link rel="stylesheet" href="Style/index.css"> <!--css link-->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"> <!-- splidejs css cdn for testimonials carousel -->
 </head>
 <body id="top"> <!--added id for back to top btn-->
     <!--Header Section-->
@@ -51,8 +52,8 @@
                 <p>
                     From startups to established brands, we bring ideas to life, shape identities, and deliver impactful results. Your vision is our mission.
                 </p>
-                <button>
-                    EXPLORE MORE<a href="#/" class="contact-us-arrow">&#8599</a>
+                <button id="btn-exploremore">
+                    EXPLORE MORE<span>&#8599</span>
                 </button>
             </div>
             <div class="header-content-mockups">
@@ -126,41 +127,31 @@
     <!--Client Feedback Section-->
     <section id="client-feed">
         <h1>Client Feedback</h1>
-        <div class="client-feed-carousel">
-            <div class="customers-container">
-                <div class="customer-card">
-                    <p>
-                        "Items that I ordered were the best investment I ever made. I can't say enough about your quality service."
-                    </p>
-                    <hr>
-                    <p>Susan B.</p>
-                </div>
-    
-                <div class="customer-card">
-                    <p>
-                        "You won't regret it. I would like to personally thank you for your outstanding product. Absolutely wonderful!"
-                    </p>
-                    <hr>
-                    <p>James K.</p>
-                </div>
-    
-                <div class="customer-card">
-                    <p>
-                        "Just what I was looking for. Thank you for making it pleasant and most of all hassle free! All products are great."
-                    </p>
-                    <hr>
-                    <p>Megan W.</p>
-                </div>
-            </div>
-
-            <!--prev/next btns-->
-            <div class="carousel-btns">
-                <div>
-                    <button id="prev-btn">←</button>
-                </div>
-    
-                <div>
-                    <button id="next-btn">→</button>
+        <div class="splide">
+            <div class="splide__track">
+                <div class="splide__list">
+                    <div class="splide__slide">
+                        <p>
+                            "Items that I ordered were the best investment I ever made. I can't say enough about your quality service."
+                        </p>
+                        <hr>
+                        <p>Susan B.</p>
+                    </div>
+                        
+                    <div class="splide__slide">
+                        <p>
+                            "You won't regret it. I would like to personally thank you for your outstanding product. Absolutely wonderful!"
+                        </p>
+                        <hr>
+                        <p>James K.</p>
+                    </div>
+                    <div class="splide__slide">
+                        <p>
+                            "Just what I was looking for. Thank you for making it pleasant and most of all hassle free! All products are great."
+                        </p>
+                        <hr>
+                        <p>Megan W.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -206,10 +197,11 @@
     </footer>
     
     <!--btn to scroll to the very start of page-->
-    <div class="button-backtotop">
-        <a href="#top">&#8593</a>
+    <div id="btn-backtotop">
+        &#8593
     </div>
 
     <script src="index.js"></script> <!--js link-->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> <!--splidejs js cdn for testimonials carousel -->
 </body>
 </html>
