@@ -320,11 +320,17 @@ footer {
         .header-content {
             border-radius: 40px;
             padding: 2.5rem 2.188rem 0;
-            font-size: $headerFontSize * 0.8; /*decrease font-size by 20%*/
+            font-size: 2vw;
+            // font-size: $headerFontSize * 0.8; /*decrease font-size by 20%*/
+
+            h1 {
+                font-size: xx-large;
+            }
 
             .header-content-mockups {
                 img {
-                    height: 350px;
+                    height: 300px;
+                    max-height: 350px;
                 }
             }
         }

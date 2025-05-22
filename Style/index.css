@@ -460,10 +460,14 @@ footer .footer-content .footer-logo img {
   header .header-content {
     border-radius: 40px;
     padding: 2.5rem 2.188rem 0;
-    font-size: 1.2rem; /*decrease font-size by 20%*/
+    font-size: 2vw;
+  }
+  header .header-content h1 {
+    font-size: xx-large;
   }
   header .header-content .header-content-mockups img {
-    height: 350px;
+    height: 300px;
+    max-height: 350px;
   }
   #why-choose-us {
     border: 1px dashed slategrey;
