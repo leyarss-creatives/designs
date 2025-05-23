@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
         type: 'loop',
         focus: 'center',
         perPage: 1,
-        padding: '5rem',
+        padding: '2rem',
         wheel: true,
     });
     splide.mount();

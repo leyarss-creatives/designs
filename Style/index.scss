@@ -19,7 +19,6 @@ header {
 
     nav {
         @include navStyle;
-        //border: 1px solid black;
 
         .nav-other-screens {
             a {
@@ -31,6 +30,7 @@ header {
             .current-page {
                 color: $pink;
                 border-bottom: 2px solid $pink;
+                pointer-events: none;
             }
         }
     }
@@ -41,7 +41,6 @@ header {
         display: flex;
         padding: 80px 70px 0;
         text-align: left;
-        //border: 1px blue solid;
 
         h1 {
             line-height: 1;
@@ -61,18 +60,22 @@ header {
             cursor: pointer;
 
             span {
-                color: white;
+                color: rgb(0, 0, 0);
                 margin-left: 15px;
                 padding: 6px 12px;
                 border-radius: 80px;
-                background-color: $lightblack;
+                background-color: white;
+
+                /* prevent it from turning into an emoji on ios screens */
+                font-family: $webFont;
+                font-style: normal;
+                font-weight: bold;
             }
         }
 
         .header-content-mockups {
             img {
                 height: 450px;
-                //border: 1px dotted blue;
             }
         }
     }
@@ -80,14 +83,18 @@ header {
 
 /*=====Why choose us Section=====*/
 #why-choose-us {
+    h1 {
+        margin-bottom: 30px;
+    }
+
     .why-choose-1,
     .why-choose-2,
     .why-choose-3 {
         max-width: 700px;
-        margin: 0 auto 50px;
+        margin: 0 auto 40px;
         border-radius: 20px;
         padding: 30px 50px 80px;
-        rotate: -9deg;
+        rotate: -6deg;
 
         p {
             margin: 0 80px 0;
@@ -100,7 +107,7 @@ header {
     
     .why-choose-2 {
         background-color: #99dff9;
-        rotate: 9deg;
+        rotate: 6deg;
     }
 
     .why-choose-3 {
@@ -141,8 +148,6 @@ header {
 /*======What our customers say Section======*/
 #client-feed {
     .splide {
-        // border: 1px dashed red;
-        
         .splide__slide {
             max-width: 600px;
             text-align: center;
@@ -151,7 +156,6 @@ header {
             border: 0.3px solid rgba(0, 0, 0, 0.4);
             border-radius: 20px;
             box-shadow: 0 6px 5px rgba(0, 0, 0, 0.4);
-            // border: 1px dashed black;
         }
 
         .splide__arrow {
@@ -187,20 +191,11 @@ header {
 /*======Footer Section======*/
 footer {
     @include footerStyle;
-
-    .footer-content {
-        border: 1px dashed grey;
-        .footer-logo {
-            img {
-                height: 200px;
-            }
-        }
-    }
 }
 
 
 /*--- MOBILE ---*/
-@media screen and (max-width: 768px) {
+@media screen and (min-width:319px) and (max-width: 768px) {
     body {
         @include bodyStyle-Mobile;
     }
@@ -209,6 +204,7 @@ footer {
         @include headerStyle-Mobile;
 
         nav {
+            padding: 10px 0;
             @include navStyle-Mobile;
         }
 
@@ -227,34 +223,19 @@ footer {
             margin: 20px auto;
             border-radius: 10px;
             padding: 10px 10px 20px;
-            rotate: 0deg;
     
             img {
-                height: 50px;
+                height: 30px;
             }
 
             p {
-                margin: 0 40px 0;
+                margin: 0 30px 0;
             }
-        }
-    
-        .why-choose-1 {
-            background-color: #f699d0;
-        }
-        
-        .why-choose-2 {
-            background-color: #99dff9;
-            //rotate: 9deg;
-        }
-    
-        .why-choose-3 {
-            background-color: #fff766;
         }
     }
 
     #our-proj {
         background-size: cover;
-        //border: 1px solid blue;
 
         .prods-container {
             margin: 30px 10px;
@@ -271,7 +252,6 @@ footer {
 
                 img {
                     width: 100%;
-                    //border: 1px blue solid;
                 }
 
                 p {
@@ -300,6 +280,14 @@ footer {
 
     footer {
         @include footerStyle-Mobile;
+
+        .footer-flex.contact-details {
+            margin: 0;
+            width: 100%;
+            display: grid;
+            // background-color: #fff766;
+            grid-template-columns: auto auto;
+        }
     }
 }
 
@@ -316,7 +304,10 @@ footer {
     }
 
     header {
-        border: 1px dashed slategrey;
+        nav {
+            @include navStyleTablet;
+        }
+
         .header-content {
             border-radius: 40px;
             padding: 2.5rem 2.188rem 0;
@@ -329,30 +320,30 @@ footer {
 
             .header-content-mockups {
                 img {
-                    height: 300px;
+                    height: 290px;
                     max-height: 350px;
                 }
             }
         }
     }
 
-    #why-choose-us {
-        border: 1px dashed slategrey;
-    }
-
     #our-proj {
-        border: 1px dashed slategrey;
         .prods-container {
-            border: 1px dashed slategrey;
             display: grid;
             grid-template-columns: auto auto;
-            gap: 30px;
+            gap: 25px;
+            border: 1px dashed black;
 
             .prod-card {
                 background-color: white;
                 border-radius: 15px;
-                padding-top: 30px;
+                padding: 10px;
                 box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+                
+                img {
+                    width: auto;
+                    height: 250px;
+                }
             }
         }
     }
@@ -368,6 +359,17 @@ footer {
         .header-content {
             p {
                 width: 450px;
+            }
+        }
+    }
+
+    #our-proj {
+        .prods-container {
+            .prod-card {
+                img {
+                    width: auto;
+                    height: 300px;
+                }
             }
         }
     }
