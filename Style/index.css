@@ -155,8 +155,7 @@ header .header-content button span {
   border-radius: 80px;
   background-color: white;
   /* prevent it from turning into an emoji on ios screens */
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
+  font-family: monospace;
   font-weight: bold;
 }
 header .header-content .header-content-mockups img {

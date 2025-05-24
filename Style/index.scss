@@ -67,8 +67,7 @@ header {
                 background-color: white;
 
                 /* prevent it from turning into an emoji on ios screens */
-                font-family: $webFont;
-                font-style: normal;
+                font-family: monospace;
                 font-weight: bold;
             }
         }
