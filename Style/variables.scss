@@ -115,7 +115,7 @@ $allTextFontSize-Mobile: 12px;
                     margin: 0 10px;
 
                     /* prevent it from turning into an emoji on ios screens */
-                    font-family: $webFont;
+                    font-family: monospace;
                     font-style: normal;
                 }
             }

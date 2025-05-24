@@ -111,7 +111,7 @@ header nav .nav-other-screens .nav-contact-us a {
 header nav .nav-other-screens .nav-contact-us a span {
   margin: 0 10px;
   /* prevent it from turning into an emoji on ios screens */
-  font-family: "Poppins", sans-serif;
+  font-family: monospace;
   font-style: normal;
 }
 header nav .nav-mobile {
@@ -271,6 +271,7 @@ footer a:last-child {
   display: inline;
 }
 footer a:hover {
+  font-size: 1rem;
   background-image: linear-gradient(to right, #EF018D, #6366F1);
 }
 footer .footer-flex {
@@ -307,8 +308,8 @@ footer .footer-content .contact-details {
   justify-content: space-around;
   margin-top: 50px;
 }
-footer .footer-content .contact-details p span {
-  font-weight: 1000;
+footer .footer-content .contact-details span {
+  font-weight: 800;
   text-transform: uppercase;
 }
 footer .footer-logo,
