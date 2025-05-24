@@ -19,6 +19,14 @@ header {
 
         //border: 1px blue dashed;
     }
+    
+    .video {
+        text-align: center;
+
+        video {
+            width: 100%;
+        }
+    }
 }
 
 /*=====Input Section=====*/
@@ -135,12 +143,11 @@ header {
 
 /*=====Footer Section=====*/
 footer {
-    @include footerStyle
+    @include footerStyle;
 }
 
 
-
-/*--- MOBILE SCREEN ---*/
+/*--- MOBILE ---*/
 @media screen and (max-width: 768px) {
     body {
         @include bodyStyle-Mobile;
@@ -200,7 +207,9 @@ footer {
 
 /* --- TABLET --- */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* tablet styles */
+    footer {
+        @include footerStyleTablet;
+    }
 }
 
 /* --- DESKTOP --- */

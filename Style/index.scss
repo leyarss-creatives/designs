@@ -90,6 +90,10 @@ header {
     .why-choose-1,
     .why-choose-2,
     .why-choose-3 {
+        opacity: 0; /* Hidden initially */
+        transform: translateY(-100vh) rotate(0deg);
+        transition: opacity 0.5s ease-out, transform 1s ease-out;
+
         max-width: 700px;
         margin: 0 auto 40px;
         border-radius: 20px;
@@ -112,6 +116,17 @@ header {
 
     .why-choose-3 {
         background-color: #fff766;
+    }
+}
+
+@keyframes fallDown {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) rotate(var(--rotation));
+        opacity: 1;
     }
 }
 

@@ -1,14 +1,15 @@
 /*=====Fonts=====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); /*Poppins font*/
 /*=====Style Variables=====*/
-/* for other screens */
-/*--- for mobile ---*/
+/*--- OTHER SCREENS ---*/
+/*--- MOBILE ---*/
 /*======Body Style=====*/
 /*==========Header Style==========*/
 /*======Nav Style=====*/
 /*======Footer Style=====*/
 /*======Back to top btn Style=====*/
 /*--- MOBILE SCREEN ---*/
+/*--- TABLET SCREEN ---*/
 body {
   margin: 0;
   overflow-x: hidden;
@@ -87,6 +88,9 @@ header nav .nav-other-screens .nav-contact-us a {
 }
 header nav .nav-other-screens .nav-contact-us a span {
   margin: 0 10px;
+  /* prevent it from turning into an emoji on ios screens */
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
 }
 header nav .nav-mobile {
   display: none;
@@ -105,12 +109,16 @@ header .header-content {
   color: white;
 }
 header .header-content p {
-  width: 900px;
+  max-width: 900px;
   margin: 0 auto;
   text-transform: uppercase;
 }
 header .header-content p span {
   color: #6366F1;
+}
+header .the-team {
+  display: flex;
+  flex-direction: row;
 }
 
 .LEYARSS-Creatives-Designs {
@@ -227,6 +235,10 @@ section {
   background-position: right;
   background-size: contain;
 }
+.our-history div img {
+  visibility: hidden;
+  position: fixed;
+}
 .our-history .title-our-history h1 {
   text-align: left;
   padding: 10px;
@@ -270,17 +282,26 @@ section {
   max-width: 100%;
 }
 .Vision-Mission .Vision-Mission-text .Vision {
-  text-transform: uppercase;
   margin: 10px 0 0 0;
 }
+.Vision-Mission .Vision-Mission-text .Vision .h4 {
+  text-transform: uppercase;
+}
 .Vision-Mission .Vision-Mission-text .Vision .border p {
+  padding: 0 0 20px 0;
   border-bottom: 2px solid #F7F7F7;
+}
+.Vision-Mission .Vision-Mission-text .Vision p {
+  padding: 20px 0 0 0;
 }
 .Vision-Mission .Vision-Mission-text .Vision p b {
   font-size: 30px;
 }
-.Vision-Mission .Vision-Mission-text .Mission p {
+.Vision-Mission .Vision-Mission-text .Mission .h4 {
   text-transform: uppercase;
+}
+.Vision-Mission .Vision-Mission-text .Mission p {
+  padding: 20px 0 0 0;
 }
 .Vision-Mission .Vision-Mission-text .Mission p b {
   font-size: 30px;
@@ -290,13 +311,72 @@ section {
 }
 
 /*===========[Building Blocks]============*/
-.Building-Blocks {
+.Building-Blocks-section .Building-Blocks {
   text-align: center;
 }
-.Building-Blocks h2 {
+.Building-Blocks-section .Building-Blocks h2 {
   font-size: 40px;
 }
+.Building-Blocks-section .Building-Blocks .words div {
+  border: 2px solid black;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 30px;
+}
+.Building-Blocks-section .Building-Blocks .words div p {
+  margin: 5px 12px;
+}
+.Building-Blocks-section .Building-Blocks .words div .words-flex {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.Building-Blocks-section .bubbles {
+  border-radius: 5px;
+  transform: translate(-10%, -8.5%);
+  position: absolute;
+  width: 110%;
+  height: 37pc;
+  overflow: hidden;
+  pointer-events: none;
+}
 
+.bubble {
+  position: absolute;
+  z-index: -1;
+  border-radius: 100%;
+  filter: blur(30px);
+  animation: animate 15s infinite ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(75px, 620px);
+  }
+  50% {
+    transform: translate(100px, 430px);
+  }
+  75% {
+    transform: translate(75px, 660px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+  0% {
+    transform: scale(5);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(3.5);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(5);
+    opacity: 0.8;
+  }
+}
 /*==========[our-services-section]===========*/
 .our-services-section {
   /*==========[our-services-list]===========*/
@@ -310,7 +390,7 @@ section {
   background: rgb(255, 255, 255);
   padding: 0 50px;
   position: absolute;
-  margin: 25px 350px;
+  margin: 25px 250px;
 }
 .our-services-section .our-services h1 {
   margin: 40px 400px 0 0;
@@ -331,23 +411,35 @@ section {
   list-style: outside;
 }
 .our-services-section .our-services-list .service-list-1 {
+  padding: 0 40px 10px 10px;
+  margin: 0 95px 0 0;
   border-bottom: 5px solid #EF018D;
-  padding: 0 20px 30px 20px;
-  margin: 10px 10px 0 0;
+}
+.our-services-section .our-services-list .service-list-1 li {
+  padding: 0 0 30px 0;
+  margin: 20px 20px 0 0;
 }
 .our-services-section .our-services-list .service-list-2 {
+  padding: 0 40px 10px 10px;
+  margin: 10px 95px 0 0;
   border-bottom: 5px solid #00ADF1;
-  padding: 0 20px 30px 20px;
-  margin: 10px 10px 0 0;
+}
+.our-services-section .our-services-list .service-list-2 li {
+  padding: 0 0 30px 0;
+  margin: 20px 20px 0 0;
 }
 .our-services-section .our-services-list .service-list-3 {
+  padding: 0 40px 10px 10px;
+  margin: 10px 95px 20px 0;
   border-bottom: 5px solid #FEF102;
-  padding: 0 20px 30px 20px;
-  margin: 10px 10px 0 0;
+}
+.our-services-section .our-services-list .service-list-3 li {
+  padding: 0 0 30px 0;
+  margin: 20px 20px 0 0;
 }
 .our-services-section .our-services-list .service-list-4 {
-  padding: 0 20px 30px 20px;
-  margin: 10px 10px 0 0;
+  padding: 0 40px 30px 10px;
+  margin: 0 0 0 0;
 }
 .our-services-section .our-services-list .pg1 {
   padding: 0;
@@ -389,6 +481,13 @@ footer .footer-content {
   margin: 50px 100px;
   gap: 30px;
 }
+footer .footer-content .footer-logo {
+  width: 300px;
+  margin: 0 auto;
+}
+footer .footer-content .footer-logo img {
+  height: 200px;
+}
 footer .footer-content .contact-details {
   width: 100%;
   justify-content: space-around;
@@ -408,14 +507,14 @@ footer .copyright {
   padding: 20px;
 }
 
+/*=========================[PHONE-FLEX]===========================*/
 /*--- MOBILE SCREEN ---*/
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 450px) {
   body {
-    font-size: 15px;
-    background-color: aquamarine;
+    font-size: 12px;
   }
   body h1 {
-    font-size: 32px;
+    font-size: 16px;
     margin: 0;
   }
   body section {
@@ -425,11 +524,16 @@ footer .copyright {
     border-radius: 30px;
     padding: 10px;
     margin-top: 10px;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
   }
   header .header-content h1 {
     text-align: center;
+    font-size: 1rem;
+  }
+  header .header-content p,
+  header .header-content button {
+    font-size: 0.8rem;
   }
   header .header-content .header-content-mockups img {
     max-width: 100%;
@@ -441,27 +545,120 @@ footer .copyright {
   }
   header nav .nav-mobile {
     display: flex;
-    justify-content: space-between;
-    position: relative;
+    flex-direction: column;
   }
-  header nav .nav-mobile div, header nav .nav-mobile a {
-    display: block;
+  header nav .nav-mobile .nav-logo-name {
+    margin: 0 auto;
   }
   header nav .nav-mobile .nav-logo-name img {
     height: 50px;
   }
-  header nav .nav-mobile button {
-    background-color: black;
-    color: white;
+  header nav .nav-mobile .nav-icon-btns {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
   }
-  header nav .nav-mobile .nav-btns {
-    background-color: black;
+  header nav .nav-mobile .nav-icon-btns div img {
+    height: 30px;
+  }
+  header .header-content p {
+    margin: 10px 20px;
+    padding: 0 0px;
+    font-size: medium;
+  }
+  /*======The team Section======*/ /*NOTE:use max width and shit*/
+  .the-team {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .the-team .p1 {
+    font-size: 2em;
+    line-height: 1.3;
+    padding: 20px 0 0 30px;
+    margin: 20px 0 0 0;
+  }
+  .the-team .p2 {
+    padding: 20px 0 0 20px;
+    margin: 0 35px 0 30px;
+  }
+  .the-team .p2 b {
+    color: transparent;
+    background-image: linear-gradient(to right, #EF018D, #6366F1);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+  .the-team .p2 span {
+    color: #EF018D;
+  }
+  /*=======[team-list-container]========*/
+  .team-list-container {
+    display: flex;
+    gap: 20px;
+  }
+  .team-list-container .team-flex {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+  }
+  .team-list-container .team-flex .person {
+    width: 175px;
+    height: 210px;
+    background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
+    border-radius: 30px;
+    position: relative;
+  }
+  .team-list-container .team-flex .person img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
+  .team-list-container .team-flex .person .person-info {
     position: absolute;
-    right: 0;
-    top: 50px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 0 15px;
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    border-radius: 20px;
   }
-  header nav .nav-mobile .nav-btns a {
-    margin: 10px;
+  .team-list-container .team-flex .person .person-info p {
+    line-height: 0.8;
+    color: #213083;
+    font-size: small;
+  }
+  .team-list-container .team-flex .person .person-info p span {
+    font-size: x-small;
+  }
+  .team-list-container .no-pic {
+    width: 100%;
+    color: #213083;
+  }
+  .team-list-container .no-pic h3 {
+    text-transform: uppercase;
+    margin: 5px;
+    font-size: medium;
+    text-align: center;
+  }
+  .team-list-container .no-pic .specialist {
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
+    padding: 10px;
+    margin: 5px 0 0 0;
+  }
+  .team-list-container .no-pic .specialist .p1 {
+    border: 1px dashed #ffffff;
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+  .team-list-container .no-pic .specialist .p1 p {
+    color: #213083;
+    font-size: small;
+  }
+  .team-list-container .no-pic .specialist .p1 p span {
+    font-size: x-small;
   }
   footer .footer-pink,
   footer .footer-blue,
@@ -473,27 +670,381 @@ footer .copyright {
     margin: 20px;
     display: block;
   }
-  footer .footer-content img {
-    height: 100px;
+  footer .footer-content .footer-logo img {
+    height: 8pc;
   }
+  footer .footer-content .footer-flex,
   footer .footer-content .contact-details {
-    display: block;
-    text-align: center;
-    /*if not center aligned
-    width: fit-content;
-    margin: 0 auto;*/
+    margin: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
   }
-  footer .footer-content .contact-details div {
-    margin: 20px 0;
+}
+/*=========================[TABLET-FLEX]===========================*/
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+    background-color: #e0e6f3;
+  }
+  body h1 {
+    font-size: 16px;
+    margin: 0;
+  }
+  body section {
+    padding: 10px;
+  }
+  header .header-content {
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+  header .header-content h1 {
+    text-align: center;
+    font-size: 1rem;
+  }
+  header .header-content p,
+  header .header-content button {
+    font-size: 0.8rem;
+  }
+  header .header-content .header-content-mockups img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+  header nav .nav-other-screens {
+    display: none;
+  }
+  header nav .nav-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  header nav .nav-mobile .nav-logo-name {
+    margin: 0 auto;
+  }
+  header nav .nav-mobile .nav-logo-name img {
+    height: 50px;
+  }
+  header nav .nav-mobile .nav-icon-btns {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+  }
+  header nav .nav-mobile .nav-icon-btns div img {
+    height: 30px;
+  }
+  header .header-content {
+    background-color: #00aeef;
+    color: white;
+  }
+  header .header-content p {
+    margin: 40px 20px;
+    text-transform: uppercase;
+  }
+  header .header-content p span {
+    color: #6366F1;
+  }
+  /*======The team Section======*/ /*NOTE:use max width and shit*/
+  .the-team {
+    display: grid;
+    grid-template-columns: 45% auto;
+    gap: 30px;
+  }
+  .the-team .p1 {
+    font-size: 1.5em;
+    line-height: 1.3;
+    padding: 40px 0 20px 10px;
+    margin: 20px 0 30px 0;
+    border: 1px dashed #f48a8a;
+  }
+  .the-team .p2 {
+    border: 2px dashed #f48a8a;
+    padding: 20px 20px 30px 0;
+    margin: 0 0 30px 0;
+  }
+  .the-team .p2 b {
+    color: transparent;
+    background-image: linear-gradient(to right, #EF018D, #6366F1);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+  .the-team .p2 span {
+    color: #EF018D;
+  }
+  /*=======[team-list-container]========*/
+  .team-list-container {
+    display: flex;
+    gap: 20px;
+    border: 2px rgb(147, 165, 247) dashed;
+    /*.Specialist{
+        border:2px dashed rgb(255, 132, 153);
+        padding: 10px 0 0 0;
+    }*/
+  }
+  .team-list-container .team-flex {
+    display: flex;
+    gap: 10px;
+  }
+  .team-list-container .team-flex .person {
+    width: 100px;
+    height: 130px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+  }
+  .team-list-container .team-flex .person img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  .team-list-container .team-flex .person .person-info {
+    background-color: rgba(255, 255, 255, 0.85);
+    right: 5px;
+    left: 5px;
+    bottom: 5px;
+    border-radius: 20px;
+  }
+  .team-list-container .team-flex .person .person-info p {
+    line-height: 0.8;
+    color: #213083;
+    font-size: 8px;
+  }
+  .team-list-container .team-flex .person .person-info p span {
+    font-size: 5px;
+  }
+  .team-list-container .no-pic {
+    width: 100%;
+    color: #213083;
+  }
+  .team-list-container .no-pic h3 {
+    text-transform: uppercase;
+    margin: 5px;
+    font-size: 9px;
+    text-align: center;
+  }
+  .team-list-container .no-pic .specialist {
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
+    padding: 5px;
+    margin: 5px;
+  }
+  .team-list-container .no-pic .specialist .p1 {
+    border: 1px dashed #ffffff;
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+  .team-list-container .no-pic .specialist .p1 p {
+    color: #213083;
+    font-size: 8px;
+  }
+  .team-list-container .no-pic .specialist .p1 p span {
+    font-size: 8px;
+  }
+  /*======[our-history]======*/
+  .our-history {
+    border: 2px dashed rgb(0, 26, 255);
+    background-image: url("../Assets/aboutUs-teampic-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+  }
+  .our-history .title-our-history {
+    border: 2px dashed rgb(130, 161, 6);
+    margin: 200px 0 0 0;
+  }
+  .our-history .title-our-history h1 {
+    text-align: left;
+  }
+  .our-history .history p {
+    margin: 10px;
+  }
+  .our-history .history p span {
+    color: #EF018D;
+  }
+  /*==========[Vision-Mission-img & Content(<p>)]==============*/
+  .Vision-Mission {
+    padding: 0 0 0 0;
+    margin: 200px 10px 0 10px;
+    /*=========[vision-mission-bg-img]===========*/
+    /*==========[Vision-Mission-Txt]==========*/
+  }
+  .Vision-Mission .Vision-Mission-img {
+    position: relative;
+    width: 340px;
+    margin: 100px 0 0 10px;
+  }
+  .Vision-Mission .Vision-Mission-img .shadow {
+    left: 10px;
+    top: -30px;
+    mix-blend-mode: overlay;
+  }
+  .Vision-Mission .Vision-Mission-img .text2 {
+    padding: 0 0 0 0;
+    margin: 0 0 0 400px;
+  }
+  .Vision-Mission .Vision-Mission-img .text2 p {
+    font-size: 11px;
+    padding: 0 0 0 0;
+    margin: 5px 10px 0 5px;
+  }
+  .Vision-Mission .Vision-Mission-img .Text {
+    left: 6px;
+    top: -90px;
+  }
+  .Vision-Mission .Mission-img {
+    max-width: 100%;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision {
+    margin: 10px 0 0 0;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision .h4 {
+    text-transform: uppercase;
+    padding: 5px 10px 5px 0;
+    margin: 5px 0 0 0;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision .border p {
+    padding: 0 0 10px 0;
+    border-bottom: 2px solid #F7F7F7;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision p {
+    padding: 5px 0 0 0;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision p b {
+    font-size: 25px;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission {
+    margin: 5px 0 0 0;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission .h4 {
+    text-transform: uppercase;
+    padding: 5px 10px 0 0;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission p {
+    padding: 5px 0 0 0;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission p b {
+    font-size: 30px;
+  }
+  .Vision-Mission .Vision-Mission-text img {
+    width: 100%;
+  }
+  /*===========[Building Blocks]============*/
+  .Building-Blocks {
+    text-align: center;
+  }
+  .Building-Blocks h2 {
+    font-size: 25px;
+  }
+  /*==========[our-services-section]===========*/
+  .our-services-section {
+    /*==========[our-services-list]===========*/
+  }
+  .our-services-section .our-services {
+    border: 1px dashed rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 0 0 10px;
+  }
+  .our-services-section .our-services p {
+    font-size: 20px;
+    background: rgb(255, 255, 255);
+    padding: 0 30px;
+    position: absolute;
+    margin: 25px 190px;
+  }
+  .our-services-section .our-services h1 {
+    margin: 40px 110px 0 0;
+    padding: 40px;
+    border: dashed black;
+    border-radius: 30px;
+    border-width: 5px 5px;
+  }
+  .our-services-section .our-services-list {
+    display: flex;
+  }
+  .our-services-section .our-services-list h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .our-services-section .our-services-list li {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  .our-services-section .our-services-list .service-list-1 {
+    padding: 0 40px 10px 10px;
+    margin: 0 60px 0 10px;
+  }
+  .our-services-section .our-services-list .service-list-1 li {
+    padding: 0 0 5px 0;
+    margin: 20px 20px 0 0;
+  }
+  .our-services-section .our-services-list .service-list-2 {
+    padding: 0 40px 10px 10px;
+    margin: 0 60px 0 10px;
+  }
+  .our-services-section .our-services-list .service-list-2 li {
+    padding: 0 0 5px 0;
+    margin: 20px 20px 0 0;
+  }
+  .our-services-section .our-services-list .service-list-3 {
+    padding: 0 40px 10px 10px;
+    margin: 0 60px 0 10px;
+  }
+  .our-services-section .our-services-list .service-list-3 li {
+    padding: 0 0 5px 0;
+    margin: 20px 20px 0 0;
+  }
+  .our-services-section .our-services-list .service-list-4 {
+    padding: 0 40px 30px 10px;
+    margin: 0 0 0 10px;
+  }
+  .our-services-section .our-services-list .pg1 {
+    padding: 0;
+    margin: 0 20px 0 auto;
+  }
+  .our-services-section .our-services-list .pg1 p {
+    font-size: 20px;
+  }
+  .our-services-section footer .footer-pink,
+  .our-services-section footer .footer-blue,
+  .our-services-section footer .footer-yellow {
+    height: 15px;
+    width: 100%;
+  }
+  .our-services-section footer .footer-content {
+    margin: 20px;
+    display: block;
+  }
+  .our-services-section footer .footer-content .footer-logo img {
+    height: 8pc;
+  }
+  .our-services-section footer .footer-content .footer-flex,
+  .our-services-section footer .footer-content .contact-details {
+    margin: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
   }
 }
 /* --- TABLET --- */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* tablet styles */
+  header nav .nav-other-screens .nav-contact-us a {
+    padding: 10px;
+    padding-left: 20px;
+  }
+  header nav .nav-other-screens .nav-contact-us span {
+    margin: 0;
+  }
+  footer .footer-content {
+    margin: 30px;
+    gap: 10px;
+  }
 }
 /* --- DESKTOP --- */
 @media screen and (min-width: 1025px) {
-  /* desktop styles */
+  /* screen styles */
 }
 /* --- LARGE DESKTOP --- */
 @media screen and (min-width: 1281px) {

@@ -6,22 +6,20 @@ $blue: #00aeef;
 $pink: #EF018D;
 $yellow: #FFF200;
 $lightblack: #282828;
-
 $webFont: "Poppins", sans-serif;
 
-/* for other screens */
+/*--- OTHER SCREENS ---*/
 $headerFontSize: 1.5rem; //(24px)
 $h1FontSize: 3.125rem; //(50px)
 $allTextFontSize: 1.1rem; //(17.6px)
-$footerFontSize: 18px;
-$boarder: 15px;
+$footerFontSize: 1rem; //(16px)
 $sectionPaddingTB: 50px;
 $sectionPaddingLR: 100px;
 
-/*--- for mobile ---*/
-$headerFontSize-Mobile: 22px;
-$h1FontSize-Mobile: 32px;
-$allTextFontSize-Mobile: 15px;
+/*--- MOBILE ---*/
+$headerFontSize-Mobile: 20px;
+$h1FontSize-Mobile: 16px;
+$allTextFontSize-Mobile: 12px;
 
 /*======Body Style=====*/
 @mixin bodyStyle {
@@ -114,6 +112,10 @@ $allTextFontSize-Mobile: 15px;
     
                 span {
                     margin: 0 10px;
+
+                    /* prevent it from turning into an emoji on ios screens */
+                    font-family: $webFont;
+                    font-style: normal;
                 }
             }
         }
@@ -164,6 +166,15 @@ $allTextFontSize-Mobile: 15px;
         gap: 30px;
         //border: 1px dashed pink;
 
+        .footer-logo {
+            width: 300px;
+            margin: 0 auto;
+
+            img {
+                height: 200px;
+            }
+        }
+
         .contact-details {
             width: 100%;
             justify-content: space-around;
@@ -210,7 +221,6 @@ $allTextFontSize-Mobile: 15px;
 /*--- MOBILE SCREEN ---*/
 @mixin bodyStyle-Mobile {
     font-size: $allTextFontSize-Mobile;
-    background-color: aquamarine;
 
     h1 {
         font-size: $h1FontSize-Mobile;
@@ -220,8 +230,6 @@ $allTextFontSize-Mobile: 15px;
     section {
         padding: 10px;
     }
-
-    
 }
 
 @mixin headerStyle-Mobile {    
@@ -234,6 +242,12 @@ $allTextFontSize-Mobile: 15px;
     
         h1 {
             text-align: center;
+            font-size: 1rem;
+        }
+
+        p,
+        button {
+            font-size: 0.8rem;
         }
     
         .header-content-mockups img {
@@ -251,30 +265,25 @@ $allTextFontSize-Mobile: 15px;
 
     .nav-mobile {
         display: flex;
-        justify-content: space-between;
-        position: relative;
-        
-        div, a {
-            display: block;
+        flex-direction: column;
+        .nav-logo-name {
+            margin: 0 auto;
+
+            img {
+                height: 50px;
+            }
         }
 
-        .nav-logo-name img {
-            height: 50px;
-        }
+        .nav-icon-btns {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
 
-        button {
-            background-color: black;
-            color: white;
-        }
-
-        .nav-btns {
-            background-color: black;
-            position: absolute;
-            right: 0;
-            top: 50px;
-
-            a {
-                margin: 10px;
+            div {
+                img {
+                    height: 30px;
+                }
             }
         }
     }
@@ -293,19 +302,39 @@ $allTextFontSize-Mobile: 15px;
         display: block;
         //border: 1px solid white;
 
-        img {
-            height: 100px;
+        .footer-logo {
+           img {
+                height: 8pc;
+            }
         }
 
+        // .contact-details {
+        //     display: block;
+        //     margin: 0 50px;
+        //     width: fit-content;
+        // }
+        .footer-flex,
         .contact-details {
-            display: block;
-            text-align: center;
-            /*if not center aligned
-            width: fit-content;
-            margin: 0 auto;*/
-            
-            div {
-                margin: 20px 0;
+            margin: 0;
+            width: 100%;
+            display: grid;
+            // background-color: #fff766;
+            grid-template-columns: auto auto;
+        }
+    }
+}
+
+/*--- TABLET SCREEN ---*/
+@mixin navStyleTablet {
+    .nav-other-screens {
+        .nav-contact-us {
+            a {
+                padding: 10px;
+                padding-left: 20px;
+            }
+
+            span {
+                margin: 0;
             }
         }
     }
