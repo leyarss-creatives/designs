@@ -395,6 +395,7 @@ footer .copyright {
   #why-choose-us .why-choose-2 img,
   #why-choose-us .why-choose-3 img {
     height: 30px;
+    border-radius: 10px;
   }
   #why-choose-us .why-choose-1 p,
   #why-choose-us .why-choose-2 p,
@@ -518,6 +519,7 @@ footer .copyright {
   #our-proj .prods-container .prod-card img {
     width: auto;
     height: 300px;
+    border-radius: 15px;
   }
 }
 /* --- LARGE DESKTOP --- *//*# sourceMappingURL=index.css.map */
