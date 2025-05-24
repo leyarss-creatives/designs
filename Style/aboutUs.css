@@ -27,6 +27,7 @@ body section {
 body button {
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
+  color: black;
   border: none;
 }
 
@@ -89,8 +90,8 @@ header nav .nav-other-screens .nav-contact-us a {
 header nav .nav-other-screens .nav-contact-us a span {
   margin: 0 10px;
   /* prevent it from turning into an emoji on ios screens */
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
+  font-family: monospace;
+  font-weight: bold;
 }
 header nav .nav-mobile {
   display: none;
@@ -148,6 +149,9 @@ section {
 .the-team .p1 {
   font-size: 2em;
   line-height: 1.3;
+}
+.the-team .p2 {
+  font-size: 1.5rem;
 }
 .the-team .p2 b {
   color: transparent;
@@ -308,75 +312,73 @@ section {
 }
 .Vision-Mission .Vision-Mission-text img {
   width: 100%;
+  margin: 0;
 }
 
 /*===========[Building Blocks]============*/
-.Building-Blocks-section .Building-Blocks {
-  text-align: center;
-}
-.Building-Blocks-section .Building-Blocks h2 {
-  font-size: 40px;
-}
-.Building-Blocks-section .Building-Blocks .words div {
-  border: 2px solid black;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 30px;
-}
-.Building-Blocks-section .Building-Blocks .words div p {
-  margin: 5px 12px;
-}
-.Building-Blocks-section .Building-Blocks .words div .words-flex {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-.Building-Blocks-section .bubbles {
-  border-radius: 5px;
-  transform: translate(-10%, -8.5%);
-  position: absolute;
-  width: 110%;
-  height: 37pc;
-  overflow: hidden;
-  pointer-events: none;
+/*.Building-Blocks-section {
+
+    .Building-Blocks{
+        text-align: center;
+        //border: 1px dashed #6366F1;
+        h2{
+            font-size: 40px;
+        }
+
+        .words {
+            div {
+                border: 2px solid black;
+                width: fit-content;
+                border-radius: 30px;
+
+                p {
+                    margin: 5px 12px;
+                }
+
+                .words-flex {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                }
+            }
+        }
+    }
+
+    .bubbles {
+    border-radius: 5px;
+    transform: translate(-10%, -8.5%);
+    position: absolute;
+    width: 110%;
+    height: 37pc;
+    overflow: hidden;
+    pointer-events: none; 
+    }
 }
 
 .bubble {
-  position: absolute;
-  z-index: -1;
-  border-radius: 100%;
-  filter: blur(30px);
-  animation: animate 15s infinite ease-in-out;
+    position: absolute;
+    z-index: -1;
+    border-radius: 100%;
+    filter: blur(30px);
+    animation: animate 15s infinite ease-in-out;
 }
 
 @keyframes animate {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(75px, 620px);
-  }
-  50% {
-    transform: translate(100px, 430px);
-  }
-  75% {
-    transform: translate(75px, 660px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-  0% {
-    transform: scale(5);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(3.5);
-    opacity: 0.2;
-  }
-  100% {
-    transform: scale(5);
-    opacity: 0.8;
-  }
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(75px, 620px); }
+    50% { transform: translate(100px, 430px); }
+    75% { transform: translate(75px, 660px); }
+    100% { transform: translate(0, 0); }
+
+    0% { transform: scale(5); opacity: 0.8; }
+    50% { transform: scale(3.5); opacity: 0.2; }
+    100% { transform: scale(5); opacity: 0.8; }
+}*/
+/*==========[About Us Video-section]===========*/
+#aboutUs-video video {
+  width: 100%;
+  border-radius: 30px;
 }
+
 /*==========[our-services-section]===========*/
 .our-services-section {
   /*==========[our-services-list]===========*/
@@ -458,6 +460,15 @@ footer a {
   display: block;
   text-decoration: none;
   color: white;
+  transition: 0.2s;
+  /* make icons8 inline */
+}
+footer a:last-child {
+  display: inline;
+}
+footer a:hover {
+  font-size: 1rem;
+  background-image: linear-gradient(to right, #EF018D, #6366F1);
 }
 footer .footer-flex {
   display: flex;
@@ -494,8 +505,7 @@ footer .footer-content .contact-details {
   margin-top: 50px;
 }
 footer .footer-content .contact-details span {
-  font-weight: 600;
-  text-decoration: underline;
+  font-weight: 800;
   text-transform: uppercase;
 }
 footer .footer-logo,
@@ -551,37 +561,46 @@ footer .copyright {
     margin: 0 auto;
   }
   header nav .nav-mobile .nav-logo-name img {
-    height: 50px;
+    height: 70px;
   }
   header nav .nav-mobile .nav-icon-btns {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     width: 100%;
   }
   header nav .nav-mobile .nav-icon-btns div img {
     height: 30px;
   }
+  header nav .nav-mobile .nav-icon-btns div img:hover {
+    background-color: #00aeef;
+  }
+  header .header-content {
+    border-radius: 20px;
+  }
   header .header-content p {
     margin: 10px 20px;
-    padding: 0 0px;
-    font-size: medium;
+    padding: 0 0 0 0;
+    font-size: 10px;
   }
   /*======The team Section======*/ /*NOTE:use max width and shit*/
   .the-team {
     display: flex;
-    flex-direction: row;
-    gap: 30px;
+    flex-direction: column;
+    gap: 20px;
   }
   .the-team .p1 {
-    font-size: 2em;
+    font-size: medium;
     line-height: 1.3;
-    padding: 20px 0 0 30px;
-    margin: 20px 0 0 0;
+    padding: 0 10px 0 10px;
+    margin: 0;
+    text-align: center;
   }
   .the-team .p2 {
-    padding: 20px 0 0 20px;
-    margin: 0 35px 0 30px;
+    padding: 0 0 0 0;
+    margin: 0 10px 20px 10px;
+    text-align: justify;
+    font-size: small;
   }
   .the-team .p2 b {
     color: transparent;
@@ -595,6 +614,7 @@ footer .copyright {
   /*=======[team-list-container]========*/
   .team-list-container {
     display: flex;
+    flex-direction: column;
     gap: 20px;
   }
   .team-list-container .team-flex {
@@ -603,49 +623,54 @@ footer .copyright {
     flex-direction: row;
   }
   .team-list-container .team-flex .person {
-    width: 175px;
-    height: 210px;
+    width: 150px;
+    height: 167px;
     background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
-    border-radius: 30px;
+    border-radius: 10px;
     position: relative;
   }
   .team-list-container .team-flex .person img {
     width: 100%;
     height: 100%;
-    border-radius: 30px;
+    border-radius: 10px;
   }
   .team-list-container .team-flex .person .person-info {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 0 15px;
-    right: 10px;
-    left: 10px;
-    bottom: 10px;
-    border-radius: 20px;
+    right: 5px;
+    left: 5px;
+    bottom: 5px;
+    border-radius: 10px;
   }
   .team-list-container .team-flex .person .person-info p {
     line-height: 0.8;
     color: #213083;
-    font-size: small;
+    font-size: 10px;
   }
   .team-list-container .team-flex .person .person-info p span {
-    font-size: x-small;
+    font-size: 8px;
   }
   .team-list-container .no-pic {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     color: #213083;
+    gap: 1em;
   }
   .team-list-container .no-pic h3 {
     text-transform: uppercase;
-    margin: 5px;
+    padding: 10px 0 0 0;
+    margin: 0;
     font-size: medium;
     text-align: center;
   }
   .team-list-container .no-pic .specialist {
-    border-radius: 20px;
+    flex-direction: row;
+    border-radius: 10px;
     background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
-    padding: 10px;
-    margin: 5px 0 0 0;
+    padding: 5px;
+    margin: 0 0 0 0;
   }
   .team-list-container .no-pic .specialist .p1 {
     border: 1px dashed #ffffff;
@@ -655,26 +680,203 @@ footer .copyright {
   }
   .team-list-container .no-pic .specialist .p1 p {
     color: #213083;
-    font-size: small;
+    font-size: 10px;
   }
   .team-list-container .no-pic .specialist .p1 p span {
-    font-size: x-small;
+    font-size: xx-small;
   }
-  footer .footer-pink,
-  footer .footer-blue,
-  footer .footer-yellow {
+  /*======[our-history]======*/
+  .our-history {
+    background-image: url("../Assets/aboutUs-teampic-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    margin: 0 10px;
+  }
+  .our-history .title-our-history {
+    margin: 200px 0 0 0;
+  }
+  .our-history .title-our-history h1 {
+    text-align: left;
+    font-size: 1.5em;
+    margin: 0 0;
+    padding: 10px 5px;
+  }
+  .our-history .history p {
+    font-size: 1em;
+    margin: 0 5px;
+  }
+  .our-history .history p span {
+    color: #EF018D;
+  }
+  /*==========[Vision-Mission-img & Content(<p>)]==============*/
+  .Vision-Mission {
+    padding: 0 8px 0 8px;
+    margin: 50px 10px 0 10px;
+    /*=========[vision-mission-bg-img]===========*/
+    /*==========[Vision-Mission-Txt]==========*/
+  }
+  .Vision-Mission .Vision-Mission-img {
+    position: relative;
+    margin: 0 0 0 10px;
+  }
+  .Vision-Mission .Vision-Mission-img .shadow {
+    left: 10px;
+    top: -20px;
+    mix-blend-mode: overlay;
+    display: none;
+  }
+  .Vision-Mission .Vision-Mission-img .text2 {
+    padding: 10px 10px 0 0;
+    margin: 5px 10px 0 0;
+    padding: auto;
+    left: 10px;
+  }
+  .Vision-Mission .Vision-Mission-img .text2 p {
+    margin: 0 auto;
+  }
+  .Vision-Mission .Vision-Mission-img .Text {
+    left: 9px;
+    top: -55px;
+    display: none;
+  }
+  .Vision-Mission .Mission-img {
+    max-width: 100%;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision {
+    display: flex;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision .h4 {
+    text-transform: uppercase;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision .border p {
+    padding: 0 0 10px 0;
+    margin: 0;
+    font-size: 9px;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision p {
+    font-size: 10px;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision p b {
+    font-size: 33px;
+    padding: 10px 0 0 0;
+    margin: 0 35px 0 10px;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission {
+    display: flex;
+    padding: 10px 0 10px 0;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission .h4 {
+    text-transform: uppercase;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission p {
+    padding: 0 0 0 0;
+    font-size: 9px;
+    padding: 0 0 10px 0;
+    margin: 0;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission p b {
+    font-size: 33px;
+    padding: 10px 0 0 0;
+    margin: 0 20px 0 0;
+  }
+  .Vision-Mission .Vision-Mission-text img {
+    width: 100%;
+  }
+  /*===========[Building Blocks]============*/
+  .Building-Blocks {
+    text-align: center;
+  }
+  .Building-Blocks h2 {
+    font-size: 20px;
+  }
+  /*==========[our-services-section]===========*/
+  .our-services-section {
+    /*==========[our-services-list]===========*/
+  }
+  .our-services-section .our-services {
+    border: 1px dashed rgb(255, 255, 255);
+    text-align: center;
+  }
+  .our-services-section .our-services p {
+    background: rgb(255, 255, 255);
+    font-size: 10px;
+    left: 125px;
+    position: absolute;
+    padding: 0 10px 0 10px;
+    margin: 13px 0 0 0;
+  }
+  .our-services-section .our-services h1 {
+    margin: 20px 110px 0 0;
+    padding: 20px;
+    border: dashed black;
+    border-radius: 1em;
+    border-width: 3px 3px;
+  }
+  .our-services-section .our-services-list {
+    display: flex;
+  }
+  .our-services-section .our-services-list h3 {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  .our-services-section .our-services-list li {
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+  .our-services-section .our-services-list .service-list-1 {
+    padding: 0 40px 10px 10px;
+    margin: 0 auto 0 10px;
+    border-bottom: 3px solid #EF018D;
+  }
+  .our-services-section .our-services-list .service-list-1 li {
+    padding: 0 0 0 0;
+    margin: 0 25px 0 0;
+  }
+  .our-services-section .our-services-list .service-list-2 {
+    padding: 0 40px 10px 10px;
+    margin: 0 auto 0 10px;
+    border-bottom: 3px solid #00ADF1;
+  }
+  .our-services-section .our-services-list .service-list-2 li {
+    padding: 0 0 0 0;
+    margin: 0 25px 0 0;
+  }
+  .our-services-section .our-services-list .service-list-3 {
+    padding: 0 40px 10px 10px;
+    margin: 0 auto 0 10px;
+    border-bottom: 3px solid #FEF102;
+  }
+  .our-services-section .our-services-list .service-list-3 li {
+    padding: 0 0 0 0;
+    margin: 0 25px 0 0;
+  }
+  .our-services-section .our-services-list .service-list-4 {
+    padding: 0 40px 30px 10px;
+    margin: 0 auto 0 10px;
+  }
+  .our-services-section .our-services-list .pg1 {
+    padding: 0;
+    margin: 0 20px 0 auto;
+  }
+  .our-services-section .our-services-list .pg1 p {
+    font-size: 15px;
+  }
+  .our-services-section footer .footer-pink,
+  .our-services-section footer .footer-blue,
+  .our-services-section footer .footer-yellow {
     height: 15px;
     width: 100%;
   }
-  footer .footer-content {
+  .our-services-section footer .footer-content {
     margin: 20px;
     display: block;
   }
-  footer .footer-content .footer-logo img {
+  .our-services-section footer .footer-content .footer-logo img {
     height: 8pc;
   }
-  footer .footer-content .footer-flex,
-  footer .footer-content .contact-details {
+  .our-services-section footer .footer-content .footer-flex,
+  .our-services-section footer .footer-content .contact-details {
     margin: 0;
     width: 100%;
     display: grid;
@@ -682,10 +884,9 @@ footer .copyright {
   }
 }
 /*=========================[TABLET-FLEX]===========================*/
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 451px) and (max-width: 768px) {
   body {
     font-size: 12px;
-    background-color: #e0e6f3;
   }
   body h1 {
     font-size: 16px;
@@ -725,16 +926,19 @@ footer .copyright {
     margin: 0 auto;
   }
   header nav .nav-mobile .nav-logo-name img {
-    height: 50px;
+    height: 70px;
   }
   header nav .nav-mobile .nav-icon-btns {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     width: 100%;
   }
   header nav .nav-mobile .nav-icon-btns div img {
     height: 30px;
+  }
+  header nav .nav-mobile .nav-icon-btns div img:hover {
+    background-color: #00aeef;
   }
   header .header-content {
     background-color: #00aeef;
@@ -743,9 +947,10 @@ footer .copyright {
   header .header-content p {
     margin: 40px 20px;
     text-transform: uppercase;
+    font-size: 1em;
   }
   header .header-content p span {
-    color: #6366F1;
+    color: #ffffff;
   }
   /*======The team Section======*/ /*NOTE:use max width and shit*/
   .the-team {
@@ -754,16 +959,15 @@ footer .copyright {
     gap: 30px;
   }
   .the-team .p1 {
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 1.3;
-    padding: 40px 0 20px 10px;
-    margin: 20px 0 30px 0;
-    border: 1px dashed #f48a8a;
+    padding: 0 20px 0 20px;
+    margin: 70px 0 30px 0;
   }
   .the-team .p2 {
-    border: 2px dashed #f48a8a;
-    padding: 20px 20px 30px 0;
-    margin: 0 0 30px 0;
+    padding: 20px 0 10px 0;
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
   }
   .the-team .p2 b {
     color: transparent;
@@ -777,8 +981,8 @@ footer .copyright {
   /*=======[team-list-container]========*/
   .team-list-container {
     display: flex;
-    gap: 20px;
-    border: 2px rgb(147, 165, 247) dashed;
+    gap: 15px;
+    margin: 10px 0 40px 0;
     /*.Specialist{
         border:2px dashed rgb(255, 132, 153);
         padding: 10px 0 0 0;
@@ -789,9 +993,9 @@ footer .copyright {
     gap: 10px;
   }
   .team-list-container .team-flex .person {
-    width: 100px;
-    height: 130px;
-    border-radius: 20px;
+    width: 175px;
+    height: 220px;
+    border-radius: 15px;
     flex-wrap: wrap;
   }
   .team-list-container .team-flex .person img {
@@ -801,18 +1005,19 @@ footer .copyright {
   }
   .team-list-container .team-flex .person .person-info {
     background-color: rgba(255, 255, 255, 0.85);
-    right: 5px;
-    left: 5px;
-    bottom: 5px;
-    border-radius: 20px;
+    padding: 0 10px 0 10px;
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    border-radius: 15px;
   }
   .team-list-container .team-flex .person .person-info p {
     line-height: 0.8;
     color: #213083;
-    font-size: 8px;
+    font-size: small;
   }
   .team-list-container .team-flex .person .person-info p span {
-    font-size: 5px;
+    font-size: x-small;
   }
   .team-list-container .no-pic {
     width: 100%;
@@ -820,45 +1025,46 @@ footer .copyright {
   }
   .team-list-container .no-pic h3 {
     text-transform: uppercase;
-    margin: 5px;
-    font-size: 9px;
+    margin: 0 0 0 0;
+    font-size: small;
     text-align: center;
   }
   .team-list-container .no-pic .specialist {
-    border-radius: 20px;
+    border-radius: 15px;
     background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
-    padding: 5px;
-    margin: 5px;
+    padding: 9px;
+    margin: 10px;
   }
   .team-list-container .no-pic .specialist .p1 {
     border: 1px dashed #ffffff;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 0 5px 0 5px;
     background-color: rgba(255, 255, 255, 0.85);
   }
   .team-list-container .no-pic .specialist .p1 p {
     color: #213083;
-    font-size: 8px;
+    font-size: small;
   }
   .team-list-container .no-pic .specialist .p1 p span {
-    font-size: 8px;
+    font-size: x-small;
   }
   /*======[our-history]======*/
   .our-history {
-    border: 2px dashed rgb(0, 26, 255);
     background-image: url("../Assets/aboutUs-teampic-mobile.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
+    margin: 0 10px 0 10px;
   }
   .our-history .title-our-history {
-    border: 2px dashed rgb(130, 161, 6);
-    margin: 200px 0 0 0;
+    margin: 350px 0 0 0;
   }
   .our-history .title-our-history h1 {
     text-align: left;
+    font-size: 2em;
   }
   .our-history .history p {
+    font-size: 1.5em;
     margin: 10px;
   }
   .our-history .history p span {
@@ -867,7 +1073,7 @@ footer .copyright {
   /*==========[Vision-Mission-img & Content(<p>)]==============*/
   .Vision-Mission {
     padding: 0 0 0 0;
-    margin: 200px 10px 0 10px;
+    margin: 100px 10px 0 10px;
     /*=========[vision-mission-bg-img]===========*/
     /*==========[Vision-Mission-Txt]==========*/
   }
@@ -887,8 +1093,8 @@ footer .copyright {
   }
   .Vision-Mission .Vision-Mission-img .text2 p {
     font-size: 11px;
-    padding: 0 0 0 0;
-    margin: 5px 10px 0 5px;
+    padding: 0 0 0 100px;
+    margin: 20px 150px 0 0;
   }
   .Vision-Mission .Vision-Mission-img .Text {
     left: 6px;
@@ -898,35 +1104,35 @@ footer .copyright {
     max-width: 100%;
   }
   .Vision-Mission .Vision-Mission-text .Vision {
-    margin: 10px 0 0 0;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
   }
   .Vision-Mission .Vision-Mission-text .Vision .h4 {
     text-transform: uppercase;
-    padding: 5px 10px 5px 0;
-    margin: 5px 0 0 0;
   }
   .Vision-Mission .Vision-Mission-text .Vision .border p {
-    padding: 0 0 10px 0;
+    margin: 0;
+    font-size: 12px;
     border-bottom: 2px solid #F7F7F7;
   }
   .Vision-Mission .Vision-Mission-text .Vision p {
-    padding: 5px 0 0 0;
+    padding: 0 0 0 0;
   }
   .Vision-Mission .Vision-Mission-text .Vision p b {
     font-size: 25px;
   }
   .Vision-Mission .Vision-Mission-text .Mission {
-    margin: 5px 0 0 0;
+    padding: 10px 0 10px 0;
   }
   .Vision-Mission .Vision-Mission-text .Mission .h4 {
     text-transform: uppercase;
-    padding: 5px 10px 0 0;
   }
   .Vision-Mission .Vision-Mission-text .Mission p {
-    padding: 5px 0 0 0;
+    padding: 0 0 0 0;
+    margin: auto;
   }
   .Vision-Mission .Vision-Mission-text .Mission p b {
-    font-size: 30px;
+    font-size: 25px;
   }
   .Vision-Mission .Vision-Mission-text img {
     width: 100%;
@@ -936,7 +1142,7 @@ footer .copyright {
     text-align: center;
   }
   .Building-Blocks h2 {
-    font-size: 25px;
+    font-size: 20px;
   }
   /*==========[our-services-section]===========*/
   .our-services-section {
@@ -952,13 +1158,14 @@ footer .copyright {
     background: rgb(255, 255, 255);
     padding: 0 30px;
     position: absolute;
-    margin: 25px 190px;
+    margin: 25px 220px;
   }
   .our-services-section .our-services h1 {
     margin: 40px 110px 0 0;
-    padding: 40px;
+    padding: 40px 0 40px 0;
     border: dashed black;
-    border-radius: 30px;
+    font-size: 2.5em;
+    border-radius: 1em;
     border-width: 5px 5px;
   }
   .our-services-section .our-services-list {

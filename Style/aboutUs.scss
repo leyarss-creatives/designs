@@ -1,512 +1,87 @@
-@import 'variables';
+    @import 'variables';
 
-//==============| NOTES: // or /*more than 1*/|=============//
-body {
-    @include bodyStyle;
-}
-
-header {
-    @include headerStyle;
-
-    nav {
-        @include navStyle;
-        
-        .nav-other-screens {
-            a {
-                color: black;
-                transition: 0.2s;
-            }
-            
-            a:hover, 
-            .current-page {
-                color: $blue;
-                border-bottom: 2px solid $blue;
-            }
-
-            //background-image: url('../Assets/aboutUs-nav-bg.png');
-        }
-    }
-
-    .header-content {
-        background-color: $blue;
-        color: white;
-        //border: 1px dashed grey;
-
-        p {
-            max-width: 900px;
-            margin: 0 auto;
-            text-transform: uppercase;
-            span{
-                color: #6366F1;
-            }
-        }
-    }
-
-    .the-team {
-        display: flex;
-        flex-direction: row;
-    }
-}
-
-.LEYARSS-Creatives-Designs {
-    background-image: url("../Assets/aboutUs-bg.png");
-    background-repeat: no-repeat;   
-    background-size: cover;
-    padding: 15%;
-    margin: 0;
-    border: 1px dashed ;
-    p {
-        text-align: center;
-        font-size: 40px;
-    }
-}
-section{
-    //border: 2px dashed rgb(242, 0, 40);
-    margin:     0;
-    padding: 0;
-}
-
-/*======The team Section======*/ //NOTE:use max width and shit
-.the-team {
-    display: grid;
-    grid-template-columns: 45% auto;
-    gap: 80px;
-    //border: 2px dashed #8168ff;
-
-    .p1 {
-        font-size: 2em;
-        line-height: 1.3;
-        //border: 1px dashed #f48a8a;
-    }
-
-    .p2{
-        //border: 2px dashed #f48a8a;
-        b{                
-            color: transparent;
-            background-image: linear-gradient(to right, #EF018D , #6366F1);
-            background-clip: text;
-        }
-        span{
-            color: #EF018D;
-        }
-    }
-
-}
-
-/*=======[team-list-container]========*/
-.team-list-container {
-    display: flex;
-    gap: 20px;
-    //border: 2px rgb(147, 165, 247) dashed;
-
-    .team-flex {
-        display: flex;
-        gap: 25px;
-        .person {
-            width: 270px;
-            height: 326px;
-            //width: 280px;
-            //height: 327px;
-            background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
-            border-radius: 30px;
-            position: relative;
-            
-
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 30px;
-                //border: 1px dotted green;
-            }
-
-            .person-info {
-                position: absolute;
-                background-color: rgb(255, 255, 255, 0.85);
-                padding: 0 15px;
-                right: 10px;
-                left: 10px;
-                bottom: 10px;
-                border-radius: 20px;
-
-                p {
-                    line-height: 0.8;
-                    color: #213083;
-
-                    span {
-                        font-size: small;
-                    }
-                }
-            }
-        }
-    }
-
-    .no-pic{
-        //border: 1px dashed rgb(255, 132, 153);
-        width: 100%;
-        color: #213083;
-        h3{
-            text-transform: uppercase;
-            margin: 10px;
-            text-align: center;
-        }
-        .specialist{
-            //border:1px dashed rgb(185, 72, 91);
-            border-radius: 25px;
-            background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
-            padding: 15px;
-            margin: 15px 0 0 0;
-            .p1{
-                border:1px dashed #ffffff;// {reqired [DO NOT REMOVE]}
-                border-radius: 15px;
-                padding:0 10px 0 10px;
-                background-color: rgb(255, 255, 255, 0.85);
-                p{
-                    color: #213083;
-
-                    span {
-                        font-size: small;
-                    }
-                }
-            }
-        }
-    }
-
-    /*.Specialist{
-        border:2px dashed rgb(255, 132, 153);
-        padding: 10px 0 0 0;
-    }*/
-}
-
-/*======[our-history]======*/
-
-.our-history{
-    background-image: url('../Assets/aboutUs-teampic.png');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
-    //border: 2px dashed rgb(0, 26, 255);
-
-   div {
-    img {
-        visibility: hidden;
-        position: fixed;
-    }
-   }
-
-    .title-our-history{
-        //border:2px dashed rgb(130, 161, 6);
-        h1{
-            //border:2px dashed rgb(16, 165, 83);
-            text-align: left;
-            padding:10px;
-        }
-    }
-    .history{
-        //border:2px dashed rgb(4, 116, 4);
-            p{
-            
-            span{
-                color: $pink;
-            }
-        }
-    }
-}
-
-/*==========[Vision-Mission-img & Content(<p>)]==============*/
-
-.Vision-Mission{    
-    // background-image: url('../Assets/aboutUs-visionMissionBg.png');
-    // background-repeat: no-repeat;
-    // background-size: 100%;
-    // position: relative;
-
-    padding: 200px 0 0 30px;
-    margin: 0;
-    //border: 2px dashed #f7bbde;
-
-    .Vision-Mission-img{
-        position: relative;
-
-        .shadow{
-            position: absolute;
-            left: 10px;
-            top: -80px;
-            mix-blend-mode: overlay;
-        }
-        .text2{
-            position: absolute;
-            padding:20px 0 70px 10px;
-            
-            //border:2px dashed #075518;
-            p{
-                //border:1px dashed #fefdff;
-                //border-bottom: 2px solid #F7F7F7;
-                padding:20px 0;
-                margin:0 10% 0 50%;
-                font-size: 25px;
-                color: #F7F7F7;
-            }
-        }
-        .Text{
-            //border: 1px dashed #df9fc4;
-            position: absolute;
-            left: 6px;
-            top: -190px;
-
-        }
-    }
-/*=========[vision-mission-bg-img]===========*/
-    .Mission-img{
-        max-width: 100%;
-        //border: 1px dashed #b7c1fd;
-    }
-
-/*==========[Vision-Mission-Txt]==========*/
-
-    .Vision-Mission-text{
-        //width: 600px;
-        //border: 1px dashed brown;
-        .Vision{// THIS ONE!@@
-            margin: 10px 0 0 0;
-            //border: 2px dashed blue;
-            .h4{
-                text-transform: uppercase;
-            }
-            .border{
-                p{  
-                    padding: 0 0 20px 0;
-                    border-bottom: 2px solid #F7F7F7;
-                }
-                
-            }
-            p{
-                padding: 20px 0 0 0;
-                b{
-                    font-size: 30px;
-
-                }
-            }
-        }
-        .Mission{
-            //border: 1px  dashed rgb(0, 255, 98);
-            
-            .h4{
-                text-transform: uppercase;
-            }
-            p{  
-                padding: 20px 0 0 0;
-                b{
-                    font-size: 30px;
-                }
-            }
-        }
-
-        img{
-            width: 100%;
-            //border: 2px dashed red;
-        }
-    }
-}
-
-/*===========[Building Blocks]============*/
-.Building-Blocks-section {
-
-    .Building-Blocks{
-        text-align: center;
-        //border: 1px dashed #6366F1;
-        h2{
-            font-size: 40px;
-        }
-
-        .words {
-            div {
-                border: 2px solid black;
-                width: fit-content;
-                border-radius: 30px;
-
-                p {
-                    margin: 5px 12px;
-                }
-
-                .words-flex {
-                    display: grid;
-                    grid-template-columns: auto auto;
-                }
-            }
-        }
-    }
-
-    .bubbles {
-    border-radius: 5px;
-    transform: translate(-10%, -8.5%);
-    position: absolute;
-    width: 110%;
-    height: 37pc;
-    overflow: hidden;
-    pointer-events: none; 
-    }
-}
-
-.bubble {
-    position: absolute;
-    z-index: -1;
-    border-radius: 100%;
-    filter: blur(30px);
-    animation: animate 15s infinite ease-in-out;
-}
-
-@keyframes animate {
-    0% { transform: translate(0, 0); }
-    25% { transform: translate(75px, 620px); }
-    50% { transform: translate(100px, 430px); }
-    75% { transform: translate(75px, 660px); }
-    100% { transform: translate(0, 0); }
-    
-    0% { transform: scale(5); opacity: 0.8; }
-    50% { transform: scale(3.5); opacity: 0.2; }
-    100% { transform: scale(5); opacity: 0.8; }
-}
-
-/*==========[our-services-section]===========*/
-
-.our-services-section{
-    .our-services{
-        border:1px dashed  rgb(255, 255, 255);//{[DO NOT REMOVE!]}
-        text-align: center;
-        
-        p{
-            //border:2px dashed rgb(100, 109, 240);
-            font-size: 20px;
-            background: rgb(255, 255, 255) ;
-            padding: 0 50px;
-            position: absolute;
-            margin:25px 250px;
-        }
-        h1{
-            margin: 40px 400px 0 0;
-            padding: 40px;
-            border: dashed black;
-            border-radius: 30px;
-            border-width: 5px  5px;
-        }
-    }
-    
-    /*==========[our-services-list]===========*/   
-    .our-services-list{
-        display: flex;
-        h3{
-            text-transform: uppercase;
-        }
-        li{
-            text-transform: uppercase;
-            font-size: 20px;
-            list-style: outside;
-        }
-        .service-list-1{
-            //border: 1px dashed rgb(236, 7, 45);
-            padding: 0 40px 10px 10px; // padding needed
-            margin: 0 95px 0 0;
-            li{
-                padding: 0 0 30px 0;
-                margin: 20px 20px 0 0;
-            }
-            border-bottom: 5px solid #EF018D; 
-        }
-        .service-list-2{
-            //border: 1px dashed rgb(236, 7, 45);
-            padding: 0 40px 10px 10px; // padding needed
-            margin: 10px 95px 0 0;
-            li{
-                padding: 0 0 30px 0;
-                margin: 20px 20px 0 0;
-            }
-            border-bottom: 5px solid #00ADF1;
-        }
-        .service-list-3{
-            //border: 1px dashed rgb(236, 7, 45);
-            padding: 0 40px 10px 10px; // padding needed
-            margin: 10px 95px 20px 0;
-            
-            li{
-                padding: 0 0 30px 0;
-                margin: 20px 20px 0 0;
-            }
-            border-bottom: 5px solid #FEF102; 
-        }
-        .service-list-4{
-            //border: 1px dashed rgb(236, 7, 45);
-            //border-bottom: 5px solid #000000;
-            //padding: 0 63px 50px 20px; // padding needed
-            padding: 0 40px 30px 10px; // padding needed
-            margin: 0 0 0 0;
-
-        }
-        .pg1{
-            //border: 1px dashed #213083;
-            padding: 0; 
-            margin:0 0 0 auto;
-            p{
-                font-size: 25px;
-            }
-        }
-    }
-}
-
-
-
-
-/*===========[Footer]=============*/
-
-footer {
-    @include footerStyle
-}
-
-/*=========================[PHONE-FLEX]===========================*/
-/*--- MOBILE SCREEN ---*/
-@media screen and (min-width:320px) and (max-width: 450px) {
+    //==============| NOTES: // or /*more than 1*/|=============//
     body {
-        @include bodyStyle-Mobile;
+        @include bodyStyle;
     }
 
     header {
-        @include headerStyle-Mobile;
+        @include headerStyle;
 
         nav {
-            @include navStyle-Mobile;
+            @include navStyle;
+            
+            .nav-other-screens {
+                a {
+                    color: black;
+                    transition: 0.2s;
+                }
+                
+                a:hover, 
+                .current-page {
+                    color: $blue;
+                    border-bottom: 2px solid $blue;
+                }
+
+                //background-image: url('../Assets/aboutUs-nav-bg.png');
+            }
         }
 
         .header-content {
-            // border: 1px dashed red;
-            p {             
-                margin: 10px 20px;                      
-                padding: 0 0px;
-                font-size: medium;
-                //background-color: #767da7;
-            }   
+            background-color: $blue;
+            color: white;
+            //border: 1px dashed grey;
+
+            p {
+                max-width: 900px;
+                margin: 0 auto;
+                text-transform: uppercase;
+                span{
+                    color: #6366F1;
+                }
+            }
+        }
+
+        .the-team {
+            display: flex;
+            flex-direction: row;
         }
     }
 
-    /*======The team Section======*/ /*NOTE:use max width and shit*/
+    .LEYARSS-Creatives-Designs {
+        background-image: url("../Assets/aboutUs-bg.png");
+        background-repeat: no-repeat;   
+        background-size: cover;
+        padding: 15%;
+        margin: 0;
+        border: 1px dashed ;
+        p {
+            text-align: center;
+            font-size: 40px;
+        }
+    }
+    section{
+        //border: 2px dashed rgb(242, 0, 40);
+        margin:     0;
+        padding: 0;
+    }
 
+    /*======The team Section======*/ //NOTE:use max width and shit
     .the-team {
-        display: flex;
-        flex-direction: row;
-        gap: 30px;
+        display: grid;
+        grid-template-columns: 45% auto;
+        gap: 80px;
         //border: 2px dashed #8168ff;
 
         .p1 {
             font-size: 2em;
             line-height: 1.3;
-            padding: 20px 0 0 30px;
-            margin: 20px 0 0 0;
-
             //border: 1px dashed #f48a8a;
         }
 
         .p2{
+            font-size: $headerFontSize;
             //border: 2px dashed #f48a8a;
-            padding: 20px 0 0 20px;
-            margin: 0 35px 0 30px;
             b{                
                 color: transparent;
                 background-image: linear-gradient(to right, #EF018D , #6366F1);
@@ -527,16 +102,16 @@ footer {
 
         .team-flex {
             display: flex;
-            gap: 10px;
-            flex-direction: row;
+            gap: 25px;
             .person {
-                width: 175px;
-                height: 210px;
+                width: 270px;
+                height: 326px;
                 //width: 280px;
                 //height: 327px;
                 background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
                 border-radius: 30px;
                 position: relative;
+                
 
                 img {
                     width: 100%;
@@ -553,12 +128,13 @@ footer {
                     left: 10px;
                     bottom: 10px;
                     border-radius: 20px;
+
                     p {
                         line-height: 0.8;
                         color: #213083;
-                        font-size: small;
+
                         span {
-                            font-size: x-small;
+                            font-size: small;
                         }
                     }
                 }
@@ -571,174 +147,25 @@ footer {
             color: #213083;
             h3{
                 text-transform: uppercase;
-                margin: 5px;
-                font-size: medium;
+                margin: 10px;
                 text-align: center;
             }
             .specialist{
                 //border:1px dashed rgb(185, 72, 91);
-                border-radius: 20px;
+                border-radius: 25px;
                 background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
-                padding: 10px;
-                margin: 5px 0 0 0;
+                padding: 15px;
+                margin: 15px 0 0 0;
                 .p1{
                     border:1px dashed #ffffff;// {reqired [DO NOT REMOVE]}
-                    border-radius: 10px;
-                    padding:0 5px 0 5px;
+                    border-radius: 15px;
+                    padding:0 10px 0 10px;
                     background-color: rgb(255, 255, 255, 0.85);
                     p{
                         color: #213083;
-                        font-size: small;
+
                         span {
-                            font-size: x-small;
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-
-    footer {
-        @include footerStyle-Mobile;
-    }
-}
-
-
-/*=========================[TABLET-FLEX]===========================*/
-
-@media screen and (max-width: 768px) {
-        body {
-            @include bodyStyle-Mobile;
-            background-color: #e0e6f3
-        }
-
-        header {
-            @include headerStyle-Mobile;
-
-            nav {
-                @include navStyle-Mobile;
-            }
-
-            .header-content {
-                background-color: $blue;
-                color: white;
-                //border: 1px dashed grey;
-
-                p {
-                    margin: 40px 20px;
-                    text-transform: uppercase;
-                    span{
-                        color: #6366F1;
-                    }
-                }
-            }
-        }
-
-
-    /*======The team Section======*/ /*NOTE:use max width and shit*/
-
-    .the-team {
-        display: grid;
-        grid-template-columns: 45% auto;
-        gap: 30px;
-        //border: 2px dashed #8168ff;
-
-        .p1 {
-            font-size: 1.5em;
-            line-height: 1.3;
-            padding: 40px 0 20px 10px;
-            margin: 20px 0 30px 0;
-
-            border: 1px dashed #f48a8a;
-        }
-
-        .p2{
-            border: 2px dashed #f48a8a;
-            padding: 20px 20px 30px 0;
-            margin: 0 0 30px 0;
-            b{                
-                color: transparent;
-                background-image: linear-gradient(to right, #EF018D , #6366F1);
-                background-clip: text;
-            }
-            span{
-                color: #EF018D;
-            }
-        }
-
-    }
-
-    /*=======[team-list-container]========*/
-    .team-list-container {
-        display: flex;
-        gap: 20px;
-        border: 2px rgb(147, 165, 247) dashed;
-        .team-flex {
-            display: flex;
-            gap: 10px;
-            .person {
-                //width: 280px;
-                //height: 327px;
-                //background-image: linear-gradient(to bottom, #F7F7F7 50%, sE3E4E7, #A5B5DB);
-                width: 100px;
-                height: 130px;
-                border-radius: 20px;
-                flex-wrap: wrap;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 20px;
-                    //border: 1px dotted green;
-                }
-
-                .person-info {
-                    //position: absolute;
-                    background-color: rgb(255, 255, 255, 0.85);
-                    //padding: 0 15px;
-                    right: 5px;
-                    left: 5px;
-                    bottom: 5px;
-                    border-radius: 20px;
-                    p {
-                        line-height: 0.8;
-                        color: #213083;
-                        font-size: 8px;
-                        span {
-                            font-size: 5px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .no-pic{
-            //border: 1px dashed rgb(255, 132, 153);
-            width: 100%;
-            color: #213083;
-            h3{
-                text-transform: uppercase;
-                margin: 5px;
-                font-size: 9px;
-                text-align: center;
-            }
-            .specialist{
-                //border:1px dashed rgb(185, 72, 91);
-                border-radius: 20px;
-                background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
-                padding: 5px;
-                margin: 5px ;
-                .p1{
-                    border:1px dashed #ffffff;// {reqired [DO NOT REMOVE]}
-                    border-radius: 10px;
-                    padding:0 5px 0 5px;
-                    background-color: rgb(255, 255, 255, 0.85);
-                    p{
-                        color: #213083;
-                        font-size: 8px;
-                        span {
-                            font-size: 8px;
+                            font-size: small;
                         }
                     }
                 }
@@ -754,27 +181,33 @@ footer {
     /*======[our-history]======*/
 
     .our-history{
-        border: 2px dashed rgb(0, 26, 255);
-        background-image: url('../Assets/aboutUs-teampic-mobile.png');
+        background-image: url('../Assets/aboutUs-teampic.png');
         background-repeat: no-repeat;
-        background-position:top;
+        background-position: right;
         background-size: contain;
+        //border: 2px dashed rgb(0, 26, 255);
+
+    div {
+        img {
+            visibility: hidden;
+            position: fixed;
+        }
+    }
+
         .title-our-history{
-            border:2px dashed rgb(130, 161, 6);
-            margin:  200px 0 0 0;
+            //border:2px dashed rgb(130, 161, 6);
             h1{
                 //border:2px dashed rgb(16, 165, 83);
                 text-align: left;
+                padding:10px;
             }
         }
-
         .history{
             //border:2px dashed rgb(4, 116, 4);
-
                 p{
-                    margin:10px ;
+                
                 span{
-                    color: #EF018D;
+                    color: $pink;
                 }
             }
         }
@@ -788,45 +221,45 @@ footer {
         // background-size: 100%;
         // position: relative;
 
-        padding: 0 0 0 0;
-        margin: 200px 10px 0 10px;
+        padding: 200px 0 0 30px;
+        margin: 0;
         //border: 2px dashed #f7bbde;
 
         .Vision-Mission-img{
             position: relative;
-            width: 340px;
-            margin: 100px 0 0 10px;
+
             .shadow{
+                position: absolute;
                 left: 10px;
-                top: -30px;
+                top: -80px;
                 mix-blend-mode: overlay;
             }
             .text2{
-                padding:0 0 0 0;
-                margin: 0 0 0 400px;
-
+                position: absolute;
+                padding:20px 0 70px 10px;
+                
                 //border:2px dashed #075518;
                 p{
                     //border:1px dashed #fefdff;
                     //border-bottom: 2px solid #F7F7F7;
-                    font-size: 11px;
-                    padding: 0 0 0 0;
-                    margin: 5px 10px 0 5px;
+                    padding:20px 0;
+                    margin:0 10% 0 50%;
+                    font-size: 25px;
+                    color: #F7F7F7;
                 }
             }
             .Text{
                 //border: 1px dashed #df9fc4;
+                position: absolute;
                 left: 6px;
-                top: -90px;
+                top: -190px;
 
             }
         }
     /*=========[vision-mission-bg-img]===========*/
         .Mission-img{
             max-width: 100%;
-
             //border: 1px dashed #b7c1fd;
-
         }
 
     /*==========[Vision-Mission-Txt]==========*/
@@ -835,38 +268,34 @@ footer {
             //width: 600px;
             //border: 1px dashed brown;
             .Vision{// THIS ONE!@@
-                margin: 10px 0 0 0;
+                margin: 10px 0 0 0 ;
                 //border: 2px dashed blue;
                 .h4{
                     text-transform: uppercase;
-                    padding: 5px 10px 5px 0;
-                    margin: 5px 0 0 0;
                 }
                 .border{
                     p{  
-                        padding: 0 0 10px 0;
+                        padding: 0 0 20px 0;
                         border-bottom: 2px solid #F7F7F7;
-
                     }
-
+                    
                 }
                 p{
-                    padding: 5px 0 0 0;
+                    padding: 20px 0 0 0;
                     b{
-                        font-size: 25px; 
+                        font-size: 30px;
 
                     }
                 }
             }
-            .Mission{   
+            .Mission{
                 //border: 1px  dashed rgb(0, 255, 98);
-                margin: 5px 0 0 0;
+                
                 .h4{
                     text-transform: uppercase;
-                    padding: 5px 10px 0 0;
                 }
                 p{  
-                    padding: 5px 0 0 0;
+                    padding: 20px 0 0 0;
                     b{
                         font-size: 30px;
                     }
@@ -875,20 +304,78 @@ footer {
 
             img{
                 width: 100%;
+                margin: 0 ;
                 //border: 2px dashed red;
             }
         }
     }
 
     /*===========[Building Blocks]============*/
-    .Building-Blocks{
-        text-align: center;
-        //border: 1px dashed #6366F1;
-        h2{
-            font-size: 25px;
+    /*.Building-Blocks-section {
+
+        .Building-Blocks{
+            text-align: center;
+            //border: 1px dashed #6366F1;
+            h2{
+                font-size: 40px;
+            }
+
+            .words {
+                div {
+                    border: 2px solid black;
+                    width: fit-content;
+                    border-radius: 30px;
+
+                    p {
+                        margin: 5px 12px;
+                    }
+
+                    .words-flex {
+                        display: grid;
+                        grid-template-columns: auto auto;
+                    }
+                }
+            }
+        }
+
+        .bubbles {
+        border-radius: 5px;
+        transform: translate(-10%, -8.5%);
+        position: absolute;
+        width: 110%;
+        height: 37pc;
+        overflow: hidden;
+        pointer-events: none; 
         }
     }
 
+    .bubble {
+        position: absolute;
+        z-index: -1;
+        border-radius: 100%;
+        filter: blur(30px);
+        animation: animate 15s infinite ease-in-out;
+    }
+
+    @keyframes animate {
+        0% { transform: translate(0, 0); }
+        25% { transform: translate(75px, 620px); }
+        50% { transform: translate(100px, 430px); }
+        75% { transform: translate(75px, 660px); }
+        100% { transform: translate(0, 0); }
+        
+        0% { transform: scale(5); opacity: 0.8; }
+        50% { transform: scale(3.5); opacity: 0.2; }
+        100% { transform: scale(5); opacity: 0.8; }
+    }*/
+
+    /*==========[About Us Video-section]===========*/
+    #aboutUs-video {
+        video {
+            width: 100%;
+            border-radius: 30px;
+        }
+    }
 
     /*==========[our-services-section]===========*/
 
@@ -896,112 +383,890 @@ footer {
         .our-services{
             border:1px dashed  rgb(255, 255, 255);//{[DO NOT REMOVE!]}
             text-align: center;
-            margin: 0 0 0 10px;
+            
             p{
                 //border:2px dashed rgb(100, 109, 240);
                 font-size: 20px;
                 background: rgb(255, 255, 255) ;
-                padding: 0 30px;
+                padding: 0 50px;
                 position: absolute;
-                margin:25px 190px;
+                margin:25px 250px;
             }
             h1{
-                margin: 40px 110px 0 0;
+                margin: 40px 400px 0 0;
                 padding: 40px;
                 border: dashed black;
                 border-radius: 30px;
                 border-width: 5px  5px;
             }
         }
-
+        
         /*==========[our-services-list]===========*/   
         .our-services-list{
             display: flex;
             h3{
                 text-transform: uppercase;
-                font-size: 20px;
-
             }
             li{
                 text-transform: uppercase;
-                font-size: 15px;
-
+                font-size: 20px;
+                list-style: outside;
             }
             .service-list-1{
                 //border: 1px dashed rgb(236, 7, 45);
                 padding: 0 40px 10px 10px; // padding needed
-                margin: 0 60px 0 10px;
+                margin: 0 95px 0 0;
                 li{
-                    padding: 0 0 5px 0;
+                    padding: 0 0 30px 0;
                     margin: 20px 20px 0 0;
                 }
+                border-bottom: 5px solid #EF018D; 
             }
             .service-list-2{
                 //border: 1px dashed rgb(236, 7, 45);
                 padding: 0 40px 10px 10px; // padding needed
-                margin: 0 60px 0 10px;
+                margin: 10px 95px 0 0;
                 li{
-                    padding: 0 0 5px 0;
+                    padding: 0 0 30px 0;
                     margin: 20px 20px 0 0;
-                    //border-bottom: 5px solid #00ADF1; 
                 }
-
+                border-bottom: 5px solid #00ADF1;
             }
             .service-list-3{
                 //border: 1px dashed rgb(236, 7, 45);
                 padding: 0 40px 10px 10px; // padding needed
-                margin: 0 60px 0 10px;
+                margin: 10px 95px 20px 0;
+                
                 li{
-                    padding: 0 0 5px 0;
+                    padding: 0 0 30px 0;
                     margin: 20px 20px 0 0;
-                    //border-bottom: 5px solid #FEF102; 
                 }
+                border-bottom: 5px solid #FEF102; 
             }
             .service-list-4{
                 //border: 1px dashed rgb(236, 7, 45);
                 //border-bottom: 5px solid #000000;
                 //padding: 0 63px 50px 20px; // padding needed
                 padding: 0 40px 30px 10px; // padding needed
-                margin: 0 0 0 10px  ;
+                margin: 0 0 0 0;
 
             }
             .pg1{
                 //border: 1px dashed #213083;
                 padding: 0; 
-                margin:0 20px 0 auto;
+                margin:0 0 0 auto;
                 p{
-                    font-size: 20px;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+
+
+
+    /*===========[Footer]=============*/
+
+    footer {
+        @include footerStyle;
+    }
+
+    /*=========================[PHONE-FLEX]===========================*/
+    /*--- MOBILE SCREEN ---*/
+    @media screen and (min-width:320px) and (max-width: 450px) {
+        body {
+            @include bodyStyle-Mobile;
+        }
+
+        header {
+            @include headerStyle-Mobile;
+
+            nav {
+                @include navStyle-Mobile;
+            }
+
+            .header-content {
+                //border: 1px dashed red;
+                border-radius: 20px;
+                p {             
+                    margin: 10px 20px;
+                    padding: 0 0 0 0;
+                    font-size: 10px;
+                    //background-color: #000;
+                    //border: 1px dashed red;
+                }   
+            }
+        }
+
+        /*======The team Section======*/ /*NOTE:use max width and shit*/
+
+        .the-team {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            //border: 2px dashed #8168ff;
+            
+            .p1 {
+                font-size: medium;
+                line-height: 1.3;
+                padding:  0 10px 0 10px ;
+                margin: 0;
+                text-align: center;
+                //border: 1px dashed #f48a8a;
+            }
+
+            .p2{
+                //border: 2px dashed #f48a8a;
+                padding: 0 0 0 0;
+                margin: 0 10px 20px 10px;
+                text-align: justify;
+                font-size: small;
+                b{                
+                    color: transparent;
+                    background-image: linear-gradient(to right, #EF018D , #6366F1);
+                    background-clip: text;
+                }
+                span{
+                    color: #EF018D;
+                }
+            }
+
+        }
+
+        /*=======[team-list-container]========*/
+        .team-list-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            //border: 2px rgb(147, 165, 247) dashed;
+
+            .team-flex {
+                display: flex;
+                gap: 10px;
+                flex-direction: row;
+                .person {
+                    width: 150px;
+                    height: 167px;
+                    //width: 280px;
+                    //height: 327px;
+                    background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
+                    border-radius: 10px;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                        //border: 1px dotted green;
+                    }
+
+                    .person-info {
+                        position: absolute;
+                        background-color: rgb(255, 255, 255, 0.85);
+                        padding: 0 15px;
+                        right: 5px;
+                        left: 5px;
+                        bottom: 5px;
+                        border-radius: 10px;
+                        p {
+                            line-height: 0.8;
+                            color: #213083;
+                            font-size: 10px;
+                            span {
+                                font-size: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .no-pic{
+                //border: 1px dashed rgb(255, 132, 153);
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                color: #213083;
+                gap: 1em;
+                h3{
+                    text-transform: uppercase;
+                    padding: 10px 0 0 0;
+                    margin: 0;
+                    font-size: medium;
+                    text-align: center;
+                }
+                .specialist{
+                    //border:1px dashed rgb(185, 72, 91);
+                    flex-direction: row ;
+                    border-radius: 10px;
+                    background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
+                    padding: 5px;
+                    margin: 0 0 0 0;
+                    .p1{
+                        border:1px dashed #ffffff;// {reqired [DO NOT REMOVE]}
+                        border-radius: 10px;
+                        padding:0 5px 0 5px;
+                        background-color: rgb(255, 255, 255, 0.85);
+                        p{
+                            color: #213083;
+                            font-size: 10px;
+                            span {
+                                font-size: xx-small;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        /*======[our-history]======*/
+
+        .our-history{
+            //border: 2px dashed rgb(0, 26, 255);
+            background-image: url('../Assets/aboutUs-teampic-mobile.png');
+            background-repeat: no-repeat;
+            background-position:top;
+            background-size: contain;
+            margin: 0 10px;
+            .title-our-history{
+                //border:2px dashed rgb(130, 161, 6);
+                margin:  200px 0 0 0;
+                h1{
+                    //border:2px dashed rgb(16, 165, 83);
+                    text-align: left;
+                    font-size: 1.5em;
+                    margin: 0 0 ;
+                    padding: 10px 5px;
+                }
+            }
+
+            .history{
+                //border:2px dashed rgb(4, 116, 4);
+                    p{
+                        font-size: 1em;
+                        margin: 0 5px;
+                    span{
+                        color: #EF018D;
+                    }
                 }
             }
         }
 
+        /*==========[Vision-Mission-img & Content(<p>)]==============*/
+
+        .Vision-Mission{    
+            // background-image: url('../Assets/aboutUs-visionMissionBg.png');
+            // background-repeat: no-repeat;
+            // background-size: 100%;
+            // position: relative;
+
+            padding: 0 8px 0 8px;
+            margin: 50px 10px 0 10px;
+            //border: 2px dashed #f7bbde;
+
+            .Vision-Mission-img{
+                position: relative;
+                margin: 0 0 0 10px;
+                .shadow{
+                    left: 10px;
+                    top: -20px;
+                    mix-blend-mode: overlay;
+                    display: none;
+                }
+                .text2{
+                    padding:10px 10px 0 0;
+                    margin: 5px 10px 0 0;
+                    padding: auto;
+                    left: 10px;
+                    //border:2px dashed #075518;       
+                    p{
+                        //border: 1px dashed #F7F7F7;
+                        margin: 0 auto;
+                    }
+                }
+                .Text{
+                    //border: 1px dashed #df9fc4;
+                    left: 9px;
+                    top: -55px;
+                    display: none;
+                }
+            }
+        /*=========[vision-mission-bg-img]===========*/
+            .Mission-img{
+                max-width: 100%;
+                //border: 1px dashed #b7c1fd;
+
+            }
+
+        /*==========[Vision-Mission-Txt]==========*/
+
+            .Vision-Mission-text{
+                //swidth: 600px;
+                //border: 1px dashed brown;
+
+                .Vision{
+                    // THIS ONE!@@
+                    //border: 2px dashed blue;
+                    display: flex;
+                    .h4{
+                        text-transform: uppercase;
+                    }
+                    .border{
+                        p{  
+                            padding: 0 0 10px 0;
+                            margin: 0;
+                            font-size: 9px;
+                        }
+
+                    }
+                    p{
+                        font-size:10px; 
+                        b{
+                            font-size:33px; 
+                            padding: 10px 0 0 0;
+                            margin:  0 35px 0 10px;
+                        }
+                    }
+                }
+                .Mission{   
+                    display: flex;
+                    //border: 1px  dashed rgb(0, 255, 98);
+                    padding: 10px 0 10px 0;
+                    .h4{
+                        text-transform: uppercase;
+                    }
+                    p{  
+                        padding: 0 0 0 0;
+                        font-size: 9px;
+                        padding: 0 0 10px 0;
+                        margin: 0;                        
+                        b{
+                            font-size: 33px;
+                            padding: 10px 0 0 0;
+                            margin:  0 20px 0 0;                            
+                        }
+                    }
+                }
+
+                img{
+                    width: 100%;
+                    //border: 2px dashed red;
+                }
+            }
+        }
+
+        /*===========[Building Blocks]============*/
+        .Building-Blocks{
+            text-align: center;
+            //border: 1px dashed #6366F1;
+            h2{
+                font-size: 20px;
+            }
+        }
+
+
+        /*==========[our-services-section]===========*/
+
+        .our-services-section{
+            .our-services{
+                border:1px dashed  rgb(255, 255, 255);//{[DO NOT REMOVE!]}
+                text-align: center;
+                p{
+                    //border:2px dashed rgb(100, 109, 240);
+                    background: rgb(255, 255, 255) ;
+                    font-size: 10px;
+                    left: 125px;
+                    position: absolute;
+                    padding: 0 10px 0 10px;
+                    margin: 13px 0 0 0;
+                }
+                h1{
+                    margin: 20px 110px 0 0;
+                    padding: 20px;
+                    border: dashed black;
+                    border-radius: 1em;
+                    border-width: 3px 3px;
+                }
+            }
+
+            /*==========[our-services-list]===========*/   
+            .our-services-list{
+                display: flex;
+                h3{
+                    text-transform: uppercase;
+                    font-size: 15px;
+
+                }
+                li{
+                    text-transform: uppercase;
+                    font-size: 11px;
+
+                }
+                .service-list-1{
+                    //border: 1px dashed rgb(236, 7, 45);
+                    padding: 0 40px 10px 10px; // padding needed
+                    margin: 0 auto 0 10px;
+                    
+                    li{
+                        padding: 0 0 0 0;
+                        margin: 0 25px 0 0;
+                    }
+                    border-bottom: 3px solid #EF018D; 
+                }
+                .service-list-2{
+                    //border: 1px dashed rgb(236, 7, 45);
+                    padding: 0 40px 10px 10px; // padding needed
+                    margin: 0 auto 0 10px;
+                    li{
+                        padding: 0 0 0 0;
+                        margin: 0 25px 0 0;
+                    }
+                    border-bottom: 3px solid #00ADF1; 
+
+                }
+                .service-list-3{
+                    //border: 1px dashed rgb(236, 7, 45);
+                    padding: 0 40px 10px 10px; // padding needed
+                    margin: 0 auto 0 10px;
+                    li{
+                        padding: 0 0 0 0;
+                        margin: 0 25px 0 0;
+                    }
+                    border-bottom: 3px solid #FEF102; 
+                }
+                .service-list-4{
+                    //border: 1px dashed rgb(236, 7, 45);
+                    //border-bottom: 5px solid #000000;
+                    //padding: 0 63px 50px 20px; // padding needed
+                    padding: 0 40px 30px 10px; // padding needed
+                    margin: 0 auto 0 10px  ;
+
+                }
+                .pg1{
+                    //border: 1px dashed #213083;
+                    padding: 0; 
+                    margin:0 20px 0 auto;
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            footer {
+                @include footerStyle-Mobile;
+            }
+        }
+    }
+
+    
+
+
+    /*=========================[TABLET-FLEX]===========================*/
+
+    @media screen and (min-width: 451px) and (max-width: 768px) {
+            body {
+                @include bodyStyle-Mobile;
+                //background-color: #e0e6f3;
+            }
+
+            header {
+                @include headerStyle-Mobile;
+
+                nav {
+                    @include navStyle-Mobile;
+                }
+
+                .header-content {
+                    background-color: $blue;
+                    color: white;
+
+                    p {
+                        margin: 40px 20px;
+                        text-transform: uppercase;
+                        //border: 1px dashed rgb(204, 201, 18);
+                        font-size: 1em;
+                        span{
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+
+
+        /*======The team Section======*/ /*NOTE:use max width and shit*/
+
+        .the-team {
+            display: grid;
+            grid-template-columns: 45% auto;
+            gap: 30px;
+            //border: 2px dashed #8168ff;
+
+            .p1 {
+                font-size: 2em;
+                line-height: 1.3;
+                padding: 0 20px 0 20px;
+                margin: 70px 0 30px 0;
+
+                //border: 1px dashed #f48a8a;
+            }
+
+            .p2{
+                //border: 2px dashed #f48a8a;
+                padding: 20px 0 10px 0 ;
+                margin: 0 0 10px 0;
+                font-size: 1.5em;
+                b{                
+                    color: transparent;
+                    background-image: linear-gradient(to right, #EF018D , #6366F1);
+                    background-clip: text;
+                }
+                span{
+                    color: #EF018D;
+                }
+            }
+
+        }
+
+        /*=======[team-list-container]========*/
+        .team-list-container {
+            display: flex;
+            gap: 15px;
+            //border: 2px rgb(147, 165, 247) dashed;
+            margin: 10px 0 40px 0;
+            .team-flex {
+                display: flex;
+                gap: 10px;
+                .person {
+                    //width: 280px;
+                    //height: 327px;
+                    //background-image: linear-gradient(to bottom, #F7F7F7 50%, sE3E4E7, #A5B5DB);
+                    width: 175px;
+                    height: 220px;
+                    border-radius: 15px;
+                    flex-wrap: wrap;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 20px;
+                        //border: 1px dotted green;
+                    }
+
+                    .person-info {
+                        //position: absolute;
+                        background-color: rgb(255, 255, 255, 0.85);
+                        padding: 0 10px 0 10px;
+                        right: 10px;
+                        left: 10px;
+                        bottom: 10px;
+                        border-radius: 15px;
+                        p {
+                            line-height: 0.8;
+                            color: #213083;
+                            font-size: small;
+                            span {
+                                font-size: x-small;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .no-pic{
+                //border: 1px dashed rgb(255, 132, 153);
+                width: 100%;
+                color: #213083;
+                h3{
+                    text-transform: uppercase;
+                    margin: 0 0 0 0;
+                    font-size: small;
+                    text-align: center;
+                }
+                .specialist{
+                    //border:1px dashed rgb(185, 72, 91);
+                    border-radius: 15px;
+                    background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
+                    padding: 9px;
+                    margin: 10px ;
+                    .p1{
+                        border:1px dashed #ffffff;// {reqired [DO NOT REMOVE]}
+                        border-radius: 15px;
+                        padding:0 5px 0 5px;
+                        background-color: rgb(255, 255, 255, 0.85);
+                        p{
+                            color: #213083;
+                            font-size: small;
+                            span {
+                                font-size: x-small;
+                            }
+                        }
+                    }
+                }
+            }
+
+            /*.Specialist{
+                border:2px dashed rgb(255, 132, 153);
+                padding: 10px 0 0 0;
+            }*/
+        }
+
+        /*======[our-history]======*/
+
+        .our-history{
+            //border: 2px dashed rgb(0, 26, 255);
+            background-image: url('../Assets/aboutUs-teampic-mobile.png');
+            background-repeat: no-repeat;
+            background-position:top;
+            background-size: contain;
+            margin: 0 10px 0 10px;
+            .title-our-history{
+                //border:2px dashed rgb(130, 161, 6);
+                margin:  350px 0 0 0;
+                h1{
+                    //border:2px dashed rgb(16, 165, 83);
+                    text-align: left;
+                    font-size: 2em;
+                }
+            }
+
+            .history{
+                //border:2px dashed rgb(4, 116, 4);
+
+                    p{
+                        font-size: 1.5em;
+                        margin:10px ;
+                    span{
+                        color: #EF018D;
+                    }
+                }
+            }
+        }
+
+        /*==========[Vision-Mission-img & Content(<p>)]==============*/
+
+        .Vision-Mission{    
+            // background-image: url('../Assets/aboutUs-visionMissionBg.png');
+            // background-repeat: no-repeat;
+            // background-size: 100%;
+            // position: relative;
+
+            padding: 0 0 0 0;
+            margin: 100px 10px 0 10px;
+            //border: 2px dashed #f7bbde;
+
+            .Vision-Mission-img{
+                position: relative;
+                width: 340px;
+                margin: 100px 0 0 10px;
+                .shadow{
+                    left: 10px;
+                    top: -30px;
+                    mix-blend-mode: overlay;
+                }
+                .text2{
+                    padding:0 0 0 0;
+                    margin: 0 0 0 400px;
+
+                    //border:2px dashed #075518;
+                    p{
+                        //border:1px dashed #fefdff;
+                        //border-bottom: 2px solid #F7F7F7;
+                        font-size: 11px;
+                        padding: 0 0 0 100px;
+                        margin: 20px 150px 0 0;
+                    }
+                }
+                .Text{
+                    //border: 1px dashed #df9fc4;
+                    left: 6px;
+                    top: -90px;
+
+                }
+            }
+        /*=========[vision-mission-bg-img]===========*/
+            .Mission-img{
+                max-width: 100%;
+
+                //border: 1px dashed #b7c1fd;
+
+            }
+
+        /*==========[Vision-Mission-Txt]==========*/
+
+            .Vision-Mission-text{
+                //swidth: 600px;
+                //border: 1px dashed brown;
+                .Vision{
+                    // THIS ONE!@@
+                    margin: 0 0 0 0;
+                    padding: 0 0 0 0;
+                    //border: 2px dashed blue;
+                    .h4{
+                        text-transform: uppercase;
+                        
+                    }
+                    .border{
+                        p{  
+                            margin: 0;
+                            font-size: 12px;
+                            border-bottom: 2px solid #F7F7F7;
+
+                        }
+
+                    }
+                    p{
+                        padding: 0 0 0 0;
+                        b{
+                            font-size: 25px; 
+
+                        }
+                    }
+                }
+                .Mission{   
+                    //border: 1px  dashed rgb(0, 255, 98);
+                    padding: 10px 0 10px 0;
+                    .h4{
+                        text-transform: uppercase;
+                    }
+                    p{  
+                        padding: 0 0 0 0;
+                        margin: auto;
+                        b{
+                            font-size: 25px;
+                        }
+                    }
+                }
+
+                img{
+                    width: 100%;
+                    //border: 2px dashed red;
+                }
+            }
+        }
+
+        /*===========[Building Blocks]============*/
+        .Building-Blocks{
+            text-align: center;
+            //border: 1px dashed #6366F1;
+            h2{
+                font-size: 20px;
+            }
+        }
+
+
+        /*==========[our-services-section]===========*/
+
+        .our-services-section{
+            .our-services{
+                border:1px dashed  rgb(255, 255, 255);//{[DO NOT REMOVE!]}
+                text-align: center;
+                margin: 0 0 0 10px;
+                p{
+                    //border:2px dashed rgb(100, 109, 240);
+                    font-size: 20px;
+                    background: rgb(255, 255, 255) ;
+                    padding: 0 30px;
+                    position: absolute;
+                    margin:25px 220px;
+                }
+                h1{
+                    margin: 40px 110px 0 0;
+                    padding: 40px 0 40px 0;
+                    border: dashed black;
+                    font-size: 2.5em;
+                    border-radius: 1em;
+                    border-width: 5px  5px;
+                }
+            }
+
+            /*==========[our-services-list]===========*/   
+            .our-services-list{
+                display: flex;
+                h3{
+                    text-transform: uppercase;
+                    font-size: 20px;
+
+                }
+                li{
+                    text-transform: uppercase;
+                    font-size: 15px;
+
+                }
+                .service-list-1{
+                    //border: 1px dashed rgb(236, 7, 45);
+                    padding: 0 40px 10px 10px; // padding needed
+                    margin: 0 60px 0 10px;
+                    li{
+                        padding: 0 0 5px 0;
+                        margin: 20px 20px 0 0;
+                    }
+                }
+                .service-list-2{
+                    //border: 1px dashed rgb(236, 7, 45);
+                    padding: 0 40px 10px 10px; // padding needed
+                    margin: 0 60px 0 10px;
+                    li{
+                        padding: 0 0 5px 0;
+                        margin: 20px 20px 0 0;
+                        //border-bottom: 5px solid #00ADF1; 
+                    }
+
+                }
+                .service-list-3{
+                    //border: 1px dashed rgb(236, 7, 45);
+                    padding: 0 40px 10px 10px; // padding needed
+                    margin: 0 60px 0 10px;
+                    li{
+                        padding: 0 0 5px 0;
+                        margin: 20px 20px 0 0;
+                        //border-bottom: 5px solid #FEF102; 
+                    }
+                }
+                .service-list-4{
+                    //border: 1px dashed rgb(236, 7, 45);
+                    //border-bottom: 5px solid #000000;
+                    //padding: 0 63px 50px 20px; // padding needed
+                    padding: 0 40px 30px 10px; // padding needed
+                    margin: 0 0 0 10px  ;
+
+                }
+                .pg1{
+                    //border: 1px dashed #213083;
+                    padding: 0; 
+                    margin:0 20px 0 auto;
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            footer {
+                @include footerStyle-Mobile;
+            }
+        }
+    }
+
+    /* --- TABLET --- */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        header {    
+            nav {
+                @include navStyleTablet;
+            }
+        }
+        
+
         footer {
-            @include footerStyle-Mobile;
-        }
-    }
-}
-
-/* --- TABLET --- */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    header {    
-        nav {
-            @include navStyleTablet;
+            @include footerStyleTablet;
         }
     }
 
-    footer {
-        @include footerStyleTablet;
+
+    /* --- DESKTOP --- */
+    @media screen and (min-width: 1025px) {
+        /* screen styles */
     }
-}
 
+    /* --- LARGE DESKTOP --- */
+    @media screen and (min-width: 1281px) {
 
-/* --- DESKTOP --- */
-@media screen and (min-width: 1025px) {
-    /* screen styles */
-}
-
-/* --- LARGE DESKTOP --- */
-@media screen and (min-width: 1281px) {
-
-  /* large screen styles */
-}
+    /* large screen styles */
+    }

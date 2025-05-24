@@ -27,6 +27,7 @@ body section {
 body button {
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
+  color: black;
   border: none;
 }
 
@@ -89,8 +90,8 @@ header nav .nav-other-screens .nav-contact-us a {
 header nav .nav-other-screens .nav-contact-us a span {
   margin: 0 10px;
   /* prevent it from turning into an emoji on ios screens */
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
+  font-family: monospace;
+  font-weight: bold;
 }
 header nav .nav-mobile {
   display: none;
@@ -106,7 +107,7 @@ header nav .nav-other-screens .current-page {
 }
 header .header-content {
   background-color: #FFF200;
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 header .header-content h1 {
   margin: 0;
@@ -234,6 +235,15 @@ footer a {
   display: block;
   text-decoration: none;
   color: white;
+  transition: 0.2s;
+  /* make icons8 inline */
+}
+footer a:last-child {
+  display: inline;
+}
+footer a:hover {
+  font-size: 1rem;
+  background-image: linear-gradient(to right, #EF018D, #6366F1);
 }
 footer .footer-flex {
   display: flex;
@@ -270,8 +280,7 @@ footer .footer-content .contact-details {
   margin-top: 50px;
 }
 footer .footer-content .contact-details span {
-  font-weight: 600;
-  text-decoration: underline;
+  font-weight: 800;
   text-transform: uppercase;
 }
 footer .footer-logo,
@@ -326,16 +335,22 @@ footer .copyright {
     margin: 0 auto;
   }
   header nav .nav-mobile .nav-logo-name img {
-    height: 50px;
+    height: 70px;
   }
   header nav .nav-mobile .nav-icon-btns {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     width: 100%;
   }
   header nav .nav-mobile .nav-icon-btns div img {
     height: 30px;
+  }
+  header nav .nav-mobile .nav-icon-btns div img:hover {
+    background-color: #00aeef;
+  }
+  header .header-content p {
+    margin: 20px;
   }
   #works .filter-dropdown .filter-btn {
     width: 100%;

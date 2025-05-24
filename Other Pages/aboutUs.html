@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | LEyarss</title>
 
-    <link rel="stylesheet" href="../Style/aboutUs.css"> <!--stylesheet-->
     <link rel="icon" type="image--" href="../Assets/Logo (With Text White Bg).png"> <!--page icon-->
+    <link rel="stylesheet" href="../Style/aboutUs.css"> <!--stylesheet-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--animation library-->
 </head>
 <body>
     <header>
@@ -48,7 +49,7 @@
         </div>
     </header>
 
-    <section class="the-team">
+    <section class="the-team" data-aos="fade-up">
         <p class="p1">MEET THE TALENTED <strong>TEAM</strong> WHO MADE ALL THIS HAPPEN</p>
         <p class="p2">
             At <b class="span-gradiant">LEYARSS CREATIVES DESIGNS</b>, our success is driven by a team of 
@@ -66,7 +67,7 @@
     <section class="team-list">                 
         <div class="team-list-container">                   
             <div class="team-flex">
-                <div class="person">
+                <div class="person" data-aos="flip-left">
                     <img src="../Assets/aboutUs-profile-erwin.png" alt="Erwin profile">
                     <div class="person-info">
                         <p>
@@ -76,7 +77,7 @@
                     </div>
                 </div>
                 
-                <div class="person">
+                <div class="person" data-aos="flip-right">
                     <img src="../Assets/aboutUs-profile-lucille.png" alt="Lucille profile">
                     <div class="person-info">
                         <p>
@@ -86,7 +87,7 @@
                     </div>
                 </div>
     
-                <div class="person">
+                <div class="person" data-aos="flip-left">
                     <img src="../Assets/aboutUs-profile-ralph.png" alt="Ralph">
                     <div class="person-info">
                         <p>
@@ -96,7 +97,7 @@
                     </div>
                 </div>
             </div>
-            <div class="no-pic">
+            <div class="no-pic" data-aos="flip-right">
                 <h3>other <b>members</b></h3>
                 <div class="specialist">
                     <div class="p1">
@@ -124,23 +125,23 @@
 <!-----------[our-history]-------------->    
 
     <section class="our-history">
-        <div class="title-our-history">
+        <div class="title-our-history"data-aos="fade-down-right">
             <h1>Our History</h1>
         </div>  
         <div class="history">
             <div>
                 <div><img src="../Assets/aboutUs-teampic.png" alt=""></div>
-                <p>
+                <p data-aos="fade-down-right">
                     <b>LEYARSS CREATIVE DESIGNS</b> 
                     started around December <span>2024</span> with a <br>vision—to empower  businesses, 
                     organizations, and schools with cutting-<br>edge branding and digital solutions.
                 </p>
-                <p>
+                <p data-aos="fade-down-right">
                     What began as a small venture in graphic design quickly expanded into <br>  
                     a full-fledged creative powerhouse, offering <span>logo creation, marketing <br>materials</span>, 
                     and <span>mobile app</span> development for seamless attendance <br>tracking and <span>database management</span>.
                 </p>
-                <p>
+                <p data-aos="fade-down-right">
                     Driven by passion and innovation, we continue to grow, helping <br>brands stand out, 
                     connect, and succeed in an ever-changing <br>digital landscape. Your success is our 
                     masterpiece.                    
@@ -161,7 +162,7 @@
                     <img src="../Assets/aboutUs-visionMissionTextShadow.png" alt="Mission-Shadow">
                 </div>
                 <div class="text2">
-                    <div class="Vision">
+                    <div class="Vision" data-aos="fade-down-left">
                             <p class="h4"><b>Vision</b></p>
                             <div class="border">
                                 <p>
@@ -172,7 +173,7 @@
                                 
                             </div>
                     </div>
-                    <div class="Mission">
+                    <div class="Mission" data-aos="fade-down-left">
                         <p class="h4"><b>Mission</b></p>
                         <p>Our mission is to empower businesses with creative design solutions 
                             that boost branding, digital presence, and efficiency, fostering 
@@ -193,7 +194,7 @@
 
 <!-----------[Building-Blocks-section]------------->
 
-    <section class="Building-Blocks-section">
+    <!-- <section class="Building-Blocks-section">
         <div class="bubbles"></div>
         <div class="Building-Blocks">
             <h2>Building Blocks of Our <i><b>Success</b></i></h2>
@@ -215,6 +216,12 @@
                 <div><p>Collaboration</p></div>
             </div>
         </div>
+    </section> -->
+
+    <section id="aboutUs-video">
+        <video autoplay muted loop>
+            <source src="../Assets/LEyarss - About Us.mp4" type="video/mp4">
+        </video>
     </section>
 <!---------------[our-services-section]---------------->
 
@@ -225,7 +232,7 @@
         </div>
 <!----------[service-list-border]----------->
 
-        <div class="our-services-list">
+        <div class="our-services-list" data-aos="fade-right" data-aos-offset="620">
 
             <!-------[service-list-1]-------->
 
@@ -246,7 +253,7 @@
     
     <!----------[service-list-2]----------->
 
-        <div class="our-services-list">
+        <div class="our-services-list" data-aos="fade-right" data-aos-offset="620">
             <div class="service-list-2">
                 <h3>Graphic Design & Branding</h3>
                 <ul>
@@ -264,7 +271,7 @@
     
     <!----------[service-list-3]----------->
     
-        <div class="our-services-list">
+        <div class="our-services-list" data-aos="fade-right" data-aos-offset="620">
             <div class="service-list-3">
                 <h3>Graphic Design & Branding</h3>
                 <ul>
@@ -281,7 +288,7 @@
     
     <!----------[service-list-4]----------->
 
-        <div class="our-services-list">
+        <div class="our-services-list" data-aos="fade-right" data-aos-offset="620">
             <div class="service-list-4">
                 <h3> Web & Digital Solutions</h3>
                 <ul>
@@ -325,7 +332,7 @@
                     <p><u>LINKS</u></p>
                     <a href="../index.html">Home</a>
                     <a href="#/">About</a>
-                    <a href="projects.html">Our Works</a>
+                    <a href="projects.html">Our Projects</a>
                     <a href="contact.html">Contact Us</a>
                 </div>
                 <div>
@@ -335,10 +342,14 @@
             </div>
         </div>
         <hr>
-        <p class="copyright">Copyright &copy; 2024 LEyarss Creative Design. All rights reserved. Icons by<a href="https://icons8.com/">Icon8</a></p>
+        <p class="copyright">Copyright &copy; 2024 LEyarss Creative Design. All rights reserved.<br>Icons by <a href="https://icons8.com/">Icon8</a>.</p>
     </footer>
 
     <script src="../Javascript/aboutUs.js"></script>
+    
+    <!--animation library-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../Javascript/variables.js"></script>
 </body>
 </html>
 <!----Taking a Break---->

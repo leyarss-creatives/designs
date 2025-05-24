@@ -8,6 +8,7 @@
     <link rel="icon" type="image--" href="../Assets/Logo (With Text White Bg).png"> <!--page icon-->
     <link rel="stylesheet" href="../Style/projects.css">
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"> <!-- splidejs css cdn for works carousel -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--animation library-->
 </head>
 <body>
     <header>
@@ -50,7 +51,7 @@
     </header>
 
     <!--Works Section-->
-    <section id="works">
+    <section id="works" data-aos="zoom-in-down">
         <!--dropdown filter-->
         <div class="filter-dropdown">
             <button onclick="showDropdownFilter()" class="filter-btn">▼ Menu</button>
@@ -174,8 +175,8 @@
 
                         <div class="splide__slide">
                             <img src="../Assets/Print Design/Acrylic Plaque - Print(1).jpg" alt="">
-                            <p></p>
-                            <button><a href="" target="_blank">View Project</a></button>
+                            <p>Acrylic Plaque</p>
+                            <button><a href="https://www.facebook.com/photo/?fbid=122185176878105818&set=pcb.122185177142105818" target="_blank">View Project</a></button>
                         </div>
 
                         <div class="splide__slide">
@@ -198,8 +199,14 @@
                     </div>
                 </div>
 
-                <!--showing more images-->
+                <!--PRINT DESSIGN || showing more images-->
                 <div id="moreImages">
+                    <div class="splide__slide">
+                        <img src="../Assets/Print Design/T-Shirt Designs/SMO Uniform.jpg" alt="">
+                        <p>SMO Uniform</p>
+                        <button><a href="https://www.facebook.com/photo/?fbid=122176773638105818&set=pcb.122176775078105818" target="_blank">View Project</a></button>
+                    </div>
+                    
                     <div class="splide__slide">
                         <img src="../Assets/Print Design/T-Shirt Designs/Unnamed.jpg" alt="">
                         <p>Yarra Uniform</p>
@@ -274,6 +281,12 @@
                     <!--Product design Projects || MORE images-->
                     <div id="moreImages">
                         <div class="splide__slide">
+                            <img src="../Assets/Product Design/Company Profile Inside - PRODUCT DESIGN.jpg" alt="">
+                            <p>Company Profile</p>
+                            <button><a href="https://www.facebook.com/photo/?fbid=10222440298075938&set=pcb.10222440298955960" target="_blank">View Project</a></button>
+                        </div>
+
+                        <div class="splide__slide">
                             <img src="../Assets/Product Design/IDs & Lanyards/ID Lanyard.jpg" alt="">
                             <p>ID Lanyard</p>
                             <button><a href="https://www.facebook.com/photo?fbid=122184751706105818&set=pcb.122184751928105818" target="_blank">View Project</a></button>
@@ -330,7 +343,7 @@
                     <p><span>Links</span></p>
                     <a href="../index.html">Home</a>
                     <a href="aboutUs.html">About</a>
-                    <a href="#/">Our Works</a>
+                    <a href="#/">Our Projects</a>
                     <a href="contact.html">Contact Us</a>
                 </div>
 
@@ -342,10 +355,13 @@
 
         </div>
         <hr>
-        <p class="copyright">Copyright &copy; 2024 LEyarss Creative Design. All rights reserved. Icons by<a href="https://icons8.com/">Icon8</a></p>
+        <p class="copyright">Copyright &copy; 2024 LEyarss Creative Design. All rights reserved.<br>Icons by <a href="https://icons8.com/">Icon8</a>.</p>
     </footer>
 
     <script src="../Javascript/projects.js"></script> <!--js link-->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> <!--splidejs js cdn for works carousel -->
+    <!--animation library-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../Javascript/variables.js"></script>
 </body>
 </html>

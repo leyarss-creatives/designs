@@ -295,6 +295,10 @@ $allTextFontSize-Mobile: 12px;
             div {
                 img {
                     height: 30px;
+
+                    &:hover {
+                    background-color: #00aeef;
+                    }
                 }
             }
         }

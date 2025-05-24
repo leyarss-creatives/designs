@@ -27,14 +27,19 @@ body section {
 body button {
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
+  color: black;
   border: none;
 }
 
 header {
-  margin: 10px;
+  height: 100vh;
+  position: relative;
 }
 header nav {
   /*hide mobile nav*/
+  margin: 0 10px;
+  position: relative;
+  z-index: 1;
 }
 header nav a {
   color: white;
@@ -83,23 +88,31 @@ header nav .nav-other-screens .nav-contact-us a {
 header nav .nav-other-screens .nav-contact-us a span {
   margin: 0 10px;
   /* prevent it from turning into an emoji on ios screens */
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
+  font-family: monospace;
+  font-weight: bold;
 }
 header nav .nav-mobile {
   display: none;
 }
-header nav a {
-  color: black;
-}
 header nav .nav-contact-us {
   visibility: hidden;
 }
-header .video {
-  text-align: center;
-}
-header .video video {
+header .video-container-otherscreens {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+header .video-container-otherscreens video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .video-container-mobile {
+  display: none;
 }
 
 /*=====Input Section=====*/
@@ -209,6 +222,15 @@ footer a {
   display: block;
   text-decoration: none;
   color: white;
+  transition: 0.2s;
+  /* make icons8 inline */
+}
+footer a:last-child {
+  display: inline;
+}
+footer a:hover {
+  font-size: 1rem;
+  background-image: linear-gradient(to right, #EF018D, #6366F1);
 }
 footer .footer-flex {
   display: flex;
@@ -245,8 +267,7 @@ footer .footer-content .contact-details {
   margin-top: 50px;
 }
 footer .footer-content .contact-details span {
-  font-weight: 600;
-  text-decoration: underline;
+  font-weight: 800;
   text-transform: uppercase;
 }
 footer .footer-logo,
@@ -270,6 +291,9 @@ footer .copyright {
   body section {
     padding: 10px;
   }
+  header {
+    height: auto;
+  }
   header .header-content {
     border-radius: 30px;
     padding: 10px;
@@ -290,6 +314,9 @@ footer .copyright {
     height: auto;
     max-height: 400px;
   }
+  header nav {
+    margin-top: 10px;
+  }
   header nav .nav-other-screens {
     display: none;
   }
@@ -301,19 +328,35 @@ footer .copyright {
     margin: 0 auto;
   }
   header nav .nav-mobile .nav-logo-name img {
-    height: 50px;
+    height: 70px;
   }
   header nav .nav-mobile .nav-icon-btns {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     width: 100%;
   }
   header nav .nav-mobile .nav-icon-btns div img {
     height: 30px;
   }
+  header nav .nav-mobile .nav-icon-btns div img:hover {
+    background-color: #00aeef;
+  }
   header nav a {
     color: white;
+  }
+  header .video-container-otherscreens {
+    display: none;
+  }
+  header .video-container-mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  header .video-container-mobile video {
+    width: 100%;
+    height: 100%;
   }
   #message input,
   #message #message-box {
@@ -328,12 +371,25 @@ footer .copyright {
   }
   #contact-details .details-flex {
     display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
   }
   #contact-details .details-flex .number,
   #contact-details .details-flex .email,
   #contact-details .details-flex .location {
     margin-top: 10px;
     padding: 20px;
+  }
+  #contact-details .details-flex .number img {
+    height: 25px;
+  }
+  #contact-details .details-flex .email img {
+    height: 35px;
+    margin: -5px;
+  }
+  #contact-details .details-flex .location img {
+    height: 25px;
   }
   #contact-details iframe {
     width: 100%;
@@ -365,12 +421,12 @@ footer .copyright {
     margin: 30px;
     gap: 10px;
   }
+  #contact-details .details-flex {
+    display: block;
+  }
+  #contact-details .details-flex div {
+    margin: 10px 0;
+  }
 }
 /* --- DESKTOP --- */
-@media screen and (min-width: 1025px) {
-  /* desktop styles */
-}
-/* --- LARGE DESKTOP --- */
-@media screen and (min-width: 1281px) {
-  /* large screen styles */
-}/*# sourceMappingURL=contact.css.map */
+/* --- LARGE DESKTOP --- *//*# sourceMappingURL=contact.css.map */

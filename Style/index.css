@@ -112,7 +112,7 @@ header nav .nav-other-screens .nav-contact-us a span {
   margin: 0 10px;
   /* prevent it from turning into an emoji on ios screens */
   font-family: monospace;
-  font-style: normal;
+  font-weight: bold;
 }
 header nav .nav-mobile {
   display: none;
@@ -376,6 +376,9 @@ footer .copyright {
   }
   header nav .nav-mobile .nav-icon-btns div img {
     height: 30px;
+  }
+  header nav .nav-mobile .nav-icon-btns div img:hover {
+    background-color: #00aeef;
   }
   header .header-content {
     display: flex;

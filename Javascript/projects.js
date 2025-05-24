@@ -74,24 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 }); 
 
-//-- for the view more button--//
-/*function viewMore() {
-    let splideContainer = document.querySelector(".slide__slide");
-    let moreImages = document.getElementById("moreImages");
-    let button = document.querySelector("moreBtn")
-
-    if (moreImages.style.display === "none" || moreImages.style.display === "") {
-        moreImages.style.display = "block";
-        button.textContent = "Show Less"
-        splideContainer.classList.add("resized");
-
-    } else {
-        moreImages.style.display = "none";
-        button.textContent = "Show More"
-        splideContainer.classList.remove("resized");
-    }
-} 
-*/
 
 /*function viewMore() {
     let splideContainer = document.querySelector(".splide__list");
@@ -140,16 +122,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if (moreImages.style.display === "none" || moreImages.style.display === "") {
         moreImages.style.display = "block";
         button.textContent = "Show Less";
-
+        // Reposition the images smoothly
+        splideContainer.scrollTo({ right: 0, behavior: "smooth" });
         // Hide the 4th image 
         if (fourthImage) fourthImage.style.display = "none";
-
         // Hide arrows 
         arrows.forEach(arrow => arrow.style.display = "none");
-
-        // Reposition the images smoothly
-        splideContainer.scrollTo({ left: 0, behavior: "smooth" });
-
         // Resize the images 
         splideContainer.querySelectorAll(".splide__slide").forEach((slide, index) => {
             if (index < 3) {
@@ -164,7 +142,5 @@ document.addEventListener('DOMContentLoaded', function () {
         if (fourthImage) fourthImage.style.display = "block";
         // Show arrows again
         arrows.forEach(arrow => arrow.style.display = "block");
-        // Reposition the images smoothly
-        splideContainer.scrollTo({ left: 0, behavior: "smooth" });
     }
 }

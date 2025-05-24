@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | LEyarss</title>
 
-    <link rel="stylesheet" href="../Style/contact.css"> <!--stylesheet-->
     <link rel="icon" type="image--" href="../Assets/Logo (With Text White Bg).png"> <!--page icon-->
+    <link rel="stylesheet" href="../Style/contact.css"> <!--stylesheet-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--animation library-->
 </head>
 <body>
     <header>
@@ -39,8 +40,14 @@
                 </div>
             </div>
         </nav>
+
+        <div class="video-container-otherscreens">
+            <video autoplay muted loop>
+                <source src="../Assets/Connect With Us..mp4" type="video/mp4">
+            </video>
+        </div>
         
-        <div class="video">
+        <div class="video-container-mobile" data-aos="zoom-in">
             <video autoplay muted loop>
                 <source src="../Assets/Connect With Us..mp4" type="video/mp4">
             </video>
@@ -48,10 +55,9 @@
     </header>
 
     <section id="message">
-        <h1>Connect <span>with us</span>!</h1>
-        <input type="text" placeholder="Enter your name...">
-        <input type="text" placeholder="Enter your email...">
-        <div>
+        <input type="text" placeholder="Enter your name..." data-aos="fade">
+        <input type="text" placeholder="Enter your email..." data-aos="fade">
+        <div data-aos="fade">
             <textarea name="message-box" id="message-box" placeholder="Your message"></textarea>
             <div><button>Submit</button></div>
         </div>
@@ -59,21 +65,21 @@
 
     <section id="contact-details">
         <div class="details-flex">
-            <div class="number">
+            <div class="number" data-aos="flip-left">
                 <img src="../Assets/contact-telephoneicon.png" alt="Telephone icon">
                 <p>+096 2284 3247</p>
             </div>
-            <div class="email">
+            <div class="email" data-aos="flip-right">
                 <img src="../Assets/contact-emailicon.png" alt="Email icon">
                 <p>leyarsscreative@gmail.com</p>
             </div>
-            <div class="location">
+            <div class="location" data-aos="flip-left">
                 <img src="../Assets/contact-locationicon.png" alt="Location icon">
                 <p>Iponan, Cagayan De Oro</p>
             </div>
         </div>
 
-        <div>
+        <div data-aos="zoom-in">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15784.162677893795!2d124.58813523969651!3d8.495426764736662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fff4a1191ff33f%3A0xbc101e5a57be04f6!2sIponan%2C%20Misamis%20Oriental%2C%20Philippines!5e0!3m2!1sen!2sae!4v1745833588339!5m2!1sen!2sae" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
@@ -102,7 +108,7 @@
                     <p><u>LINKS</u></p>
                     <a href="../index.html">Home</a>
                     <a href="aboutUs.html">About</a>
-                    <a href="projects.html">Our Works</a>
+                    <a href="projects.html">Our projects</a>
                     <a href="#/">Contact Us</a>
                 </div>
                 <div>
@@ -112,7 +118,11 @@
             </div>
         </div>
         <hr>
-        <p class="copyright">Copyright &copy; 2024 LEyarss Creative Design. All rights reserved. Icons by<a href="https://icons8.com/">Icon8</a></p>
+        <p class="copyright">Copyright &copy; 2024 LEyarss Creative Design. All rights reserved.<br>Icons by <a href="https://icons8.com/">Icon8</a>.</p>
     </footer>
+
+    <!--animation library-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../Javascript/variables.js"></script>
 </body>
 </html>

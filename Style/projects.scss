@@ -29,7 +29,7 @@ header {
 
     .header-content {
         background-color: $yellow;
-        font-size: $headerFontSize-Mobile;
+        font-size: $headerFontSize;
 
         h1 {
             margin: 0;
@@ -195,6 +195,12 @@ footer {
 
         nav {
             @include navStyle-Mobile;
+        }
+
+        .header-content {
+            p {
+                margin: 20px;
+            }
         }
     }
 
