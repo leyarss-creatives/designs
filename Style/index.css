@@ -33,6 +33,7 @@ body section {
 body button {
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
+  color: black;
   border: none;
 }
 body #btn-backtotop {
@@ -169,9 +170,6 @@ header .header-content .header-content-mockups img {
 #why-choose-us .why-choose-1,
 #why-choose-us .why-choose-2,
 #why-choose-us .why-choose-3 {
-  opacity: 0; /* Hidden initially */
-  transform: translateY(-100vh) rotate(0deg);
-  transition: opacity 0.5s ease-out, transform 1s ease-out;
   max-width: 700px;
   margin: 0 auto 40px;
   border-radius: 20px;
@@ -194,16 +192,6 @@ header .header-content .header-content-mockups img {
   background-color: #fff766;
 }
 
-@keyframes fallDown {
-  0% {
-    transform: translateY(-100vh) rotate(0deg);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0) rotate(var(--rotation));
-    opacity: 1;
-  }
-}
 /*======Our Projects Section======*/
 #our-proj {
   background-image: url("../Assets/our-proj-bg.png");
@@ -276,6 +264,14 @@ footer a {
   display: block;
   text-decoration: none;
   color: white;
+  transition: 0.2s;
+  /* make icons8 inline */
+}
+footer a:last-child {
+  display: inline;
+}
+footer a:hover {
+  background-image: linear-gradient(to right, #EF018D, #6366F1);
 }
 footer .footer-flex {
   display: flex;
@@ -311,9 +307,8 @@ footer .footer-content .contact-details {
   justify-content: space-around;
   margin-top: 50px;
 }
-footer .footer-content .contact-details span {
-  font-weight: 600;
-  text-decoration: underline;
+footer .footer-content .contact-details p span {
+  font-weight: 1000;
   text-transform: uppercase;
 }
 footer .footer-logo,
@@ -371,12 +366,12 @@ footer .copyright {
     margin: 0 auto;
   }
   header nav .nav-mobile .nav-logo-name img {
-    height: 50px;
+    height: 70px;
   }
   header nav .nav-mobile .nav-icon-btns {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     width: 100%;
   }
   header nav .nav-mobile .nav-icon-btns div img {
@@ -498,7 +493,6 @@ footer .copyright {
     display: grid;
     grid-template-columns: auto auto;
     gap: 25px;
-    border: 1px dashed black;
   }
   #our-proj .prods-container .prod-card {
     background-color: white;

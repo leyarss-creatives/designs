@@ -43,6 +43,7 @@ $allTextFontSize-Mobile: 12px;
     button {
         font-family: $webFont;
         font-size: $allTextFontSize;
+        color: black;
         border: none;
     }
 }
@@ -136,7 +137,19 @@ $allTextFontSize-Mobile: 12px;
         display: block;
         text-decoration: none;
         color: white;
+        transition: 0.2s;
+
+        /* make icons8 inline */
+        &:last-child {
+            display: inline;
+        }
+
+        &:hover {
+            font-size: 1rem;
+            background-image: linear-gradient(to right, #EF018D , #6366F1);
+        }
     }
+
 
     .footer-flex {
         display: flex;
@@ -179,12 +192,11 @@ $allTextFontSize-Mobile: 12px;
             width: 100%;
             justify-content: space-around;
             margin-top: 50px;
-            
+
             span {
-                font-weight: 600;
-                text-decoration: underline;
+                font-weight: 800;
                 text-transform: uppercase;
-            }
+                }
 
             //border: 1px dashed blue;
         }
@@ -270,14 +282,14 @@ $allTextFontSize-Mobile: 12px;
             margin: 0 auto;
 
             img {
-                height: 50px;
+                height: 70px;
             }
         }
 
         .nav-icon-btns {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 50px;
             width: 100%;
 
             div {

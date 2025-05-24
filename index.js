@@ -23,22 +23,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-/* card falling from the top to its position*/
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".why-choose-1, .why-choose-2, .why-choose-3");
-
-    function checkScroll() {
-        cards.forEach((card, index) => {
-            const cardPosition = card.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-
-            if (cardPosition < windowHeight * 0.8) { // Adjust threshold for earlier/later reveal
-                card.style.opacity = "1";
-                card.style.transform = `translateY(0) rotate(${index % 2 === 0 ? "-6deg" : "6deg"})`;
-            }
-        });
-    }
-
-    window.addEventListener("scroll", checkScroll);
-    checkScroll(); // Run once on page load in case section is already in view
-});

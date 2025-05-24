@@ -8,6 +8,7 @@
     <link rel="icon" type="image--" href="Assets/Logo (With Text White Bg).png"> <!--page icon-->
     <link rel="stylesheet" href="Style/index.css"> <!--css link-->
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"> <!-- splidejs css cdn for testimonials carousel -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--animation library-->
 </head>
 <body id="top"> <!--added id for back to top btn-->
     <!--Header Section-->
@@ -44,7 +45,7 @@
 
         <!--heading text & product img-->
         <div class="header-content">
-            <div>
+            <div data-aos="zoom-in-down">
                 <h1>We Build Brand Legacies</h1>
                 <p>
                     From startups to established brands, we bring ideas to life, shape identities, and deliver impactful results. Your vision is our mission.
@@ -53,7 +54,7 @@
                     EXPLORE MORE<span>&#8599</span>
                 </button>
             </div>
-            <div class="header-content-mockups">
+            <div class="header-content-mockups" data-aos="zoom-in-up">
                 <img src="Assets/home-header-mockups.png" alt="">
             </div>
         </div>
@@ -61,20 +62,20 @@
 
     <!--Why Choose Us Section-->
     <section id="why-choose-us">
-        <h1>Why choose us?</h1>
-        <div class="why-choose-1">
+        <h1 data-aos="fade">Why choose us?</h1>
+        <div class="why-choose-1" data-aos="fade-down">
             <img src="Assets/why-choose-1.png" alt="">
             <p><b>Creative Excellence:</b> Designs that make a lasting impression</p>
             <p><b>Premium Quality:</b> High-resolution prints & professional layouts</p>
         </div>
         
-        <div class="why-choose-2">
+        <div class="why-choose-2" data-aos="fade-down">
             <img src="Assets/why-choose-2.png" alt="">
             <p><b>Tailored Solutions:</b> Custom designs to reflect your brand’s identity</p>
             <p><b>Innovative & Trend-Aware:</b> We stay updated with the latest design and tech trends</p>
         </div>
 
-        <div class="why-choose-3">
+        <div class="why-choose-3" data-aos="fade-down">
             <img src="Assets/why-choose-3.png" alt="">
             <p><b>Reliable Service:</b> Fast turnaround without compromising quality</p>
             <p><b>Affordable & Flexible Packages:</b> Quality design with competitive rates</p>
@@ -83,37 +84,37 @@
 
     <!--Projects Section-->
     <section id="our-proj">
-        <h1>Our Projects</h1>
-        <p>
+        <h1 data-aos="fade">Our Projects</h1>
+        <p data-aos="fade">
             Our customers entrust us with bringing you the latest and most innovative products. Explore our new arrivals and stay ahead with the best in quality and design.
         </p>
         <div class="prods-container">
-            <div class="prod-card">
+            <div class="prod-card" data-aos="flip-up" data-aos-offset="200">
                 <img src="Assets/our-proj-magnets.png" alt="">
                 <p>Magnets</p>
             </div>
 
-            <div class="prod-card">
+            <div class="prod-card" data-aos="flip-up" data-aos-offset="200">
                 <img src="Assets/our-proj-logodesign.png" alt="">
                 <p>Logo Designs</p>
             </div>
 
-            <div class="prod-card">
+            <div class="prod-card" data-aos="flip-up" data-aos-offset="200">
                 <img src="Assets/our-proj-packaging.png" alt="">
                 <p>Packaging</p>
             </div>
 
-            <div class="prod-card">
+            <div class="prod-card" data-aos="flip-down" data-aos-offset="200">
                 <img src="Assets/our-proj-acrylic.png" alt="">
                 <p>Acrylic Plaques</p>
             </div>
 
-            <div class="prod-card">
+            <div class="prod-card" data-aos="flip-down" data-aos-offset="200">
                 <img src="/Assets/Print Design/T-Shirt Designs/Custom Reunion T-Shirt.jpg" alt="" >
                 <p>T-shirt Design</p>
             </div>
 
-            <div class="prod-card">
+            <div class="prod-card" data-aos="flip-down" data-aos-offset="200">
                 <img src="Assets/our-proj-standees.png" alt="">
                 <p>Standees, Posters</p>
             </div>
@@ -122,8 +123,8 @@
 
     <!--Client Feedback Section-->
     <section id="client-feed">
-        <h1>Client Feedback</h1>
-        <div class="splide">
+        <h1 data-aos="fade">Client Feedback</h1>
+        <div class="splide" data-aos="zoom-in" data-aos-offset="300">
             <div class="splide__track">
                 <div class="splide__list">
 
@@ -215,7 +216,7 @@
             </div>
         </div>
         <hr>
-        <p class="copyright">Copyright &copy; 2024 LEyarss Creative Design. All rights reserved. Icons by<a href="https://icons8.com/">Icon8</a></p>
+        <p class="copyright">Copyright &copy; 2024 LEyarss Creative Design. All rights reserved.<br>Icons by <a href="https://icons8.com/">Icon8</a>.</p>
     </footer>
     
     <!--btn to scroll to the very start of page-->
@@ -225,5 +226,8 @@
 
     <script src="index.js"></script> <!--js link-->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> <!--splidejs js cdn for testimonials carousel -->
+    <!--animation library-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="Javascript/variables.js"></script> <!--js for all pages-->
 </body>
 </html>
