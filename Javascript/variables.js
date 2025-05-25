@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (window.innerWidth <= 768) {
             targetElement.setAttribute('data-aos-offset', '50'); // mobile value
         } else {
-            targetElement.setAttribute('data-aos-offset', '620'); // desktop value
+            targetElement.setAttribute('data-aos-offset', '200'); // desktop value
         }
 
         AOS.refresh(); // re-initialize to apply the updated offset

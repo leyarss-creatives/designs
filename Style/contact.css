@@ -269,6 +269,7 @@ footer .footer-content .contact-details {
 footer .footer-content .contact-details span {
   font-weight: 800;
   text-transform: uppercase;
+  text-decoration: underline;
 }
 footer .footer-logo,
 footer .copyright {

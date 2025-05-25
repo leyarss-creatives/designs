@@ -119,12 +119,17 @@ header nav .nav-mobile {
 }
 header nav .nav-other-screens a {
   color: black;
-  transition: 0.2s;
+  transition: 0.5s;
 }
-header nav .nav-other-screens a:hover,
-header nav .nav-other-screens .current-page {
+header nav .nav-other-screens a:hover {
   color: #EF018D;
   border-bottom: 2px solid #EF018D;
+}
+header nav .nav-other-screens .current-page {
+  background-color: #EF018D;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
   pointer-events: none;
 }
 header .header-content {

@@ -74,73 +74,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 }); 
 
+function viewMore(button) {
+    const workSection = button.closest(".work"); // Find the parent .work div
+    const splide = workSection.querySelector(".splide");
+    const allWorks = workSection.querySelector(".all-works");
+    const isVisible = allWorks.style.display === "grid";
 
-/*function viewMore() {
-    let splideContainer = document.querySelector(".splide__list");
-    let moreImages = document.getElementById("moreImages");
-    let button = document.querySelector(".moreBtn");
-    let fourthImage = splideContainer.children[3]; // Select the 4th image
-    let arrows = document.querySelectorAll(".splide__arrow");
-    
-    if (moreImages.style.display === "none" || moreImages.style.display === "") {
-        moreImages.style.display = "block";
-        button.textContent = "Show Less";
-        // Hide the 4th image
-        fourthImage.style.display = "none";
-        //hides the arrow
-        arrows.forEach(arrow => arrow.style.display = "none")
-        //repositioning the images
-        splideContainer.scrollTo({ left: 0, behavior: "smooth" });
-        // Resize the remaining images
-        document.querySelectorAll(".splide__slide").forEach((slide, index) => {
-            if (index < 3) {
-                slide.style.width = "31.2%"; // Resize the first 3 images
-            }
-        });
+    if (window.innerWidth > 768) { 
+        // only toggle for tablet/desktop
+        if (isVisible) {
+            allWorks.style.display = "none";
+            splide.style.display = "block";
+            button.textContent = "Show More";
+        } else {
+            allWorks.style.display = "grid";
+            splide.style.display = "none";
+            button.textContent = "Show Less";
 
-    } else {
-        moreImages.style.display = "none";
-        button.textContent = "Show More";
-        // Show the 4th image again
-        fourthImage.style.display = "block";
-        arrows.forEach(arrow => arrow.style.display = "block");
-        //repositioning the images
-        splideContainer.scrollTo({ left: 0, behavior: "smooth" });
-    }
-} */
-
-    function viewMore(button) {
-    let workSection = button.closest(".work");
-
-    // Get the corresponding ".splide__list" inside that section
-    let splideContainer = workSection.querySelector(".splide__list");
-    let moreImages = workSection.querySelector("#moreImages");
-    let fourthImage = splideContainer.children[3]; // Select the 4th image (if exists)
-    let arrows = workSection.querySelectorAll(".splide__arrow");
-
-    // Check the display state and toggle visibility
-    if (moreImages.style.display === "none" || moreImages.style.display === "") {
-        moreImages.style.display = "block";
-        button.textContent = "Show Less";
-        // Reposition the images smoothly
-        splideContainer.scrollTo({ right: 0, behavior: "smooth" });
-        // Hide the 4th image 
-        if (fourthImage) fourthImage.style.display = "none";
-        // Hide arrows 
-        arrows.forEach(arrow => arrow.style.display = "none");
-        // Resize the images 
-        splideContainer.querySelectorAll(".splide__slide").forEach((slide, index) => {
-            if (index < 3) {
-                slide.style.width = "31.2%"; // Resize the first 3 images
-            }
-        });
-
-    } else {
-        moreImages.style.display = "none";
-        button.textContent = "Show More";
-        // Show the 4th image again
-        if (fourthImage) fourthImage.style.display = "block";
-        // Show arrows again
-        arrows.forEach(arrow => arrow.style.display = "block");
+            // make the user stay at the first works if all-works are shown
+            allWorks.scrollIntoView({
+                block: "start"
+            });
+        }
     }
 }

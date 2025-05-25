@@ -16,10 +16,17 @@ header {
                 transition: 0.2s;
             }
             
-            a:hover, 
-            .current-page {
+            a:hover {
                 color: $yellow;
                 border-bottom: 2px solid $yellow;
+            }
+
+            .current-page {
+                background-color: $yellow;
+                pointer-events: none;
+                padding: 5px;
+                border-radius: 10px;
+                color: rgb(255, 255, 255);
             }
 
             //background-image: url('../Assets/projects-nav-bg.png');
@@ -44,7 +51,7 @@ header {
 
 /*=====Works Section=====*/
 #works {
-   .filter-dropdown {
+    .filter-dropdown {
         position: relative;
 
         .filter-btn {
@@ -92,8 +99,10 @@ header {
     }
     
     .work {
+        text-align: center;
+
         .splide {
-            // border: 1px dashed red;
+            text-align: left;
             max-width: 100%;
             position: relative; // Needed for absolute arrows to position correctly
 
@@ -169,6 +178,51 @@ header {
                 }
             }           
         }
+
+        .all-works {
+            display: none; /* hidden by default for desktop/tablet */
+            grid-template-columns: auto auto auto;
+            text-align: left;
+            
+            .slide {
+                /* border: 1px dashed black;  */
+                background-color: white;
+                margin: 13px;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    
+                img {
+                    width: 100%;
+                    margin: auto 0;
+                }
+    
+                p {
+                    font-weight: 600;
+                }
+    
+                button {
+                    padding: 7px 20px;
+                    border: 1px solid black;
+                    border-radius: 60px;
+                    background-color: white;
+    
+                    a {
+                        color: black;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .moreBtn {
+            background-color: $pink;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px auto;
+            cursor: pointer;
+        }
     }
 
     #event,
@@ -205,20 +259,6 @@ footer {
     }
 
     #works {
-        .filter-dropdown {
-            .filter-btn {
-                width: 100%;
-                text-align: left;
-                padding: 5px 10px;
-            }
-    
-            .filter-btn,
-            div {
-                background-color: black;
-                color: white;
-            }
-        }
-    
         .work {
             padding: 20px 0;
             display: flex;
@@ -237,20 +277,16 @@ footer {
                 font-size: $allTextFontSize-Mobile;
             }
 
-            .splide {
-                .splide__slide {
-                    .splide__arrow--prev,
-                    .splide__arrow--next {
-                        display: none;
-                    }
-                }
+            /*hide splide and show more btn on mobile*/
+            .splide,
+            .moreBtn {
+                display: none;
             }
-        }
-    
-        #event,
-        #print,
-        #proddesign {
-            display: none;
+
+            .all-works {
+                display: block;
+                margin: 0 auto;
+            }
         }
     }
 
@@ -260,10 +296,34 @@ footer {
 }
 
 /* --- TABLET --- */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        section {
+            padding: 25px;
+        }
+    }
+    
     header {    
         nav {
             @include navStyleTablet;
+        }
+    }
+
+    #works {
+        .work {
+            .splide {
+                // no splide arrows for tablet
+                .splide__arrow--prev,
+                .splide__arrow--next {
+                    display: none;
+                }
+            }
+
+            .all-works {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap:20px;
+            }
         }
     }
 
@@ -273,11 +333,11 @@ footer {
 }
 
 /* --- DESKTOP --- */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   /* desktop styles */
 }
 
 /* --- LARGE DESKTOP --- */
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1280px) {
   /* large screen styles */
 }

@@ -4,7 +4,7 @@
 /*=====Style Variables=====*/
 $blue: #00aeef;
 $pink: #EF018D;
-$yellow: #FFF200;
+$yellow: #fff763;
 $lightblack: #282828;
 $webFont: "Poppins", sans-serif;
 
@@ -196,7 +196,8 @@ $allTextFontSize-Mobile: 12px;
             span {
                 font-weight: 800;
                 text-transform: uppercase;
-                }
+                text-decoration: underline;
+            }
 
             //border: 1px dashed blue;
         }
@@ -295,10 +296,6 @@ $allTextFontSize-Mobile: 12px;
             div {
                 img {
                     height: 30px;
-
-                    &:hover {
-                    background-color: #00aeef;
-                    }
                 }
             }
         }
@@ -319,7 +316,7 @@ $allTextFontSize-Mobile: 12px;
         //border: 1px solid white;
 
         .footer-logo {
-           img {
+        img {
                 height: 8pc;
             }
         }
@@ -333,6 +330,7 @@ $allTextFontSize-Mobile: 12px;
         .contact-details {
             margin: 0;
             width: 100%;
+            gap: 20px;
             display: grid;
             // background-color: #fff766;
             grid-template-columns: auto auto;

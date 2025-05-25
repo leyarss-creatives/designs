@@ -238,17 +238,14 @@ section {
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
+  background-size: 50%;
 }
 .our-history div img {
-  visibility: hidden;
   position: fixed;
 }
 .our-history .title-our-history h1 {
   text-align: left;
   padding: 10px;
-}
-.our-history .history p span {
-  color: #EF018D;
 }
 
 /*==========[Vision-Mission-img & Content(<p>)]==============*/
@@ -486,7 +483,7 @@ footer .footer-blue {
   background-color: #00aeef;
 }
 footer .footer-yellow {
-  background-color: #FFF200;
+  background-color: #fff763;
 }
 footer .footer-content {
   margin: 50px 100px;
@@ -507,6 +504,7 @@ footer .footer-content .contact-details {
 footer .footer-content .contact-details span {
   font-weight: 800;
   text-transform: uppercase;
+  text-decoration: underline;
 }
 footer .footer-logo,
 footer .copyright {
@@ -519,7 +517,7 @@ footer .copyright {
 
 /*=========================[PHONE-FLEX]===========================*/
 /*--- MOBILE SCREEN ---*/
-@media screen and (min-width: 320px) and (max-width: 450px) {
+@media screen and (min-width: 320px) and (max-width: 375px) {
   body {
     font-size: 12px;
   }
@@ -572,8 +570,387 @@ footer .copyright {
   header nav .nav-mobile .nav-icon-btns div img {
     height: 30px;
   }
-  header nav .nav-mobile .nav-icon-btns div img:hover {
-    background-color: #00aeef;
+  header .header-content {
+    border-radius: 20px;
+  }
+  header .header-content p {
+    margin: 10px 20px;
+    padding: 0 0 0 0;
+    font-size: 10px;
+  }
+  /*======The team Section======*/ /*NOTE:use max width and shit*/
+  .the-team {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .the-team .p1 {
+    font-size: small;
+    line-height: 1.3;
+    padding: 0 10px 0 10px;
+    margin: 0;
+    text-align: center;
+  }
+  .the-team .p2 {
+    padding: 0 0 0 0;
+    margin: 0 10px 20px 10px;
+    text-align: justify;
+    font-size: small;
+  }
+  .the-team .p2 b {
+    color: transparent;
+    background-image: linear-gradient(to right, #EF018D, #6366F1);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+  .the-team .p2 span {
+    color: #EF018D;
+  }
+  /*=======[team-list-container]========*/
+  .team-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .team-list-container .team-flex {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+  }
+  .team-list-container .team-flex .person {
+    width: 120px;
+    height: 75px;
+    background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
+    border-radius: 10px;
+    position: relative;
+  }
+  .team-list-container .team-flex .person img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: none;
+  }
+  .team-list-container .team-flex .person .person-info {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 0 15px;
+    right: 5px;
+    left: 5px;
+    bottom: 5px;
+    border-radius: 10px;
+  }
+  .team-list-container .team-flex .person .person-info p {
+    line-height: 0.8;
+    color: #213083;
+    font-size: 10px;
+  }
+  .team-list-container .team-flex .person .person-info p span {
+    font-size: xx-small;
+  }
+  .team-list-container .no-pic {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: #213083;
+    gap: 1em;
+  }
+  .team-list-container .no-pic h3 {
+    text-transform: uppercase;
+    padding: 10px 0 0 0;
+    margin: 0;
+    font-size: medium;
+    text-align: center;
+  }
+  .team-list-container .no-pic .specialist {
+    flex-direction: row;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
+    padding: 5px;
+    margin: 0 0 0 0;
+  }
+  .team-list-container .no-pic .specialist .p1 {
+    border: 1px dashed #ffffff;
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+  .team-list-container .no-pic .specialist .p1 p {
+    color: #213083;
+    font-size: 10px;
+  }
+  .team-list-container .no-pic .specialist .p1 p span {
+    font-size: xx-small;
+  }
+  /*======[our-history]======*/
+  .our-history {
+    background-image: url("../Assets/aboutUs-teampic-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    margin: 0 10px;
+  }
+  .our-history .title-our-history {
+    margin: 200px 0 0 0;
+  }
+  .our-history .title-our-history h1 {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+    padding: 0 0;
+  }
+  .our-history .history p {
+    text-align: left;
+    font-size: 1em;
+    margin: 0 5px;
+    padding: 0;
+  }
+  .our-history .history span {
+    color: #EF018D;
+  }
+  /*==========[Vision-Mission-img & Content(<p>)]==============*/
+  .Vision-Mission {
+    padding: 0 8px 0 8px;
+    margin: 50px 10px 0 10px;
+    /*=========[vision-mission-bg-img]===========*/
+    /*==========[Vision-Mission-Txt]==========*/
+  }
+  .Vision-Mission .Vision-Mission-img {
+    position: relative;
+    margin-left: 10px;
+  }
+  .Vision-Mission .Vision-Mission-img .shadow {
+    left: 10px;
+    top: -20px;
+    mix-blend-mode: overlay;
+    display: none;
+  }
+  .Vision-Mission .Vision-Mission-img .text2 {
+    padding: 10px 10px 0 0;
+    margin: 5px 10px 0 0;
+    padding: auto;
+    left: 10px;
+  }
+  .Vision-Mission .Vision-Mission-img .text2 p {
+    margin: 0 auto;
+  }
+  .Vision-Mission .Vision-Mission-img .Text {
+    left: 9px;
+    top: -55px;
+    display: none;
+  }
+  .Vision-Mission .Mission-img {
+    max-width: 100%;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision {
+    display: flex;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision .h4 {
+    text-transform: uppercase;
+    font-size: small;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision .border p {
+    padding: 0 0 10px 0;
+    margin: 0;
+    font-size: 6px;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision p {
+    font-size: 5px;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision p b {
+    font-size: 20px;
+    padding: 0 0 0 0;
+    margin: 0 15px 0 10px;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission {
+    display: flex;
+    padding: 10px 0 10px 0;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission .h4 {
+    text-transform: uppercase;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission p {
+    padding: 0 0 0 0;
+    font-size: 6px;
+    padding: 0 0 10px 0;
+    margin: 0;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission p b {
+    font-size: 20px;
+    padding: 5px 0 0 0;
+    margin: 0 10px 0 0;
+  }
+  .Vision-Mission .Vision-Mission-text img {
+    width: 100%;
+  }
+  /*==========[our-services-section]===========*/
+  .our-services-section {
+    /*==========[our-services-list]===========*/
+  }
+  .our-services-section .our-services {
+    border: 1px dashed rgb(255, 255, 255);
+    text-align: center;
+  }
+  .our-services-section .our-services p {
+    background: rgb(255, 255, 255);
+    font-size: 10px;
+    left: 90px;
+    position: absolute;
+    padding: 0 10px 0 10px;
+    margin: 13px 0 0 0;
+  }
+  .our-services-section .our-services h1 {
+    margin: 20px 50px 0 0;
+    padding: 20px;
+    border: dashed black;
+    border-radius: 1em;
+    border-width: 3px 3px;
+  }
+  .our-services-section .our-services-list {
+    display: flex;
+  }
+  .our-services-section .our-services-list h3 {
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+  .our-services-section .our-services-list li {
+    text-transform: uppercase;
+    font-size: 9px;
+  }
+  .our-services-section .our-services-list .service-list-1 {
+    padding: 0 40px 10px 10px;
+    margin: 0 auto 0 10px;
+    border-bottom: 3px solid #EF018D;
+  }
+  .our-services-section .our-services-list .service-list-1 li {
+    padding: 0 0 0 0;
+    margin: 0 25px 0 0;
+  }
+  .our-services-section .our-services-list .service-list-2 {
+    padding: 0 40px 10px 10px;
+    margin: 0 auto 0 10px;
+    border-bottom: 3px solid #00ADF1;
+  }
+  .our-services-section .our-services-list .service-list-2 li {
+    padding: 0 0 0 0;
+    margin: 0 25px 0 0;
+  }
+  .our-services-section .our-services-list .service-list-3 {
+    padding: 0 40px 10px 10px;
+    margin: 0 auto 0 10px;
+    border-bottom: 3px solid #FEF102;
+  }
+  .our-services-section .our-services-list .service-list-3 li {
+    padding: 0 0 0 0;
+    margin: 0 25px 0 0;
+  }
+  .our-services-section .our-services-list .service-list-4 {
+    padding: 0 40px 30px 10px;
+    margin: 0 auto 0 10px;
+  }
+  .our-services-section .our-services-list .pg1 {
+    padding: 0;
+    margin: 0 20px 0 auto;
+  }
+  .our-services-section .our-services-list .pg1 p {
+    font-size: 15px;
+  }
+  .our-services-section footer .footer-pink,
+  .our-services-section footer .footer-blue,
+  .our-services-section footer .footer-yellow {
+    height: 15px;
+    width: 100%;
+  }
+  .our-services-section footer .footer-content {
+    margin: 20px;
+    display: block;
+  }
+  .our-services-section footer .footer-content .footer-logo img {
+    height: 8pc;
+  }
+  .our-services-section footer .footer-content .footer-flex,
+  .our-services-section footer .footer-content .contact-details {
+    margin: 0;
+    width: 100%;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  footer .footer-pink,
+  footer .footer-blue,
+  footer .footer-yellow {
+    height: 15px;
+    width: 100%;
+  }
+  footer .footer-content {
+    margin: 20px;
+    display: block;
+  }
+  footer .footer-content .footer-logo img {
+    height: 8pc;
+  }
+  footer .footer-content .footer-flex,
+  footer .footer-content .contact-details {
+    margin: 0;
+    width: 100%;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+/*=========================[PHONE-FLEX]===========================*/
+/*--- MOBILE SCREEN ---*/
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  body {
+    font-size: 12px;
+  }
+  body h1 {
+    font-size: 16px;
+    margin: 0;
+  }
+  body section {
+    padding: 10px;
+  }
+  header .header-content {
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+  header .header-content h1 {
+    text-align: center;
+    font-size: 1rem;
+  }
+  header .header-content p,
+  header .header-content button {
+    font-size: 0.8rem;
+  }
+  header .header-content .header-content-mockups img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+  header nav .nav-other-screens {
+    display: none;
+  }
+  header nav .nav-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  header nav .nav-mobile .nav-logo-name {
+    margin: 0 auto;
+  }
+  header nav .nav-mobile .nav-logo-name img {
+    height: 70px;
+  }
+  header nav .nav-mobile .nav-icon-btns {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+  }
+  header nav .nav-mobile .nav-icon-btns div img {
+    height: 30px;
   }
   header .header-content {
     border-radius: 20px;
@@ -590,7 +967,7 @@ footer .copyright {
     gap: 20px;
   }
   .the-team .p1 {
-    font-size: medium;
+    font-size: small;
     line-height: 1.3;
     padding: 0 10px 0 10px;
     margin: 0;
@@ -697,16 +1074,18 @@ footer .copyright {
     margin: 200px 0 0 0;
   }
   .our-history .title-our-history h1 {
-    text-align: left;
+    text-align: center;
     font-size: 1.5em;
-    margin: 0 0;
-    padding: 10px 5px;
+    margin: 0 0 10px 0;
+    padding: 0 0;
   }
   .our-history .history p {
+    text-align: left;
     font-size: 1em;
     margin: 0 5px;
+    padding: 0;
   }
-  .our-history .history p span {
+  .our-history .history span {
     color: #EF018D;
   }
   /*==========[Vision-Mission-img & Content(<p>)]==============*/
@@ -718,7 +1097,7 @@ footer .copyright {
   }
   .Vision-Mission .Vision-Mission-img {
     position: relative;
-    margin: 0 0 0 10px;
+    margin-left: 10px;
   }
   .Vision-Mission .Vision-Mission-img .shadow {
     left: 10px;
@@ -748,6 +1127,7 @@ footer .copyright {
   }
   .Vision-Mission .Vision-Mission-text .Vision .h4 {
     text-transform: uppercase;
+    font-size: small;
   }
   .Vision-Mission .Vision-Mission-text .Vision .border p {
     padding: 0 0 10px 0;
@@ -782,13 +1162,6 @@ footer .copyright {
   }
   .Vision-Mission .Vision-Mission-text img {
     width: 100%;
-  }
-  /*===========[Building Blocks]============*/
-  .Building-Blocks {
-    text-align: center;
-  }
-  .Building-Blocks h2 {
-    font-size: 20px;
   }
   /*==========[our-services-section]===========*/
   .our-services-section {
@@ -879,12 +1252,34 @@ footer .copyright {
   .our-services-section footer .footer-content .contact-details {
     margin: 0;
     width: 100%;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  footer .footer-pink,
+  footer .footer-blue,
+  footer .footer-yellow {
+    height: 15px;
+    width: 100%;
+  }
+  footer .footer-content {
+    margin: 20px;
+    display: block;
+  }
+  footer .footer-content .footer-logo img {
+    height: 8pc;
+  }
+  footer .footer-content .footer-flex,
+  footer .footer-content .contact-details {
+    margin: 0;
+    width: 100%;
+    gap: 20px;
     display: grid;
     grid-template-columns: auto auto;
   }
 }
-/*=========================[TABLET-FLEX]===========================*/
-@media screen and (min-width: 451px) and (max-width: 768px) {
+/*==================[Large Mobile]=====================*/
+@media screen and (min-width: 426px) and (max-width: 768px) {
   body {
     font-size: 12px;
   }
@@ -937,9 +1332,6 @@ footer .copyright {
   header nav .nav-mobile .nav-icon-btns div img {
     height: 30px;
   }
-  header nav .nav-mobile .nav-icon-btns div img:hover {
-    background-color: #00aeef;
-  }
   header .header-content {
     background-color: #00aeef;
     color: white;
@@ -982,6 +1374,7 @@ footer .copyright {
   .team-list-container {
     display: flex;
     gap: 15px;
+    flex-direction: column;
     margin: 10px 0 40px 0;
     /*.Specialist{
         border:2px dashed rgb(255, 132, 153);
@@ -990,11 +1383,11 @@ footer .copyright {
   }
   .team-list-container .team-flex {
     display: flex;
-    gap: 10px;
+    gap: 20px;
   }
   .team-list-container .team-flex .person {
-    width: 175px;
-    height: 220px;
+    width: 375px;
+    height: 250px;
     border-radius: 15px;
     flex-wrap: wrap;
   }
@@ -1014,39 +1407,40 @@ footer .copyright {
   .team-list-container .team-flex .person .person-info p {
     line-height: 0.8;
     color: #213083;
-    font-size: small;
+    font-size: medium;
   }
   .team-list-container .team-flex .person .person-info p span {
-    font-size: x-small;
+    font-size: small;
   }
   .team-list-container .no-pic {
     width: 100%;
     color: #213083;
+    display: flex;
   }
   .team-list-container .no-pic h3 {
     text-transform: uppercase;
-    margin: 0 0 0 0;
-    font-size: small;
+    margin: 40px 30px 0 20px;
+    font-size: medium;
     text-align: center;
   }
   .team-list-container .no-pic .specialist {
     border-radius: 15px;
     background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
-    padding: 9px;
+    padding: 9px 9px 9px 9px;
     margin: 10px;
   }
   .team-list-container .no-pic .specialist .p1 {
     border: 1px dashed #ffffff;
     border-radius: 15px;
-    padding: 0 5px 0 5px;
+    padding: 0 15px 0 5px;
     background-color: rgba(255, 255, 255, 0.85);
   }
   .team-list-container .no-pic .specialist .p1 p {
     color: #213083;
-    font-size: small;
+    font-size: medium;
   }
   .team-list-container .no-pic .specialist .p1 p span {
-    font-size: x-small;
+    font-size: small;
   }
   /*======[our-history]======*/
   .our-history {
@@ -1060,68 +1454,71 @@ footer .copyright {
     margin: 350px 0 0 0;
   }
   .our-history .title-our-history h1 {
-    text-align: left;
+    text-align: center;
     font-size: 2em;
   }
   .our-history .history p {
     font-size: 1.5em;
-    margin: 10px;
+    margin: 20px;
   }
   .our-history .history p span {
     color: #EF018D;
   }
   /*==========[Vision-Mission-img & Content(<p>)]==============*/
   .Vision-Mission {
-    padding: 0 0 0 0;
-    margin: 100px 10px 0 10px;
+    padding: 0 8px 0 8px;
+    margin: 50px 10px 0 10px;
     /*=========[vision-mission-bg-img]===========*/
     /*==========[Vision-Mission-Txt]==========*/
   }
   .Vision-Mission .Vision-Mission-img {
     position: relative;
-    width: 340px;
-    margin: 100px 0 0 10px;
+    margin: 0 0 0 10px;
   }
   .Vision-Mission .Vision-Mission-img .shadow {
     left: 10px;
-    top: -30px;
+    top: -20px;
     mix-blend-mode: overlay;
+    display: none;
   }
   .Vision-Mission .Vision-Mission-img .text2 {
-    padding: 0 0 0 0;
-    margin: 0 0 0 400px;
+    padding: 20px 30px 0 0;
+    margin: 5px 10px 0 0;
+    padding: auto;
+    left: 10px;
   }
   .Vision-Mission .Vision-Mission-img .text2 p {
-    font-size: 11px;
-    padding: 0 0 0 100px;
-    margin: 20px 150px 0 0;
+    margin: 0 auto;
   }
   .Vision-Mission .Vision-Mission-img .Text {
-    left: 6px;
-    top: -90px;
+    left: 9px;
+    top: -55px;
+    display: none;
   }
   .Vision-Mission .Mission-img {
     max-width: 100%;
   }
   .Vision-Mission .Vision-Mission-text .Vision {
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
+    display: flex;
   }
   .Vision-Mission .Vision-Mission-text .Vision .h4 {
     text-transform: uppercase;
   }
   .Vision-Mission .Vision-Mission-text .Vision .border p {
+    padding: 0 0 10px 0;
     margin: 0;
-    font-size: 12px;
-    border-bottom: 2px solid #F7F7F7;
+    font-size: 1.5em;
   }
   .Vision-Mission .Vision-Mission-text .Vision p {
-    padding: 0 0 0 0;
+    font-size: 2em;
   }
   .Vision-Mission .Vision-Mission-text .Vision p b {
-    font-size: 25px;
+    font-size: 2em;
+    padding: 20px 0 0 0;
+    margin: 0 75px 0 20px;
   }
   .Vision-Mission .Vision-Mission-text .Mission {
+    display: flex;
     padding: 10px 0 10px 0;
   }
   .Vision-Mission .Vision-Mission-text .Mission .h4 {
@@ -1129,10 +1526,14 @@ footer .copyright {
   }
   .Vision-Mission .Vision-Mission-text .Mission p {
     padding: 0 0 0 0;
-    margin: auto;
+    font-size: 1.5em;
+    padding: 0 0 10px 0;
+    margin: 0;
   }
   .Vision-Mission .Vision-Mission-text .Mission p b {
-    font-size: 25px;
+    font-size: 3em;
+    padding: 20px 0 0 0;
+    margin: 0 35px 0 0;
   }
   .Vision-Mission .Vision-Mission-text img {
     width: 100%;
@@ -1214,29 +1615,41 @@ footer .copyright {
   .our-services-section .our-services-list .pg1 p {
     font-size: 20px;
   }
-  .our-services-section footer .footer-pink,
-  .our-services-section footer .footer-blue,
-  .our-services-section footer .footer-yellow {
+  footer .footer-pink,
+  footer .footer-blue,
+  footer .footer-yellow {
     height: 15px;
     width: 100%;
   }
-  .our-services-section footer .footer-content {
+  footer .footer-content {
     margin: 20px;
     display: block;
   }
-  .our-services-section footer .footer-content .footer-logo img {
+  footer .footer-content .footer-logo img {
     height: 8pc;
   }
-  .our-services-section footer .footer-content .footer-flex,
-  .our-services-section footer .footer-content .contact-details {
+  footer .footer-content .footer-flex,
+  footer .footer-content .contact-details {
     margin: 0;
     width: 100%;
+    gap: 20px;
     display: grid;
     grid-template-columns: auto auto;
   }
 }
+/*=========================[TABLET-FLEX]===========================*/
 /* --- TABLET --- */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 12px;
+  }
+  body h1 {
+    font-size: 16px;
+    margin: 0;
+  }
+  body section {
+    padding: 10px;
+  }
   header nav .nav-other-screens .nav-contact-us a {
     padding: 10px;
     padding-left: 20px;
@@ -1248,10 +1661,301 @@ footer .copyright {
     margin: 30px;
     gap: 10px;
   }
+  .header-content {
+    background-color: #00aeef;
+    color: white;
+  }
+  .header-content p {
+    margin: 40px 20px;
+    text-transform: uppercase;
+    font-size: 1em;
+  }
+  .header-content p span {
+    color: #ffffff;
+  }
+  /*======The team Section======*/ /*NOTE:use max width and shit*/
+  .the-team {
+    display: grid;
+    grid-template-columns: 45% auto;
+    gap: 30px;
+  }
+  .the-team .p1 {
+    font-size: 2em;
+    line-height: 1.3;
+    padding: 0 20px 0 20px;
+    margin: 70px 0 30px 0;
+  }
+  .the-team .p2 {
+    padding: 20px 0 10px 0;
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+  }
+  .the-team .p2 b {
+    color: transparent;
+    background-image: linear-gradient(to right, #EF018D, #6366F1);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+  .the-team .p2 span {
+    color: #EF018D;
+  }
+  /*=======[team-list-container]========*/
+  .team-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 10px 0 40px 0;
+    /*.Specialist{
+        border:2px dashed rgb(255, 132, 153);
+        padding: 10px 0 0 0;
+    }*/
+  }
+  .team-list-container .team-flex {
+    display: flex;
+    gap: 20px;
+  }
+  .team-list-container .team-flex .person {
+    width: 325px;
+    height: 290px;
+    border-radius: 15px;
+    flex-wrap: wrap;
+  }
+  .team-list-container .team-flex .person img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  .team-list-container .team-flex .person .person-info {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 0 10px 0 10px;
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    border-radius: 15px;
+  }
+  .team-list-container .team-flex .person .person-info p {
+    line-height: 0.8;
+    color: #213083;
+    font-size: small;
+  }
+  .team-list-container .team-flex .person .person-info p span {
+    font-size: x-small;
+  }
+  .team-list-container .no-pic {
+    width: 100%;
+    color: #213083;
+    display: flex;
+  }
+  .team-list-container .no-pic h3 {
+    text-transform: uppercase;
+    margin: 35px 50px 10px 20px;
+    font-size: medium;
+    text-align: center;
+  }
+  .team-list-container .no-pic .specialist {
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
+    padding: 9px;
+    margin: 10px;
+  }
+  .team-list-container .no-pic .specialist .p1 {
+    border: 1px dashed #ffffff;
+    border-radius: 15px;
+    padding: 0 5px 0 5px;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+  .team-list-container .no-pic .specialist .p1 p {
+    color: #213083;
+    font-size: medium;
+  }
+  .team-list-container .no-pic .specialist .p1 p span {
+    font-size: small;
+  }
+  /*======[our-history]======*/
+  .our-history {
+    background-image: url("../Assets/aboutUs-teampic-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    margin: 0 10px 0 10px;
+  }
+  .our-history .title-our-history {
+    margin-top: 250px;
+  }
+  .our-history .title-our-history h1 {
+    text-align: center;
+    font-size: 2em;
+  }
+  .our-history .history p {
+    font-size: 1.5em;
+    text-align: left;
+    margin: 10px;
+  }
+  .our-history .history p span {
+    color: #EF018D;
+  }
+  /*==========[Vision-Mission-img & Content(<p>)]==============*/
+  .Vision-Mission {
+    padding: 0 8px 0 8px;
+    margin: 50px 10px 0 10px;
+    /*=========[vision-mission-bg-img]===========*/
+    /*==========[Vision-Mission-Txt]==========*/
+  }
+  .Vision-Mission .Vision-Mission-img {
+    position: relative;
+    margin: 0 0 0 10px;
+  }
+  .Vision-Mission .Vision-Mission-img .shadow {
+    left: 10px;
+    top: -20px;
+    mix-blend-mode: overlay;
+    display: none;
+  }
+  .Vision-Mission .Vision-Mission-img .text2 {
+    padding: 50px 30px 0 0;
+    margin: 5px 10px 0 0;
+    padding: auto;
+    left: 10px;
+  }
+  .Vision-Mission .Vision-Mission-img .text2 p {
+    margin: 0 auto;
+  }
+  .Vision-Mission .Vision-Mission-img .Text {
+    left: 9px;
+    top: -55px;
+    display: none;
+  }
+  .Vision-Mission .Mission-img {
+    max-width: 100%;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision {
+    display: flex;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision .h4 {
+    text-transform: uppercase;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision .border p {
+    padding: 0 0 10px 0;
+    margin: 0;
+    font-size: 2em;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision p {
+    font-size: 2em;
+  }
+  .Vision-Mission .Vision-Mission-text .Vision p b {
+    font-size: 3em;
+    padding: 20px 35px 0 0;
+    margin: 0 70px 0 20px;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission {
+    display: flex;
+    padding: 10px 0 10px 0;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission .h4 {
+    text-transform: uppercase;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission p {
+    padding: 0 0 0 0;
+    font-size: 2em;
+    padding: 0 0 10px 0;
+    margin: 0;
+  }
+  .Vision-Mission .Vision-Mission-text .Mission p b {
+    font-size: 3em;
+    padding: 30px 0 0 20px;
+    margin: 0 50px 0 0;
+  }
+  .Vision-Mission .Vision-Mission-text img {
+    width: 100%;
+  }
+  /*===========[Building Blocks]============*/
+  .Building-Blocks {
+    text-align: center;
+  }
+  .Building-Blocks h2 {
+    font-size: 20px;
+  }
+  /*==========[our-services-section]===========*/
+  .our-services-section {
+    /*==========[our-services-list]===========*/
+  }
+  .our-services-section .our-services {
+    border: 1px dashed rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 0 0 10px;
+  }
+  .our-services-section .our-services p {
+    font-size: 20px;
+    background: rgb(255, 255, 255);
+    padding: 0 30px;
+    left: 150px;
+    position: absolute;
+    margin: 25px 220px;
+  }
+  .our-services-section .our-services h1 {
+    margin: 40px 110px 0 0;
+    padding: 40px 0 40px 0;
+    border: dashed black;
+    font-size: 2.5em;
+    border-radius: 1em;
+    border-width: 5px 5px;
+  }
+  .our-services-section .our-services-list {
+    display: flex;
+  }
+  .our-services-section .our-services-list h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .our-services-section .our-services-list li {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  .our-services-section .our-services-list .service-list-1 {
+    padding: 0 40px 10px 10px;
+    margin: 0 60px 0 10px;
+  }
+  .our-services-section .our-services-list .service-list-1 li {
+    padding: 0 0 5px 0;
+    margin: 20px 20px 0 0;
+  }
+  .our-services-section .our-services-list .service-list-2 {
+    padding: 0 40px 10px 10px;
+    margin: 0 60px 0 10px;
+  }
+  .our-services-section .our-services-list .service-list-2 li {
+    padding: 0 0 5px 0;
+    margin: 20px 20px 0 0;
+  }
+  .our-services-section .our-services-list .service-list-3 {
+    padding: 0 40px 10px 10px;
+    margin: 0 60px 0 10px;
+  }
+  .our-services-section .our-services-list .service-list-3 li {
+    padding: 0 0 5px 0;
+    margin: 20px 20px 0 0;
+  }
+  .our-services-section .our-services-list .service-list-4 {
+    padding: 0 40px 30px 10px;
+    margin: 0 0 0 10px;
+  }
+  .our-services-section .our-services-list .pg1 {
+    padding: 0;
+    margin: 0 20px 0 auto;
+  }
+  .our-services-section .our-services-list .pg1 p {
+    font-size: 20px;
+  }
 }
 /* --- DESKTOP --- */
-@media screen and (min-width: 1025px) {
-  /* screen styles */
+@media screen and (min-width: 1024px) {
+  .our-history .history p {
+    margin: 0 40em 0 0;
+    padding: 0;
+  }
+  .our-history .history p span {
+    color: #EF018D;
+  }
 }
 /* --- LARGE DESKTOP --- */
 @media screen and (min-width: 1281px) {
