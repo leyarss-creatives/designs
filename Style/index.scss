@@ -28,14 +28,11 @@ header {
 
             a:hover{
                 color: $pink;
-                border-bottom: 2px solid $pink;
             }
 
             .current-page {
-                background-color: $pink;
-                padding: 5px;
-                border-radius: 10px;
-                color: white;
+                border-bottom: 2px solid $pink;
+                color: $pink;
                 pointer-events: none;
             }
         }

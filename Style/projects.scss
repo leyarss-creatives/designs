@@ -13,20 +13,17 @@ header {
         .nav-other-screens {
             a {
                 color: black;
-                transition: 0.2s;
+                transition: 0.5s;
             }
             
             a:hover {
+                    color: $yellow;
+                }
+
+                .current-page {
+                pointer-events: none;
                 color: $yellow;
                 border-bottom: 2px solid $yellow;
-            }
-
-            .current-page {
-                background-color: $yellow;
-                pointer-events: none;
-                padding: 5px;
-                border-radius: 10px;
-                color: rgb(255, 255, 255);
             }
 
             //background-image: url('../Assets/projects-nav-bg.png');
@@ -35,7 +32,7 @@ header {
     }
 
     .header-content {
-        background-color: $yellow;
+        background-color: #fcf004;
         font-size: $headerFontSize;
 
         h1 {
