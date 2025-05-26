@@ -123,13 +123,10 @@ header nav .nav-other-screens a {
 }
 header nav .nav-other-screens a:hover {
   color: #EF018D;
-  border-bottom: 2px solid #EF018D;
 }
 header nav .nav-other-screens .current-page {
-  background-color: #EF018D;
-  padding: 5px;
-  border-radius: 10px;
-  color: white;
+  border-bottom: 2px solid #EF018D;
+  color: #EF018D;
   pointer-events: none;
 }
 header .header-content {
@@ -150,7 +147,7 @@ header .header-content button {
   font-weight: 600;
   padding: 15px 10px 15px 30px;
   border-radius: 80px;
-  background-color: #FFF200;
+  background-color: #fcf004;
   cursor: pointer;
 }
 header .header-content button span {
@@ -294,7 +291,7 @@ footer .footer-blue {
   background-color: #00aeef;
 }
 footer .footer-yellow {
-  background-color: #FFF200;
+  background-color: #fcf004;
 }
 footer .footer-content {
   margin: 50px 100px;
@@ -383,9 +380,6 @@ footer .copyright {
   header nav .nav-mobile .nav-icon-btns div img {
     height: 30px;
   }
-  header nav .nav-mobile .nav-icon-btns div img:hover {
-    background-color: #00aeef;
-  }
   header .header-content {
     display: flex;
     flex-direction: column-reverse;
@@ -462,6 +456,7 @@ footer .copyright {
   footer .footer-content .contact-details {
     margin: 0;
     width: 100%;
+    gap: 20px;
     display: grid;
     grid-template-columns: auto auto;
   }

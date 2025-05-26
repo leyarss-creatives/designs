@@ -98,10 +98,13 @@ header nav .nav-mobile {
 }
 header nav .nav-other-screens a {
   color: black;
-  transition: 0.2s;
+  transition: 0.5s;
 }
-header nav .nav-other-screens a:hover,
+header nav .nav-other-screens a:hover {
+  color: #00aeef;
+}
 header nav .nav-other-screens .current-page {
+  pointer-events: none;
   color: #00aeef;
   border-bottom: 2px solid #00aeef;
 }
@@ -483,7 +486,7 @@ footer .footer-blue {
   background-color: #00aeef;
 }
 footer .footer-yellow {
-  background-color: #fff763;
+  background-color: #fcf004;
 }
 footer .footer-content {
   margin: 50px 100px;
