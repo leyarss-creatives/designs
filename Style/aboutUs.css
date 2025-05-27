@@ -1002,10 +1002,7 @@ footer .copyright {
   }
   /*======[our-history]======*/
   .our-history {
-    background-image: url("../Assets/aboutUs-teampic-mobile.png");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
+    background-image: none;
     margin: 0 10px;
   }
   .our-history .title-our-history {
@@ -1392,10 +1389,7 @@ footer .copyright {
   }
   /*======[our-history]======*/
   .our-history {
-    background-image: url("../Assets/aboutUs-teampic-mobile.png");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
+    background-image: none;
     margin: 0 10px 0 10px;
   }
   .our-history .title-our-history {
