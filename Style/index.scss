@@ -21,11 +21,6 @@ header {
         @include navStyle;
 
         .nav-other-screens {
-            a {
-                color: black;
-                transition: 0.5s;
-            }
-
             a:hover{
                 color: $pink;
             }
@@ -197,6 +192,7 @@ footer {
 }
 
 
+/*======Screen Responsiveness======*/
 /*--- MOBILE ---*/
 @media screen and (min-width:319px) and (max-width: 768px) {
     body {
@@ -207,7 +203,6 @@ footer {
         @include headerStyle-Mobile;
 
         nav {
-            padding: 10px 0;
             @include navStyle-Mobile;
         }
 
@@ -289,14 +284,13 @@ footer {
             margin: 0;
             width: 100%;
             display: grid;
-            // background-color: #fff766;
             grid-template-columns: auto auto;
         }
     }
 }
 
 /* --- TABLET --- */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     body {
         h1 {
             font-size: $h1FontSize * 0.8; /*decrease font-size by 20%*/

@@ -35,17 +35,24 @@ header {
   margin: 10px;
 }
 header .header-content {
+  margin-top: 90px;
   border-radius: 60px;
   padding: 80px;
   font-size: 1.5rem;
   text-align: center;
 }
 header nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
   /*hide mobile nav*/
 }
 header nav a {
-  color: white;
+  color: black;
   text-decoration: none;
+  transition: 0.5s;
 }
 header nav div {
   display: flex;
@@ -129,8 +136,9 @@ header .header-content p {
   width: 100%;
   text-align: left;
   padding: 5px 10px;
+  background-color: #EF018D;
+  color: white;
 }
-#works .filter-dropdown .filter-btn,
 #works .filter-dropdown div {
   background-color: black;
   color: white;
@@ -350,10 +358,13 @@ footer .copyright {
   body section {
     padding: 10px;
   }
+  header {
+    margin: 0;
+  }
   header .header-content {
+    margin: 140px 10px 0;
     border-radius: 30px;
     padding: 10px;
-    margin-top: 10px;
     font-size: 20px;
     text-align: center;
   }
@@ -369,6 +380,9 @@ footer .copyright {
     max-width: 100%;
     height: auto;
     max-height: 400px;
+  }
+  header nav {
+    padding-top: 10px;
   }
   header nav .nav-other-screens {
     display: none;

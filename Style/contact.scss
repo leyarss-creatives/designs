@@ -5,42 +5,35 @@ body {
 }
 
 header {
-        height: 100vh;
-        position: relative;
+    @include headerStyle;
+    padding: 0;
+    
     nav {
         @include navStyle;
-        margin: 0 10px;
-        position: relative;
-        z-index: 1;
-
-        // a {
-        //     color: black;
-        // }
-
+        .nav-other-screens {
+            .nav-general {
+                .pink:hover {
+                    color: $pink;
+                }
+                .blue:hover {
+                    color: $blue;
+                }
+                .yellow:hover {
+                    color: $yellow;
+                }
+            }
+        }
         .nav-contact-us {
             visibility: hidden;
         }
-
-        //border: 1px blue dashed;
     }
 
-    .video-container-otherscreens {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-
+    .header-content {
+        padding: 0;
         video {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            border-radius: 60px;
         }
-    }
-
-    .video-container-mobile {
-        display: none;
     }
 }
 
@@ -170,32 +163,37 @@ footer {
 
     header {
         @include headerStyle-Mobile;
-        height: auto;
 
         nav {
             @include navStyle-Mobile;
-            margin-top: 10px;
 
             a {
                 color: white;
             }
         }
-        
-        .video-container-otherscreens {
-            display: none;
-        }
 
-        .video-container-mobile {
-            display: block;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-
+        .header-content {
+            padding: 0;
             video {
-                width: 100%;
-                height: 100%;
+                border-radius: 30px;
             }
         }
+        
+        // .video-container-otherscreens {
+        //     display: none;
+        // }
+
+        // .video-container-mobile {
+        //     display: block;
+        //     width: 100%;
+        //     height: 100%;
+        //     z-index: 0;
+
+        //     video {
+        //         width: 100%;
+        //         height: 100%;
+        //     }
+        // }
     }
 
     #message {    

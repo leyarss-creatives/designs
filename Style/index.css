@@ -56,17 +56,24 @@ header {
   /*heading paragraph & product img*/
 }
 header .header-content {
+  margin-top: 90px;
   border-radius: 60px;
   padding: 80px;
   font-size: 1.5rem;
   text-align: center;
 }
 header nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
   /*hide mobile nav*/
 }
 header nav a {
-  color: white;
+  color: black;
   text-decoration: none;
+  transition: 0.5s;
 }
 header nav div {
   display: flex;
@@ -116,10 +123,6 @@ header nav .nav-other-screens .nav-contact-us a span {
 }
 header nav .nav-mobile {
   display: none;
-}
-header nav .nav-other-screens a {
-  color: black;
-  transition: 0.5s;
 }
 header nav .nav-other-screens a:hover {
   color: #EF018D;
@@ -323,6 +326,7 @@ footer .copyright {
   padding: 20px;
 }
 
+/*======Screen Responsiveness======*/
 /*--- MOBILE ---*/
 @media screen and (min-width: 319px) and (max-width: 768px) {
   body {
@@ -335,10 +339,13 @@ footer .copyright {
   body section {
     padding: 10px;
   }
+  header {
+    margin: 0;
+  }
   header .header-content {
+    margin: 140px 10px 0;
     border-radius: 30px;
     padding: 10px;
-    margin-top: 10px;
     font-size: 20px;
     text-align: center;
   }
@@ -356,7 +363,7 @@ footer .copyright {
     max-height: 400px;
   }
   header nav {
-    padding: 10px 0;
+    padding-top: 10px;
   }
   header nav .nav-other-screens {
     display: none;
@@ -468,7 +475,7 @@ footer .copyright {
   }
 }
 /* --- TABLET --- */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   body h1 {
     font-size: 2.5rem; /*decrease font-size by 20%*/
   }
