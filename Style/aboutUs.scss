@@ -144,13 +144,13 @@ section{
     }
 
     .no-pic{
-        border: 1px dashed rgb(255, 132, 153);
+        //border: 1px dashed rgb(255, 132, 153);
         width: 100%;
         color: #213083;
         margin: 0 0 0 0;
         padding: 0 0 0 0 ;
         h3{
-            border: 1px dashed red;
+            //border: 1px dashed red;
             text-transform: uppercase;
             margin: 0 0 0 0 ;
             padding: 0 0 0 0 ;
@@ -191,8 +191,8 @@ section{
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
-    background-size: 50%;
-
+    background-size: 40%;
+    
     div {
         img {
             //visibility: hidden;
@@ -449,14 +449,6 @@ footer {
             margin: 0 10px 20px 10px;
             text-align: justify;
             font-size: small;
-            b{                
-                color: transparent;
-                background-image: linear-gradient(to right, #EF018D , #6366F1);
-                background-clip: text;
-            }
-            span{
-                color: #EF018D;
-            }
         }
     }
 
@@ -562,13 +554,13 @@ footer {
         
         .title-our-history{
             //border:2px dashed rgb(130, 161, 6);
-            margin:  0 0 0 0;
+            margin: 0;
             h1{
                 //border:2px dashed rgb(16, 165, 83);
                 text-align: center;
                 font-size: 1.5em;
                 margin: 15px 0 10px 0;
-                padding: 0 0;
+                padding: 0;
             }
         }
 
@@ -584,7 +576,7 @@ footer {
                     color: #EF018D;
                 }
             }
-    }
+        }
     
 
     /*==========[Vision-Mission-img & Content(<p>)]==============*/
@@ -610,7 +602,7 @@ footer {
                 .Mission {
                     display: block;
                     p {
-                        margin: 0;
+                        margin: 0 10px;
                         padding: 0 0 10px 0;
                         font-size: $allTextFontSize-Mobile;
                     }
@@ -618,7 +610,7 @@ footer {
                     .h4 {
                         b{
                             margin-top: 5px;
-                            padding: 0; 
+                            padding: 0 ; 
                             font-size: 1.5em;
                         }
                     }
@@ -645,13 +637,12 @@ footer {
                 //border:2px dashed rgb(100, 109, 240);
                 background: rgb(255, 255, 255) ;
                 font-size: 10px;
-                left: 90px;
                 position: absolute;
                 padding: 0 10px 0 10px;
-                margin: 13px 0 0 0;
+                margin: 13px 0 0 100px;
             }
             h1{
-                margin: 20px 50px 0 0;
+                margin: 20px 0 0 0;
                 padding: 20px;
                 border: dashed black;
                 border-radius: 1em;
@@ -734,7 +725,7 @@ footer {
 }
 
 /*--- MEDIUM MOBILE ---*/
-@media screen and (min-width:376px) and (max-width: 425px) {
+@media screen and (min-width:375px) and (max-width: 425px) {
     body {
         @include bodyStyle-Mobile;
     }
@@ -782,14 +773,6 @@ footer {
             margin: 0 10px 20px 10px;
             text-align: justify;
             font-size: small;
-            b{                
-                color: transparent;
-                background-image: linear-gradient(to right, #EF018D , #6366F1);
-                background-clip: text;
-            }
-            span{
-                color: #EF018D;
-            }
         }
 
     }
@@ -799,16 +782,16 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        //border: 2px rgb(147, 165, 247) dashed;
+        //border: 2px rgb(55, 90, 243) dashed;
         .team-flex {
             display: flex;
             gap: 10px;
             flex-direction: column;
             .person {
-                width: 150px;
-                height: 167px;
                 //width: 280px;
                 //height: 327px;
+                width: 200px;
+                height: 217px;
                 background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
                 border-radius: 10px;
                 position: relative;
@@ -841,9 +824,8 @@ footer {
         }
 
         .no-pic{
-            //border: 1px dashed rgb(255, 132, 153);
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             width: 100%;
             color: #213083;
             gap: 1em;
@@ -878,20 +860,27 @@ footer {
         }
 
     }
+
     /*======[our-history]======*/
 
     .our-history{
         //border: 2px dashed rgb(0, 26, 255);
         background-image: none;
         margin: 0 10px;
+        
+        .teampic-mobile {
+            display: block;
+            width: 100%;
+        }
+
         .title-our-history{
             //border:2px dashed rgb(130, 161, 6);
-            margin:  200px 0 0 0;
+            margin: 0;
             h1{
                 //border:2px dashed rgb(16, 165, 83);
                 text-align: center;
-                font-size: 1.5em;
-                margin: 0 0 10px 0;
+                font-size: 1em;
+                margin: 10px 0 10px 0;
                 padding: 0 0;
             }
         }
@@ -900,7 +889,7 @@ footer {
             //border:2px dashed rgb(4, 116, 4);
                 p{
                     text-align: left;
-                    font-size: 1em;
+                    font-size: $allTextFontSize-Mobile;                                             
                     margin: 0 5px;
                     padding: 0;
                 }
@@ -908,114 +897,42 @@ footer {
                     color: #EF018D;
                 }
             }
-        }
+    }
     
-
     /*==========[Vision-Mission-img & Content(<p>)]==============*/
 
-    .Vision-Mission{    
-        // background-image: url('../Assets/aboutUs-visionMissionBg.png');
-        // background-repeat: no-repeat;
-        // background-size: 100%;
-        // position: relative;
-
-        padding: 0 8px 0 8px;
-        margin: 50px 10px 0 10px;
-        //border: 2px dashed #f7bbde;
+    .Vision-Mission{
+        border-radius: 30px;
 
         .Vision-Mission-img{
-            position: relative;
-            margin-left: 10px;
-            .shadow{
-                left: 10px;
-                top: -20px;
-                mix-blend-mode: overlay;
-                display: none;
-            }
             .text2{
-                padding:10px 10px 0 0;
-                margin: 5px 10px 0 0;
-                padding: auto;
-                left: 10px;
-                //border:2px dashed #075518;       
-                p{
-                    //border: 1px dashed #F7F7F7;
-                    margin: 0 auto;
-                }
+                padding: 0;
+                margin: 10px 0; 
                 
                 .Vision,
                 .Mission {
                     display: block;
+                    p {
+                        margin: 0 10px;
+                        padding: 0 0 10px 0;
+                        font-size: $allTextFontSize-Mobile;
+                    }
+
+                    .h4 {
+                        b{
+                            margin-top: 5px;
+                            padding: 0 ; 
+                            font-size: 1.5em;
+                        }
                 }
+            }
             }
             .Text{
-                //border: 1px dashed #df9fc4;
-                left: 9px;
-                top: -55px;
                 display: none;
             }
-        }
-    /*=========[vision-mission-bg-img]===========*/
-        .Mission-img{
-            max-width: 100%;
-            //border: 1px dashed #b7c1fd;
-
-        }
-
-    /*==========[Vision-Mission-Txt]==========*/
-
-        .Vision-Mission-text{
-            //swidth: 600px;
-            //border: 1px dashed brown;
-
-            .Vision{
-                // THIS ONE!@@
-                //border: 2px dashed blue;
-                display: flex;
-                .h4{
-                    text-transform: uppercase;
-                    font-size: small;
-                }
-                .border{
-                    p{  
-                        padding: 0 0 10px 0;
-                        margin: 0;
-                        font-size: 9px;
-                    }
-
-                }
-                p{
-                    font-size:10px; 
-                    b{
-                        font-size:33px; 
-                        padding: 10px 0 0 0;
-                        margin:  0 35px 0 10px;
-                    }
-                }
-            }
-            .Mission{   
-                display: flex;
-                //border: 1px  dashed rgb(0, 255, 98);
-                padding: 10px 0 10px 0;
-                .h4{
-                    text-transform: uppercase;
-                }
-                p{  
-                    padding: 0 0 0 0;
-                    font-size: 9px;
-                    padding: 0 0 10px 0;
-                    margin: 0;                        
-                    b{
-                        font-size: 33px;
-                        padding: 10px 0 0 0;
-                        margin:  0 20px 0 0;                            
-                    }
-                }
-            }
-
-            img{
-                width: 100%;
-                //border: 2px dashed red;
+        /*=========[vision-mission-bg-img]===========*/
+            .Mission-img{
+                display: none;
             }
         }
     }
@@ -1031,13 +948,12 @@ footer {
                 //border:2px dashed rgb(100, 109, 240);
                 background: rgb(255, 255, 255) ;
                 font-size: 10px;
-                left: 125px;
                 position: absolute;
                 padding: 0 10px 0 10px;
-                margin: 13px 0 0 0;
+                margin: 13px 0 0 12px;
             }
             h1{
-                margin: 20px 110px 0 0;
+                margin: 20px 0 0 0;
                 padding: 20px;
                 border: dashed black;
                 border-radius: 1em;
@@ -1121,65 +1037,59 @@ footer {
 
 /*--- LARGE MOBILE ---*/
 @media screen and (min-width: 425px) and (max-width: 768px) {
-        body {
-            @include bodyStyle-Mobile;
-            //background-color: #e0e6f3;
+    body {
+        @include bodyStyle-Mobile;
+    }
+
+    header {
+        @include headerStyle-Mobile;
+
+        nav {
+            @include navStyle-Mobile;
         }
 
-        header {
-            @include headerStyle-Mobile;
+        .header-content {
+            background-color: $blue;
+            color: white;
 
-            nav {
-                @include navStyle-Mobile;
-            }
-
-            .header-content {
-                background-color: $blue;
-                color: white;
-
-                p {
-                    margin: 40px 20px;
-                    text-transform: uppercase;
-                    //border: 1px dashed rgb(204, 201, 18);
-                    font-size: 1em;
-                    span{
-                        color: #ffffff;
-                    }
+            p {
+                margin: 40px 20px;
+                text-transform: uppercase;
+                //border: 1px dashed rgb(204, 201, 18);
+                font-size: $allTextFontSize-Mobile;
+                span{
+                    color: #ffffff;
                 }
             }
         }
+    }
 
 
     /*======The team Section======*/ /*NOTE:use max width and shit*/
 
     .the-team {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         grid-template-columns: 45% auto;
-        gap: 30px;
+        gap: 20px;
         //border: 2px dashed #8168ff;
 
         .p1 {
-            font-size: 2em;
-            line-height: 1.3;
-            padding: 0 20px 0 20px;
-            margin: 70px 0 30px 0;
-
+            font-size: 1.5em;
+            line-height: 1.8;
+            padding: 0 20px;
+            margin: 0;
+            text-align: center;
             //border: 1px dashed #f48a8a;
         }
 
         .p2{
             //border: 2px dashed #f48a8a;
-            padding: 20px 0 10px 0 ;
-            margin: 0 0 10px 0;
-            font-size: 1.5em;
-            b{                
-                color: transparent;
-                background-image: linear-gradient(to right, #EF018D , #6366F1);
-                background-clip: text;
-            }
-            span{
-                color: #EF018D;
-            }
+            //padding: 20px 0 0px 0 ;
+            //margin: 0 25px;
+            margin: 0 20px;
+            padding: 0;
+            font-size: $allTextFontSize-Mobile;
         }
 
     }
@@ -1189,29 +1099,25 @@ footer {
         display: flex;
         gap: 15px;
         flex-direction: column;
-        //border: 2px rgb(147, 165, 247) dashed;
         margin: 10px 0 40px 0;
         .team-flex {
             display: flex;
+            flex-direction: column;
             gap: 20px;
             .person {
-                //width: 280px;
-                //height: 327px;
-                //background-image: linear-gradient(to bottom, #F7F7F7 50%, sE3E4E7, #A5B5DB);
-                width: 375px;
+                margin: 0 auto;
+                width: 200px;
                 height: 250px;
                 border-radius: 15px;
-                flex-wrap: wrap;
+                position: relative;
 
                 img {
                     width: 100%;
                     height: 100%;
                     border-radius: 20px;
-                    //border: 1px dotted green;
                 }
 
                 .person-info {
-                    //position: absolute;
                     background-color: rgb(255, 255, 255, 0.85);
                     padding: 0 10px 0 10px;
                     right: 10px;
@@ -1221,9 +1127,9 @@ footer {
                     p {
                         line-height: 0.8;
                         color: #213083;
-                        font-size: medium;
+                        font-size:  $allTextFontSize-Mobile;
                         span {
-                            font-size: small;
+                            font-size:  $allTextFontSize-Mobile;;
                         }
                     }
                 }
@@ -1231,44 +1137,38 @@ footer {
         }
 
         .no-pic{
-            //border: 1px dashed rgb(255, 132, 153);
             width: 100%;
             color: #213083;
             display: flex;
+            flex-direction: column;
 
             h3{
                 text-transform: uppercase;
-                margin: 40px 30px 0 20px;
+                margin: 0;
                 font-size: medium;
                 text-align: center;
             }
             .specialist{
-                //border:1px dashed rgb(185, 72, 91);
                 border-radius: 15px;
                 background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
                 padding: 9px 9px 9px 9px;
-                margin: 10px;
                 .p1{
                     border:1px dashed #ffffff;// {reqired [DO NOT REMOVE]}
                     border-radius: 15px;
+
                     padding:0 15px 0 5px;
                     background-color: rgb(255, 255, 255, 0.85);
                     p{
                         color: #213083;
-                        font-size: medium;
+                        font-size:  $allTextFontSize-Mobile;;
 
                         span {
-                            font-size: small;
+                            font-size:  $allTextFontSize-Mobile;;
                         }
                     }
                 }
             }
         }
-
-        /*.Specialist{
-            border:2px dashed rgb(255, 132, 153);
-            padding: 10px 0 0 0;
-        }*/
     }
 
     /*======[our-history]======*/
@@ -1277,13 +1177,19 @@ footer {
         //border: 2px dashed rgb(0, 26, 255);
         background-image: none;
         margin: 0 10px 0 10px;
+        
+        .teampic-mobile {
+            display: block;
+            width: 100%;
+        }
+
         .title-our-history{
             //border:2px dashed rgb(130, 161, 6);
-            margin:  350px 0 0 0;
+            margin: 0;
             h1{
                 //border:2px dashed rgb(16, 165, 83);
                 text-align: center;
-                font-size: 2em;
+                font-size: 1.5em;
             }
         }
 
@@ -1291,7 +1197,7 @@ footer {
             //border:2px dashed rgb(4, 116, 4);
 
                 p{
-                    font-size: 1.5em;
+                    font-size: $allTextFontSize-Mobile;
                     margin:20px ;
                 span{
                     color: #EF018D;
@@ -1302,14 +1208,10 @@ footer {
 
     /*==========[Vision-Mission-img & Content(<p>)]==============*/
 
-    .Vision-Mission{    
-        // background-image: url('../Assets/aboutUs-visionMissionBg.png');
-        // background-repeat: no-repeat;
-        // background-size: 100%;
-        // position: relative;
-
+    .Vision-Mission{
         padding: 0 8px 0 8px;
         margin: 50px 10px 0 10px;
+        border-radius: 30px;
         //border: 2px dashed #f7bbde;
 
         .Vision-Mission-img{
@@ -1325,25 +1227,35 @@ footer {
                 padding:20px 30px 0 0;
                 margin: 5px 10px 0 0;
                 padding: auto;
-                left: 10px;
+                left: 10px; 
                 //border:2px dashed #075518;       
                 p{
                     //border: 1px dashed #F7F7F7;
+                    font-size: $allTextFontSize-Mobile;
                     margin: 0 auto;
                 }
                 
                 .Vision,
                 .Mission {
                     display: block;
+                    p {
+                        margin: 0 10px;
+                        padding: 0 0 10px 0;
+                        font-size: $allTextFontSize-Mobile;
+                    }
+
+                    .h4 {
+                        b{
+                            margin-top: 5px;
+                            padding: 0 ; 
+                            font-size: 1.5em;
+                        }
+                    }
                 }
             }
             .Text{
-                //border: 1px dashed #df9fc4;
-                left: 9px;
-                top: -55px;
                 display: none;
             }
-        }
     /*=========[vision-mission-bg-img]===========*/
         .Mission-img{
             max-width: 100%;
@@ -1384,7 +1296,7 @@ footer {
             .Mission{   
                 display: flex;
                 //border: 1px  dashed rgb(0, 255, 98);
-                padding: 10px 0 10px 0;
+                padding: 0;
                 .h4{
                     text-transform: uppercase;
                 }
@@ -1407,6 +1319,7 @@ footer {
             }
         }
     }
+    }
 
     /*==========[our-services-section]===========*/
 
@@ -1417,19 +1330,19 @@ footer {
             margin: 0 0 0 10px;
             p{
                 //border:2px dashed rgb(100, 109, 240);
-                font-size: 20px;
+                font-size: 15px;
                 background: rgb(255, 255, 255) ;
                 padding: 0 30px;
                 position: absolute;
-                margin:25px 220px;
+                margin:25px 20px 0 110px;
             }
             h1{
-                margin: 40px 110px 0 0;
+                margin: 40px 0px 0 0;
                 padding: 40px 0 40px 0;
                 border: dashed black;
-                font-size: 2.5em;
+                font-size: 2em;
                 border-radius: 1em;
-                border-width: 5px  5px;
+                border-width: 3px 3px;
             }
         }
 
@@ -1438,12 +1351,12 @@ footer {
             display: flex;
             h3{
                 text-transform: uppercase;
-                font-size: 20px;
+                font-size: 15px;
 
             }
             li{
                 text-transform: uppercase;
-                font-size: 15px;
+                font-size: 10px;
 
             }
             .service-list-1{
@@ -1489,7 +1402,7 @@ footer {
                 padding: 0; 
                 margin:0 20px 0 auto;
                 p{
-                    font-size: 20px;
+                    font-size: 15px;
                 }
             }
         }
@@ -1502,7 +1415,7 @@ footer {
 }
 
 /*=========================[TABLET-FLEX]===========================*/
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     body {
         @include bodyStyle-Mobile;
         //background-color: #acc6fc;
@@ -1533,8 +1446,6 @@ footer {
             }
         }
     }
-        
-
 
     /*======The team Section======*/ /*NOTE:use max width and shit*/
 
@@ -1542,30 +1453,18 @@ footer {
         display: grid;
         grid-template-columns: 45% auto;
         gap: 30px;
-        //border: 2px dashed #8168ff;
 
         .p1 {
             font-size: 2em;
             line-height: 1.3;
             padding: 0 20px 0 20px;
             margin: 70px 0 30px 0;
-            
-            //border: 1px dashed #f48a8a;
         }
 
         .p2 {
-            //border: 2px dashed #f48a8a;
             padding: 20px 0 10px 0 ;
             margin: 0 0 10px 0;
             font-size: 1.5em;
-            b{                
-                color: transparent;
-                background-image: linear-gradient(to right, #EF018D , #6366F1);
-                background-clip: text;
-            }
-            span{
-                color: #EF018D;
-            }
         }
     }
 
@@ -1574,29 +1473,24 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        //border: 2px rgb(147, 165, 247) dashed;
         margin: 10px 0 40px 0;
         .team-flex {
+            
             display: flex;
             gap: 20px;
+            flex-direction: row;
             .person {
-                //width: 280px;
-                //height: 327px;
-                //background-image: linear-gradient(to bottom, #F7F7F7 50%, sE3E4E7, #A5B5DB);
-                width: 325px;
-                height: 290px;
+                width: 355px;
+                height: 360px;
                 border-radius: 15px;
                 flex-wrap: wrap;
                 img {
                     width: 100%;
                     height: 100%;
                     border-radius: 20px;
-
-                    //border: 1px dotted green;
                 }
 
                 .person-info {
-                    //position: absolute;
                     background-color: rgb(255, 255, 255, 0.85);
                     padding: 0 10px 0 10px;
                     right: 10px;
@@ -1606,9 +1500,9 @@ footer {
                     p {
                         line-height: 0.8;
                         color: #213083;
-                        font-size: small;
+                        font-size: $allTextFontSize-Tablet;
                         span {
-                            font-size: x-small;
+                            font-size: $allTextFontSize-Tablet;
                         }
                     }
                 }
@@ -1616,31 +1510,32 @@ footer {
         }
 
         .no-pic{
-            //border: 1px dashed rgb(255, 132, 153);
             width: 100%;
             color: #213083;
             display: flex;
+            flex-direction: row;
             h3{
+                border: 1px dashed red;
                 text-transform: uppercase;
-                margin: 35px 50px 10px 20px;
+                margin: 35px 50px 20px 20px;
                 font-size: medium;
                 text-align: center;
-                
             }
             .specialist{
-                //border:1px dashed rgb(185, 72, 91);
                 border-radius: 15px;
                 background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
                 padding: 9px;
                 margin: 10px;
                 .p1{
+                    
                     border:1px dashed #ffffff;// {reqired [DO NOT REMOVE]}
                     border-radius: 15px;
-                    padding:0 5px 0 5px;
+                    padding:0 15px 0 5px;
                     background-color: rgb(255, 255, 255, 0.85);
                     p{
                         color: #213083;
                         font-size: medium;
+                        margin: 10px 50px 10px 20px;
                         span {
                             font-size: small;
                         }
@@ -1648,43 +1543,49 @@ footer {
                 }
             }
         }
-
-        /*.Specialist{
-            border:2px dashed rgb(255, 132, 153);
-            padding: 10px 0 0 0;
-        }*/
     }
 
     /*======[our-history]======*/
 
     .our-history{
-        //border: 2px dashed rgb(0, 26, 255);
-        background-image: url('../Assets/aboutUs-teampic-mobile.png');
-        background-repeat: no-repeat;
-        background-position:top;
-        background-size: contain;
-        margin: 0 10px 0 10px;
-
+        background-image: none;
+        margin: 0 10px;
+        
+        .teampic-mobile {
+            display: block;
+            width: 100%;
+        }
+        
         .title-our-history{
             //border:2px dashed rgb(130, 161, 6);
-            margin-top:  250px;
+            margin: 0;
             h1{
                 //border:2px dashed rgb(16, 165, 83);
                 text-align: center;
-                font-size: 2em;
+                font-size: 1.5em;
+                margin: 15px 0 10px 0;
+                padding: 0;
             }
         }
 
         .history{
             //border:2px dashed rgb(4, 116, 4);
-
                 p{
-                    font-size: 1.5em;
-                    text-align: left;
-                    margin:10px ;
+                    text-align: justify;
+                    font-size: 1.2em;
+                    margin: 0 5px;
+                    padding: 0;
+                }
                 span{
                     color: #EF018D;
                 }
+            }
+
+        .title-our-history{
+            margin-top:  50px;
+            h1{
+                text-align: center;
+                font-size: 2em;
             }
         }
     }
@@ -1705,96 +1606,54 @@ footer {
                 display: none;
             }
             .text2{
-                padding:50px 30px 0 0;
-                margin: 5px 10px 0 0;
+                padding:10px 0 10x 0;
+                margin: 0 0 0 0;
                 padding: auto;
                 left: 10px;
                 //border:2px dashed #075518;       
-                p{
+                /*p{
                     //border: 1px dashed #F7F7F7;
-                    margin: 0 auto;
+                }*/
+                
+                .Vision,
+                .Mission {
+                    display: block;
+                    p {
+                        margin: 10px 0 0 0;
+                        padding: 5px 0 10px 0;
+                        font-size: 1.5em;
+                    }
+
+                    .h4 {
+                        b{
+                            margin-top: 0;
+                            padding: 0 0 ; 
+                            font-size: 2em;
+                        }
+                    }
                 }
             }
-            .Text{
+            
+        .Text{
                 //border: 1px dashed #df9fc4;
                 left: 9px;
                 top: -55px;
                 display: none;
             }
         }
-    /*=========[vision-mission-bg-img]===========*/
+    
+            /*=========[vision-mission-bg-img]===========*/
         .Mission-img{
             max-width: 100%;
             //border: 1px dashed #b7c1fd;
 
         }
-
-    /*==========[Vision-Mission-Txt]==========*/
-
-        .Vision-Mission-text{
-            //swidth: 600px;
-            //border: 1px dashed brown;
-
-            .Vision{
-                // THIS ONE!@@
-                //border: 2px dashed blue;
-                display: flex;
-                .h4{
-                    text-transform: uppercase;
-                }
-                .border{
-                    p{  
-                        padding: 0 0 10px 0;
-                        margin: 0;
-                        font-size: 2em;
-                    }
-
-                }
-                p{
-                    font-size:2em; 
-                    b{
-                        font-size:3em; 
-                        padding: 20px 35px 0 0;
-                        margin:  0 70px 0 20px;
-                    }
-                }
-            }
-            .Mission{   
-                display: flex;
-                //border: 1px  dashed rgb(0, 255, 98);
-                padding: 10px 0 10px 0;
-                .h4{
-                    text-transform: uppercase;
-                }
-                p{  
-                    padding: 0 0 0 0;
-                    font-size: 2em;
-                    padding: 0 0 10px 0;
-                    margin: 0;                        
-                    b{
-                        font-size: 3em;
-                        padding: 30px 0 0 20px;
-                        margin:  0 50px 0 0;                            
-                    }
-                }
-            }
-
             img{
                 width: 100%;
                 //border: 2px dashed red;
             }
         }
-    }
-
-    /*===========[Building Blocks]============*/
-    .Building-Blocks{
-        text-align: center;
-        //border: 1px dashed #6366F1;
-        h2{
-            font-size: 20px;
-        }
-    }
-
+    
 
     /*==========[our-services-section]===========*/
 
@@ -1861,7 +1720,7 @@ footer {
                 margin: 0 60px 0 10px;
                 li{
                     padding: 0 0 5px 0;
-                    margin: 20px 20px 0 0;
+                    margin: 20px 80px 0 0;
                     //border-bottom: 5px solid #FEF102; 
                 }
             }
@@ -1886,8 +1745,8 @@ footer {
 }
 
 /*=========================[DESKTOP-FLEX]===========================*/
-/* --- DESKTOP --- */
-@media screen and (min-width: 1024px) {
+/* --- SMALLDESKTOP --- */
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
     .our-history {
         .history{
             //border:2px dashed rgb(4, 116, 4);
@@ -1903,7 +1762,7 @@ footer {
 }
 
 /* --- LARGE DESKTOP --- */
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1280px) {
     .Vision-Mission {
         margin: 200px 30px 0;
         padding: 0;

@@ -215,14 +215,12 @@ section {
   font-size: small;
 }
 .team-list-container .no-pic {
-  border: 1px dashed rgb(255, 132, 153);
   width: 100%;
   color: #213083;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
 }
 .team-list-container .no-pic h3 {
-  border: 1px dashed red;
   text-transform: uppercase;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
@@ -253,7 +251,7 @@ section {
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
-  background-size: 50%;
+  background-size: 40%;
 }
 .our-history div img {
   position: fixed;
@@ -562,15 +560,6 @@ footer .copyright {
     text-align: justify;
     font-size: small;
   }
-  .the-team .p2 b {
-    color: transparent;
-    background-image: linear-gradient(to right, #EF018D, #6366F1);
-    -webkit-background-clip: text;
-            background-clip: text;
-  }
-  .the-team .p2 span {
-    color: #EF018D;
-  }
   /*=======[team-list-container]========*/
   .team-list-container {
     display: flex;
@@ -657,13 +646,13 @@ footer .copyright {
     width: 100%;
   }
   .our-history .title-our-history {
-    margin: 0 0 0 0;
+    margin: 0;
   }
   .our-history .title-our-history h1 {
     text-align: center;
     font-size: 1.5em;
     margin: 15px 0 10px 0;
-    padding: 0 0;
+    padding: 0;
   }
   .our-history .history p {
     text-align: left;
@@ -699,7 +688,7 @@ footer .copyright {
   }
   .Vision-Mission .Vision-Mission-img .text2 .Vision p,
   .Vision-Mission .Vision-Mission-img .text2 .Mission p {
-    margin: 0;
+    margin: 0 10px;
     padding: 0 0 10px 0;
     font-size: 12px;
   }
@@ -726,13 +715,12 @@ footer .copyright {
   .our-services-section .our-services p {
     background: rgb(255, 255, 255);
     font-size: 10px;
-    left: 90px;
     position: absolute;
     padding: 0 10px 0 10px;
-    margin: 13px 0 0 0;
+    margin: 13px 0 0 100px;
   }
   .our-services-section .our-services h1 {
-    margin: 20px 50px 0 0;
+    margin: 20px 0 0 0;
     padding: 20px;
     border: dashed black;
     border-radius: 1em;
@@ -831,7 +819,7 @@ footer .copyright {
   }
 }
 /*--- MEDIUM MOBILE ---*/
-@media screen and (min-width: 376px) and (max-width: 425px) {
+@media screen and (min-width: 375px) and (max-width: 425px) {
   body {
     font-size: 12px;
   }
@@ -917,15 +905,6 @@ footer .copyright {
     text-align: justify;
     font-size: small;
   }
-  .the-team .p2 b {
-    color: transparent;
-    background-image: linear-gradient(to right, #EF018D, #6366F1);
-    -webkit-background-clip: text;
-            background-clip: text;
-  }
-  .the-team .p2 span {
-    color: #EF018D;
-  }
   /*=======[team-list-container]========*/
   .team-list-container {
     display: flex;
@@ -938,8 +917,8 @@ footer .copyright {
     flex-direction: column;
   }
   .team-list-container .team-flex .person {
-    width: 150px;
-    height: 167px;
+    width: 200px;
+    height: 217px;
     background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
     border-radius: 10px;
     position: relative;
@@ -968,7 +947,7 @@ footer .copyright {
   }
   .team-list-container .no-pic {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     color: #213083;
     gap: 1em;
@@ -1005,18 +984,22 @@ footer .copyright {
     background-image: none;
     margin: 0 10px;
   }
+  .our-history .teampic-mobile {
+    display: block;
+    width: 100%;
+  }
   .our-history .title-our-history {
-    margin: 200px 0 0 0;
+    margin: 0;
   }
   .our-history .title-our-history h1 {
     text-align: center;
-    font-size: 1.5em;
-    margin: 0 0 10px 0;
+    font-size: 1em;
+    margin: 10px 0 10px 0;
     padding: 0 0;
   }
   .our-history .history p {
     text-align: left;
-    font-size: 1em;
+    font-size: 12px;
     margin: 0 5px;
     padding: 0;
   }
@@ -1025,82 +1008,36 @@ footer .copyright {
   }
   /*==========[Vision-Mission-img & Content(<p>)]==============*/
   .Vision-Mission {
-    padding: 0 8px 0 8px;
-    margin: 50px 10px 0 10px;
-    /*=========[vision-mission-bg-img]===========*/
-    /*==========[Vision-Mission-Txt]==========*/
+    border-radius: 30px;
   }
   .Vision-Mission .Vision-Mission-img {
-    position: relative;
-    margin-left: 10px;
-  }
-  .Vision-Mission .Vision-Mission-img .shadow {
-    left: 10px;
-    top: -20px;
-    mix-blend-mode: overlay;
-    display: none;
+    /*=========[vision-mission-bg-img]===========*/
   }
   .Vision-Mission .Vision-Mission-img .text2 {
-    padding: 10px 10px 0 0;
-    margin: 5px 10px 0 0;
-    padding: auto;
-    left: 10px;
-  }
-  .Vision-Mission .Vision-Mission-img .text2 p {
-    margin: 0 auto;
+    padding: 0;
+    margin: 10px 0;
   }
   .Vision-Mission .Vision-Mission-img .text2 .Vision,
   .Vision-Mission .Vision-Mission-img .text2 .Mission {
     display: block;
   }
+  .Vision-Mission .Vision-Mission-img .text2 .Vision p,
+  .Vision-Mission .Vision-Mission-img .text2 .Mission p {
+    margin: 0 10px;
+    padding: 0 0 10px 0;
+    font-size: 12px;
+  }
+  .Vision-Mission .Vision-Mission-img .text2 .Vision .h4 b,
+  .Vision-Mission .Vision-Mission-img .text2 .Mission .h4 b {
+    margin-top: 5px;
+    padding: 0;
+    font-size: 1.5em;
+  }
   .Vision-Mission .Vision-Mission-img .Text {
-    left: 9px;
-    top: -55px;
     display: none;
   }
-  .Vision-Mission .Mission-img {
-    max-width: 100%;
-  }
-  .Vision-Mission .Vision-Mission-text .Vision {
-    display: flex;
-  }
-  .Vision-Mission .Vision-Mission-text .Vision .h4 {
-    text-transform: uppercase;
-    font-size: small;
-  }
-  .Vision-Mission .Vision-Mission-text .Vision .border p {
-    padding: 0 0 10px 0;
-    margin: 0;
-    font-size: 9px;
-  }
-  .Vision-Mission .Vision-Mission-text .Vision p {
-    font-size: 10px;
-  }
-  .Vision-Mission .Vision-Mission-text .Vision p b {
-    font-size: 33px;
-    padding: 10px 0 0 0;
-    margin: 0 35px 0 10px;
-  }
-  .Vision-Mission .Vision-Mission-text .Mission {
-    display: flex;
-    padding: 10px 0 10px 0;
-  }
-  .Vision-Mission .Vision-Mission-text .Mission .h4 {
-    text-transform: uppercase;
-  }
-  .Vision-Mission .Vision-Mission-text .Mission p {
-    padding: 0 0 0 0;
-    font-size: 9px;
-    padding: 0 0 10px 0;
-    margin: 0;
-  }
-  .Vision-Mission .Vision-Mission-text .Mission p b {
-    font-size: 33px;
-    padding: 10px 0 0 0;
-    margin: 0 20px 0 0;
-  }
-  .Vision-Mission .Vision-Mission-text img {
-    width: 100%;
+  .Vision-Mission .Vision-Mission-img .Mission-img {
+    display: none;
   }
   /*==========[our-services-section]===========*/
   .our-services-section {
@@ -1113,13 +1050,12 @@ footer .copyright {
   .our-services-section .our-services p {
     background: rgb(255, 255, 255);
     font-size: 10px;
-    left: 125px;
     position: absolute;
     padding: 0 10px 0 10px;
-    margin: 13px 0 0 0;
+    margin: 13px 0 0 12px;
   }
   .our-services-section .our-services h1 {
-    margin: 20px 110px 0 0;
+    margin: 20px 0 0 0;
     padding: 20px;
     border: dashed black;
     border-radius: 1em;
@@ -1284,36 +1220,29 @@ footer .copyright {
   header .header-content p {
     margin: 40px 20px;
     text-transform: uppercase;
-    font-size: 1em;
+    font-size: 12px;
   }
   header .header-content p span {
     color: #ffffff;
   }
   /*======The team Section======*/ /*NOTE:use max width and shit*/
   .the-team {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: 45% auto;
-    gap: 30px;
+    gap: 20px;
   }
   .the-team .p1 {
-    font-size: 2em;
-    line-height: 1.3;
-    padding: 0 20px 0 20px;
-    margin: 70px 0 30px 0;
+    font-size: 1.5em;
+    line-height: 1.8;
+    padding: 0 20px;
+    margin: 0;
+    text-align: center;
   }
   .the-team .p2 {
-    padding: 20px 0 10px 0;
-    margin: 0 0 10px 0;
-    font-size: 1.5em;
-  }
-  .the-team .p2 b {
-    color: transparent;
-    background-image: linear-gradient(to right, #EF018D, #6366F1);
-    -webkit-background-clip: text;
-            background-clip: text;
-  }
-  .the-team .p2 span {
-    color: #EF018D;
+    margin: 0 20px;
+    padding: 0;
+    font-size: 12px;
   }
   /*=======[team-list-container]========*/
   .team-list-container {
@@ -1321,20 +1250,18 @@ footer .copyright {
     gap: 15px;
     flex-direction: column;
     margin: 10px 0 40px 0;
-    /*.Specialist{
-        border:2px dashed rgb(255, 132, 153);
-        padding: 10px 0 0 0;
-    }*/
   }
   .team-list-container .team-flex {
     display: flex;
+    flex-direction: column;
     gap: 20px;
   }
   .team-list-container .team-flex .person {
-    width: 375px;
+    margin: 0 auto;
+    width: 200px;
     height: 250px;
     border-radius: 15px;
-    flex-wrap: wrap;
+    position: relative;
   }
   .team-list-container .team-flex .person img {
     width: 100%;
@@ -1352,19 +1279,20 @@ footer .copyright {
   .team-list-container .team-flex .person .person-info p {
     line-height: 0.8;
     color: #213083;
-    font-size: medium;
+    font-size: 12px;
   }
   .team-list-container .team-flex .person .person-info p span {
-    font-size: small;
+    font-size: 12px;
   }
   .team-list-container .no-pic {
     width: 100%;
     color: #213083;
     display: flex;
+    flex-direction: column;
   }
   .team-list-container .no-pic h3 {
     text-transform: uppercase;
-    margin: 40px 30px 0 20px;
+    margin: 0;
     font-size: medium;
     text-align: center;
   }
@@ -1372,7 +1300,6 @@ footer .copyright {
     border-radius: 15px;
     background-image: linear-gradient(to bottom, #F7F7F7 50%, #E3E4E7, #A5B5DB);
     padding: 9px 9px 9px 9px;
-    margin: 10px;
   }
   .team-list-container .no-pic .specialist .p1 {
     border: 1px dashed #ffffff;
@@ -1382,25 +1309,29 @@ footer .copyright {
   }
   .team-list-container .no-pic .specialist .p1 p {
     color: #213083;
-    font-size: medium;
+    font-size: 12px;
   }
   .team-list-container .no-pic .specialist .p1 p span {
-    font-size: small;
+    font-size: 12px;
   }
   /*======[our-history]======*/
   .our-history {
     background-image: none;
     margin: 0 10px 0 10px;
   }
+  .our-history .teampic-mobile {
+    display: block;
+    width: 100%;
+  }
   .our-history .title-our-history {
-    margin: 350px 0 0 0;
+    margin: 0;
   }
   .our-history .title-our-history h1 {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .our-history .history p {
-    font-size: 1.5em;
+    font-size: 12px;
     margin: 20px;
   }
   .our-history .history p span {
@@ -1410,12 +1341,13 @@ footer .copyright {
   .Vision-Mission {
     padding: 0 8px 0 8px;
     margin: 50px 10px 0 10px;
-    /*=========[vision-mission-bg-img]===========*/
-    /*==========[Vision-Mission-Txt]==========*/
+    border-radius: 30px;
   }
   .Vision-Mission .Vision-Mission-img {
     position: relative;
     margin: 0 0 0 10px;
+    /*=========[vision-mission-bg-img]===========*/
+    /*==========[Vision-Mission-Txt]==========*/
   }
   .Vision-Mission .Vision-Mission-img .shadow {
     left: 10px;
@@ -1430,58 +1362,69 @@ footer .copyright {
     left: 10px;
   }
   .Vision-Mission .Vision-Mission-img .text2 p {
+    font-size: 12px;
     margin: 0 auto;
   }
   .Vision-Mission .Vision-Mission-img .text2 .Vision,
   .Vision-Mission .Vision-Mission-img .text2 .Mission {
     display: block;
   }
+  .Vision-Mission .Vision-Mission-img .text2 .Vision p,
+  .Vision-Mission .Vision-Mission-img .text2 .Mission p {
+    margin: 0 10px;
+    padding: 0 0 10px 0;
+    font-size: 12px;
+  }
+  .Vision-Mission .Vision-Mission-img .text2 .Vision .h4 b,
+  .Vision-Mission .Vision-Mission-img .text2 .Mission .h4 b {
+    margin-top: 5px;
+    padding: 0;
+    font-size: 1.5em;
+  }
   .Vision-Mission .Vision-Mission-img .Text {
-    left: 9px;
-    top: -55px;
     display: none;
   }
-  .Vision-Mission .Mission-img {
+  .Vision-Mission .Vision-Mission-img .Mission-img {
     max-width: 100%;
   }
-  .Vision-Mission .Vision-Mission-text .Vision {
+  .Vision-Mission .Vision-Mission-img .Vision-Mission-text .Vision {
     display: flex;
   }
-  .Vision-Mission .Vision-Mission-text .Vision .h4 {
+  .Vision-Mission .Vision-Mission-img .Vision-Mission-text .Vision .h4 {
     text-transform: uppercase;
   }
-  .Vision-Mission .Vision-Mission-text .Vision .border p {
+  .Vision-Mission .Vision-Mission-img .Vision-Mission-text .Vision .border p {
     padding: 0 0 10px 0;
     margin: 0;
     font-size: 1.5em;
   }
-  .Vision-Mission .Vision-Mission-text .Vision p {
+  .Vision-Mission .Vision-Mission-img .Vision-Mission-text .Vision p {
     font-size: 2em;
   }
-  .Vision-Mission .Vision-Mission-text .Vision p b {
+  .Vision-Mission .Vision-Mission-img .Vision-Mission-text .Vision p b {
     font-size: 2em;
     padding: 20px 0 0 0;
     margin: 0 75px 0 20px;
   }
-  .Vision-Mission .Vision-Mission-text .Mission {
+  .Vision-Mission .Vision-Mission-img .Vision-Mission-text .Mission {
     display: flex;
-    padding: 10px 0 10px 0;
+    padding: 0;
   }
-  .Vision-Mission .Vision-Mission-text .Mission .h4 {
+  .Vision-Mission .Vision-Mission-img .Vision-Mission-text .Mission .h4 {
     text-transform: uppercase;
   }
-  .Vision-Mission .Vision-Mission-text .Mission p {
+  .Vision-Mission .Vision-Mission-img .Vision-Mission-text .Mission p {
     padding: 0 0 0 0;
     font-size: 1.5em;
     padding: 0 0 10px 0;
     margin: 0;
   }
-  .Vision-Mission .Vision-Mission-text .Mission p b {
+  .Vision-Mission .Vision-Mission-img .Vision-Mission-text .Mission p b {
     font-size: 3em;
     padding: 20px 0 0 0;
     margin: 0 35px 0 0;
   }
-  .Vision-Mission .Vision-Mission-text img {
+  .Vision-Mission .Vision-Mission-img .Vision-Mission-text img {
     width: 100%;
   }
   /*==========[our-services-section]===========*/
@@ -1494,30 +1437,30 @@ footer .copyright {
     margin: 0 0 0 10px;
   }
   .our-services-section .our-services p {
-    font-size: 20px;
+    font-size: 15px;
     background: rgb(255, 255, 255);
     padding: 0 30px;
     position: absolute;
-    margin: 25px 220px;
+    margin: 25px 20px 0 110px;
   }
   .our-services-section .our-services h1 {
-    margin: 40px 110px 0 0;
+    margin: 40px 0px 0 0;
     padding: 40px 0 40px 0;
     border: dashed black;
-    font-size: 2.5em;
+    font-size: 2em;
     border-radius: 1em;
-    border-width: 5px 5px;
+    border-width: 3px 3px;
   }
   .our-services-section .our-services-list {
     display: flex;
   }
   .our-services-section .our-services-list h3 {
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 15px;
   }
   .our-services-section .our-services-list li {
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 10px;
   }
   .our-services-section .our-services-list .service-list-1 {
     padding: 0 40px 10px 10px;
@@ -1552,7 +1495,7 @@ footer .copyright {
     margin: 0 20px 0 auto;
   }
   .our-services-section .our-services-list .pg1 p {
-    font-size: 20px;
+    font-size: 15px;
   }
   footer .footer-pink,
   footer .footer-blue,
@@ -1577,7 +1520,7 @@ footer .copyright {
   }
 }
 /*=========================[TABLET-FLEX]===========================*/
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   body {
     font-size: 12px;
   }
@@ -1628,33 +1571,21 @@ footer .copyright {
     margin: 0 0 10px 0;
     font-size: 1.5em;
   }
-  .the-team .p2 b {
-    color: transparent;
-    background-image: linear-gradient(to right, #EF018D, #6366F1);
-    -webkit-background-clip: text;
-            background-clip: text;
-  }
-  .the-team .p2 span {
-    color: #EF018D;
-  }
   /*=======[team-list-container]========*/
   .team-list-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin: 10px 0 40px 0;
-    /*.Specialist{
-        border:2px dashed rgb(255, 132, 153);
-        padding: 10px 0 0 0;
-    }*/
   }
   .team-list-container .team-flex {
     display: flex;
     gap: 20px;
+    flex-direction: row;
   }
   .team-list-container .team-flex .person {
-    width: 325px;
-    height: 290px;
+    width: 355px;
+    height: 360px;
     border-radius: 15px;
     flex-wrap: wrap;
   }
@@ -1674,19 +1605,20 @@ footer .copyright {
   .team-list-container .team-flex .person .person-info p {
     line-height: 0.8;
     color: #213083;
-    font-size: small;
+    font-size: medium;
   }
   .team-list-container .team-flex .person .person-info p span {
-    font-size: x-small;
+    font-size: 12px;
   }
   .team-list-container .no-pic {
     width: 100%;
     color: #213083;
     display: flex;
+    flex-direction: row;
   }
   .team-list-container .no-pic h3 {
     text-transform: uppercase;
-    margin: 35px 50px 10px 20px;
+    margin: 35px 50px 20px 20px;
     font-size: medium;
     text-align: center;
   }
@@ -1699,45 +1631,56 @@ footer .copyright {
   .team-list-container .no-pic .specialist .p1 {
     border: 1px dashed #ffffff;
     border-radius: 15px;
-    padding: 0 5px 0 5px;
+    padding: 0 15px 0 5px;
     background-color: rgba(255, 255, 255, 0.85);
   }
   .team-list-container .no-pic .specialist .p1 p {
     color: #213083;
     font-size: medium;
+    margin: 10px 20px 10px 20px;
   }
   .team-list-container .no-pic .specialist .p1 p span {
     font-size: small;
   }
   /*======[our-history]======*/
   .our-history {
-    background-image: url("../Assets/aboutUs-teampic-mobile.png");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
-    margin: 0 10px 0 10px;
+    background-image: none;
+    margin: 0 10px;
+  }
+  .our-history .teampic-mobile {
+    display: block;
+    width: 100%;
   }
   .our-history .title-our-history {
-    margin-top: 250px;
+    margin: 0;
+  }
+  .our-history .title-our-history h1 {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 15px 0 10px 0;
+    padding: 0;
+  }
+  .our-history .history p {
+    text-align: justify;
+    font-size: 1.2em;
+    margin: 0 5px;
+    padding: 0;
+  }
+  .our-history .history span {
+    color: #EF018D;
+  }
+  .our-history .title-our-history {
+    margin-top: 50px;
   }
   .our-history .title-our-history h1 {
     text-align: center;
     font-size: 2em;
-  }
-  .our-history .history p {
-    font-size: 1.5em;
-    text-align: left;
-    margin: 10px;
-  }
-  .our-history .history p span {
-    color: #EF018D;
   }
   /*==========[Vision-Mission-img & Content(<p>)]==============*/
   .Vision-Mission {
     padding: 0 8px 0 8px;
     margin: 50px 10px 0 10px;
     /*=========[vision-mission-bg-img]===========*/
-    /*==========[Vision-Mission-Txt]==========*/
   }
   .Vision-Mission .Vision-Mission-img {
     position: relative;
@@ -1750,13 +1693,26 @@ footer .copyright {
     display: none;
   }
   .Vision-Mission .Vision-Mission-img .text2 {
-    padding: 50px 30px 0 0;
-    margin: 5px 10px 0 0;
+    padding: 10px 0 10x 0;
+    margin: 0 0 0 0;
     padding: auto;
     left: 10px;
   }
-  .Vision-Mission .Vision-Mission-img .text2 p {
-    margin: 0 auto;
+  .Vision-Mission .Vision-Mission-img .text2 .Vision,
+  .Vision-Mission .Vision-Mission-img .text2 .Mission {
+    display: block;
+  }
+  .Vision-Mission .Vision-Mission-img .text2 .Vision p,
+  .Vision-Mission .Vision-Mission-img .text2 .Mission p {
+    margin: 10px 0 0 0;
+    padding: 5px 0 10px 0;
+    font-size: 1.5em;
+  }
+  .Vision-Mission .Vision-Mission-img .text2 .Vision .h4 b,
+  .Vision-Mission .Vision-Mission-img .text2 .Mission .h4 b {
+    margin-top: 0;
+    padding: 0 0;
+    font-size: 2em;
   }
   .Vision-Mission .Vision-Mission-img .Text {
     left: 9px;
@@ -1766,52 +1722,8 @@ footer .copyright {
   .Vision-Mission .Mission-img {
     max-width: 100%;
   }
-  .Vision-Mission .Vision-Mission-text .Vision {
-    display: flex;
-  }
-  .Vision-Mission .Vision-Mission-text .Vision .h4 {
-    text-transform: uppercase;
-  }
-  .Vision-Mission .Vision-Mission-text .Vision .border p {
-    padding: 0 0 10px 0;
-    margin: 0;
-    font-size: 2em;
-  }
-  .Vision-Mission .Vision-Mission-text .Vision p {
-    font-size: 2em;
-  }
-  .Vision-Mission .Vision-Mission-text .Vision p b {
-    font-size: 3em;
-    padding: 20px 35px 0 0;
-    margin: 0 70px 0 20px;
-  }
-  .Vision-Mission .Vision-Mission-text .Mission {
-    display: flex;
-    padding: 10px 0 10px 0;
-  }
-  .Vision-Mission .Vision-Mission-text .Mission .h4 {
-    text-transform: uppercase;
-  }
-  .Vision-Mission .Vision-Mission-text .Mission p {
-    padding: 0 0 0 0;
-    font-size: 2em;
-    padding: 0 0 10px 0;
-    margin: 0;
-  }
-  .Vision-Mission .Vision-Mission-text .Mission p b {
-    font-size: 3em;
-    padding: 30px 0 0 20px;
-    margin: 0 50px 0 0;
-  }
-  .Vision-Mission .Vision-Mission-text img {
+  .Vision-Mission img {
     width: 100%;
-  }
-  /*===========[Building Blocks]============*/
-  .Building-Blocks {
-    text-align: center;
-  }
-  .Building-Blocks h2 {
-    font-size: 20px;
   }
   /*==========[our-services-section]===========*/
   .our-services-section {
@@ -1897,7 +1809,7 @@ footer .copyright {
   }
 }
 /* --- LARGE DESKTOP --- */
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1280px) {
   .Vision-Mission {
     margin: 200px 30px 0;
     padding: 0;
